@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsDetallePrestamo.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsDetallePrestamo.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsDetallePrestamo.xsd" id="dsDetallePrestamo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsDetallePrestamo">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtPrestamo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:AutoIncrement="true" minOccurs="0" name="id" type="xs:int" />
+              <xs:element minOccurs="0" name="CodRetorno" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtDetallePrestamo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:AutoIncrement="true" minOccurs="0" name="iddetalle" type="xs:int" />
+              <xs:element minOccurs="0" name="id" type="xs:int" />
+              <xs:element minOccurs="0" name="Cuota" type="xs:string" />
+              <xs:element minOccurs="0" name="Fvcto" type="xs:string" />
+              <xs:element minOccurs="0" name="Tasa" type="xs:string" />
+              <xs:element minOccurs="0" name="Signo1" type="xs:string" />
+              <xs:element minOccurs="0" name="Origen" type="xs:string" />
+              <xs:element minOccurs="0" name="Signo2" type="xs:string" />
+              <xs:element minOccurs="0" name="Pago" type="xs:string" />
+              <xs:element minOccurs="0" name="Signo3" type="xs:string" />
+              <xs:element minOccurs="0" name="Saldo" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="dtPretamoKey1">
+      <xs:selector xpath=".//mstns:dtPrestamo" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="dtDetallePrestamoKey1">
+      <xs:selector xpath=".//mstns:dtDetallePrestamo" />
+      <xs:field xpath="mstns:iddetalle" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="dtPretamo_dtDetallePrestamo" msdata:parent="dtPrestamo" msdata:child="dtDetallePrestamo" msdata:parentkey="id" msdata:childkey="id" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

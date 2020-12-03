@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsPagEfeRelacionadas.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsPagEfeRelacionadas.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsPagEfeRelacionadas.xsd" id="dsPagEfeRelacionadas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsPagEfeRelacionadas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtPagEfeRelacionadas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Cantidad" type="xs:string" />
+              <xs:element minOccurs="0" name="CodigoRetorno" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtDetPagEfeRelacionadas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Cantidad" type="xs:string" />
+              <xs:element minOccurs="0" name="NumeroTarjeta" type="xs:string" />
+              <xs:element minOccurs="0" name="Nombre" type="xs:string" />
+              <xs:element minOccurs="0" name="Estado" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="dtPagEfeRelacionadasKey1">
+      <xs:selector xpath=".//mstns:dtPagEfeRelacionadas" />
+      <xs:field xpath="mstns:Cantidad" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="dtPagEfeRelacionadas_dtDetPagEfeRelacionadas" msdata:parent="dtPagEfeRelacionadas" msdata:child="dtDetPagEfeRelacionadas" msdata:parentkey="Cantidad" msdata:childkey="Cantidad" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

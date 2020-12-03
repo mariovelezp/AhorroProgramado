@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsCTG.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsCTG.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsCTG.xsd" id="dsCTG" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsCTG">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dt_Transaccion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default=" " name="TRANSACCION_IO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="INSTITUCION_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CLAVE_INSTITUCION_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="OPID_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CANAL_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="OFICINA_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TERMINAL_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FECHA_TRANSACCION_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="HORA_TRANSACCION_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="MODO_PROCESO_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CODIGO_BANCO_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FILLER_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRN_INSTITUCION_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRN_TIPO_BUSQUEDA_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRN_CEP_RUC_CED_IO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRN_FILLER_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRN_SECUENCIA_BG_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRX_MONEDA_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRX_VALOR_PAGAR_IO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRX_VALOR_CITACIONES_IO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRX_VALOR_MULTAS_IO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRN_FECHA_CONTABLE_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRN_FECHA_REVERSO_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRN_HORA_REVERSO_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="COD_RET_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRX_NOMBRE_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRX_MSG_RET_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRX_AUTORIZACION_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRX_TRAMITE_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRX_RUC_CED_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRN_CITACIONES_O" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

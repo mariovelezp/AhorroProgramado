@@ -1,0 +1,77 @@
+﻿@model MiMetaBG.WebApp.Models.MetasCreadas
+@{
+    Layout = null;
+}
+
+
+<div class="row justify-content-center">
+    @if (Model.metasCreadas != null)
+    {
+        <input type="hidden" id="idVenta" name="idVenta" value="@ViewBag.Ventas" />
+        foreach (var metas in Model.metasCreadas)
+        {
+
+        <div class="col-sm-10 col-md-8 col-lg-6 mb-4 px-sm-3 px-4">
+            <div class="card shadow-sm">
+                <div class="dream-detail-header">
+                    <div class="dream-detail-img">
+                        <img src="data:image;base64,@System.Convert.ToBase64String(metas.emojid)" alt="" width="25" height="25"></div>
+                    <div class="dream-detail-text">
+                        <h5>@metas.nombreMeta</h5>
+                    </div>
+                    <div id="divMas" onclick="llenaData('@metas.cuentaAhorro','@metas.numeroSolicitud','@metas.tipoDebito','@metas.cuentaDebito','@metas.cuotaMeta','@metas.frecuencia','@metas.diaDeb1','@metas.diaDeb2','@metas.montoMetaForn','@metas.plazoMeta', '@metas.nombreMeta', '@metas.valorDebAcumulado', '@metas.cuotaMeta', '@metas.fechaEmision')"  class="dream-detail-opt">
+                        <span></span><span></span><span></span>
+                        <div class="dream-detail-menu shadow">
+                            <ul>
+                                <li>
+                                    <a data-toggle="modal" data-target="#dreamAddModal" onclick="llenarExtra('@metas.cuentaAhorro' +'|'+ '@metas.numeroSolicitud' +'|'+ '@metas.tipoDebito' +'|'+ '@metas.cuentaDebito' +'|'+ '@metas.cuotaMeta' +'|'+ '@metas.frecuencia' +'|'+ '@metas.diaDeb1' +'|'+ '@metas.diaDeb2' +'|'+ '@metas.montoMeta' +'|'+ '@metas.plazoMeta' +'|'+ '@metas.nombreMeta' +'|'+ '@metas.cuentasEnm')"><span class="icon-add"></span>Añadir fondos</a>
+                                </li>
+                                <li><a data-toggle="modal" data-target="#dreamEditModal"><span class="icon-edit"></span>Editar meta</a></li>
+                                <li><a data-toggle="modal" data-target="#compartir"><span class="icon-share"></span>Compartir...</a></li>
+
+                                <li>
+                                    <a class="cancel" data-toggle="modal" data-target="#dreamCancelModal" onclick="llenarCancelacion('@metas.cuentaAhorro' +'|'+ '@metas.numeroSolicitud' +'|'+ '@metas.tipoDebito' +'|'+ '@metas.cuentaDebito' +'|'+ '@metas.cuotaMeta' +'|'+ '@metas.frecuencia' +'|'+ '@metas.diaDeb1' +'|'+ '@metas.diaDeb2' +'|'+ '@metas.montoMeta' +'|'+ '@metas.plazoMeta' +'|'+ '@metas.nombreMeta' +'|'+ '@metas.cuentasEnm')">
+                                        <span class="icon-cancel"></span>Cancelar meta
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="dream-detail-divider"></div>
+                <div class="dream-detail-body">
+                    <div class="dream-detail-info">
+                        <div class="dream-detail-goal">
+                            <p>Meta:<span>@metas.montoMetaForn</span></p>
+                        </div>
+                        <div class="dream-detail-save">
+                            <p>Cuota:<span>@metas.cuotaMetaForm</span></p>
+                        </div>
+                        <div class="dream-detail-time">
+                            <p id="plazoFecha">Plazo:<span>@metas.plazoMetaForm</span></p>
+                        </div>
+                    </div>
+
+                    <div class="dream-detail-circle">
+                        <div class="o-progress-circle o-progress-circle--rounded">
+                            <div class="o-progress-circle__number"><span class="data-percent">@metas.porcentaje</span><span>%</span></div>
+                            <div class="o-progress-circle__fill">
+                                <svg class="progress-icon" viewBox="0 0 40 40">
+                                    <defs>
+                                        <lineargradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                            <stop offset="0%" stop-color="#33e5e2"></stop>
+                                            <stop offset="100%" stop-color="#5ff096"></stop>
+                                        </lineargradient>
+                                    </defs>
+                                    <circle r="15.9154943092" cy="20" cx="20"></circle>
+                                    <circle class="load-circle" r="15.9154943092" cy="20" cx="20" stroke="url(#gradient)" stroke-dashoffset="" transform="rotate(-90,20,20)"></circle>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+        }
+    }
+</div>

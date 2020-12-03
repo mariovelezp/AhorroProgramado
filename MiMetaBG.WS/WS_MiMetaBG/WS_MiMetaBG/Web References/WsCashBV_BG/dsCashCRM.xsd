@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsCashCRM.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsCashCRM.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsCashCRM.xsd" id="dsCashCRM" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsCashCRM">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtCashCRM">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="CodigoEvento" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CodigoProducto" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Ciudad" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Cliente" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Identificacion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TipoIdentificacion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Email" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TelefonoDomicilio" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TelefonoOficina" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Celular" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Fax" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="MedioParaContactar" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="HorarioDeContacto" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FechaParaContacto" type="xs:string" />
+              <xs:element minOccurs="0" name="MantenerActualizado" type="xs:boolean" />
+              <xs:element minOccurs="0" default="" name="CtaCte1" type="xs:string" />
+              <xs:element minOccurs="0" default="false" name="BloqueaTCtaCte1" type="xs:boolean" />
+              <xs:element minOccurs="0" default="" name="CtaCte2" type="xs:string" />
+              <xs:element minOccurs="0" default="false" name="BloqueaTCtaCte2" type="xs:boolean" />
+              <xs:element minOccurs="0" default="" name="CtaCte3" type="xs:string" />
+              <xs:element minOccurs="0" default="false" name="BloqueaTCtaCte3" type="xs:boolean" />
+              <xs:element minOccurs="0" default="" name="DireccionDomicilio" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DireccionOficina" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="ParametrosAdicionales" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NombresCliente" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="ApellidosCliente" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Canal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Empresa" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="tipoTransaccion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="identificacionATM" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="montoReclamo" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtDatosContacto">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="TipoIdentificacion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Identificacion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CodCLTE" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Email" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Celular" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FormaEnvio" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Canal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Usuario" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Numero_Caso" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtDireccionContacto">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Tipo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Calle_Principal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Calle_Intercepta" type="xs:string" />
+              <xs:element minOccurs="0" name="Manzana" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Villa" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Barrio" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Referencia" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Ciudad" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Telefono" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtDatosAuditoria">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Sucursal" type="xs:string" />
+              <xs:element minOccurs="0" name="Agencia" type="xs:string" />
+              <xs:element minOccurs="0" name="Canal" type="xs:string" />
+              <xs:element minOccurs="0" name="Opid" type="xs:string" />
+              <xs:element minOccurs="0" name="Terminal" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

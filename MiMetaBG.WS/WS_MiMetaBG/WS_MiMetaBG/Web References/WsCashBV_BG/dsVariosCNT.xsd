@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsVariosCNT.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsVariosCNT.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsVariosCNT.xsd" id="dsVariosCNT" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsVariosCNT">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dt_Transaccion_In">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ID_SERVICIO" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPO_TRANS" type="xs:string" />
+              <xs:element minOccurs="0" name="HORA_TRANS_LOCAL" type="xs:string" />
+              <xs:element minOccurs="0" name="FECHA_TRANS_LOCAL" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPO_CONSULTA" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPO_SERVICIO" type="xs:string" />
+              <xs:element minOccurs="0" name="COD_INS" type="xs:string" />
+              <xs:element minOccurs="0" name="COD_AGENCIA" type="xs:string" />
+              <xs:element minOccurs="0" name="CAJERO" type="xs:string" />
+              <xs:element minOccurs="0" name="ID_SECUENCIAL" type="xs:string" />
+              <xs:element minOccurs="0" name="TERMINAL" type="xs:string" />
+              <xs:element minOccurs="0" name="VALOR_TOT" type="xs:string" />
+              <xs:element minOccurs="0" name="FECHA_COMPENSACION" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPO_MONEDA" type="xs:string" />
+              <xs:element minOccurs="0" name="ID_PAGO" type="xs:string" />
+              <xs:element minOccurs="0" name="AUD_IDTRANSACCION" type="xs:string" />
+              <xs:element minOccurs="0" name="AUD_CANAL" type="xs:string" />
+              <xs:element minOccurs="0" name="AUD_TERMINAL" type="xs:string" />
+              <xs:element minOccurs="0" name="MOT_REVERSA" type="xs:string" />
+              <xs:element minOccurs="0" name="AUD_OPERADOR" type="xs:string" />
+              <xs:element minOccurs="0" name="AUD_OFICINA" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_TransaccionOut">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ID_SERVICIO" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPO_TRANS" type="xs:string" />
+              <xs:element minOccurs="0" name="VALOR_DEUDA" type="xs:string" />
+              <xs:element minOccurs="0" name="HORA_TRANS_LOCAL" type="xs:string" />
+              <xs:element minOccurs="0" name="FECHA_TRANS_LOCAL" type="xs:string" />
+              <xs:element minOccurs="0" name="COD_RESPUESTA" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPO_SERVICIO" type="xs:string" />
+              <xs:element minOccurs="0" name="NUM_ID" type="xs:string" />
+              <xs:element minOccurs="0" name="COD_INS" type="xs:string" />
+              <xs:element minOccurs="0" name="COD_AGENCIA" type="xs:string" />
+              <xs:element minOccurs="0" name="CAJERO" type="xs:string" />
+              <xs:element minOccurs="0" name="ID_SECUENCIAL" type="xs:string" />
+              <xs:element minOccurs="0" name="TERMINAL" type="xs:string" />
+              <xs:element minOccurs="0" name="NOMBRES" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPO_MONEDA" type="xs:string" />
+              <xs:element minOccurs="0" name="CATEGORIA" type="xs:string" />
+              <xs:element minOccurs="0" name="NUM_CUENTA" type="xs:string" />
+              <xs:element minOccurs="0" name="FECHA_EMISION" type="xs:string" />
+              <xs:element minOccurs="0" name="SUB_TOTAL" type="xs:string" />
+              <xs:element minOccurs="0" name="RETENCION" type="xs:string" />
+              <xs:element minOccurs="0" name="BASE_IMP" type="xs:string" />
+              <xs:element minOccurs="0" name="ICE" type="xs:string" />
+              <xs:element minOccurs="0" name="CIC_FACT" type="xs:string" />
+              <xs:element minOccurs="0" name="NUM_CARGOS" type="xs:string" />
+              <xs:element minOccurs="0" name="ID_PAGO" type="xs:string" />
+              <xs:element minOccurs="0" name="FECHA_VENC" type="xs:string" />
+              <xs:element minOccurs="0" name="SRI" type="xs:string" />
+              <xs:element minOccurs="0" name="FECHA_VALIDEZ" type="xs:string" />
+              <xs:element minOccurs="0" name="NUM_FACTURA" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPO_MONEDA2" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_Transaccion_Det">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="SRI" type="xs:string" />
+              <xs:element minOccurs="0" name="FECHA_VALIDEZ" type="xs:string" />
+              <xs:element minOccurs="0" name="NUM_FACTURA" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPO_MONEDA" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

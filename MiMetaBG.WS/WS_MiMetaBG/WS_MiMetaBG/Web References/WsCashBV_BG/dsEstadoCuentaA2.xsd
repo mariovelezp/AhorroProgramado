@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsEstadoCuentaA2.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsEstadoCuentaA2.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsEstadoCuentaA2.xsd" id="dsEstadoCuentaA2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsEstadoCuentaA2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtEstadoCuentaA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Oficial" type="xs:string" />
+              <xs:element minOccurs="0" name="Tipo_moneda" type="xs:string" />
+              <xs:element minOccurs="0" name="Numero_cuenta" type="xs:string" />
+              <xs:element minOccurs="0" name="Periodo" type="xs:string" />
+              <xs:element minOccurs="0" name="Tipo_saldo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Marca" type="xs:string" />
+              <xs:element minOccurs="0" name="Tuitem_a" type="xs:string" />
+              <xs:element minOccurs="0" name="Puntero" type="xs:string" />
+              <xs:element minOccurs="0" name="Nombre_programa" type="xs:string" />
+              <xs:element minOccurs="0" name="Fecha_inicial" type="xs:string" />
+              <xs:element minOccurs="0" name="Anio_mes_final" type="xs:string" />
+              <xs:element minOccurs="0" name="Dia_final" type="xs:string" />
+              <xs:element minOccurs="0" name="Codigo_retorno" type="xs:string" />
+              <xs:element minOccurs="0" name="Saldo" type="xs:string" />
+              <xs:element minOccurs="0" name="Saldo_disponible" type="xs:string" />
+              <xs:element minOccurs="0" name="Saldo_confirmar" type="xs:string" />
+              <xs:element minOccurs="0" name="Nombre" type="xs:string" />
+              <xs:element minOccurs="0" name="Tuitem" type="xs:string" />
+              <xs:element minOccurs="0" name="Contador" type="xs:string" />
+              <xs:element minOccurs="0" name="CorreoOficial" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Movimientos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Fechtr" type="xs:string" />
+              <xs:element minOccurs="0" name="Fechco" type="xs:string" />
+              <xs:element minOccurs="0" name="Tip" type="xs:string" />
+              <xs:element minOccurs="0" name="TipDesc" type="xs:string" />
+              <xs:element minOccurs="0" name="Doc" type="xs:string" />
+              <xs:element minOccurs="0" name="Ref" type="xs:string" />
+              <xs:element minOccurs="0" name="Agc" type="xs:string" />
+              <xs:element msdata:Caption="Column1" minOccurs="0" default="" name="Signo" type="xs:string" />
+              <xs:element minOccurs="0" name="Deb" type="xs:string" />
+              <xs:element minOccurs="0" name="Dis" type="xs:string" />
+              <xs:element minOccurs="0" name="Sal" type="xs:string" />
+              <xs:element minOccurs="0" name="CL_Fecha" type="xs:string" />
+              <xs:element minOccurs="0" name="CL_Hora" type="xs:string" />
+              <xs:element minOccurs="0" name="CL_Indic" type="xs:string" />
+              <xs:element minOccurs="0" name="Puntero_Det" type="xs:string" />
+              <xs:element minOccurs="0" name="Marca_Det" type="xs:string" />
+              <xs:element minOccurs="0" name="Ref1" type="xs:string" />
+              <xs:element minOccurs="0" name="Procedencia" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Ref2" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Ref3" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsConsultaPacifictel.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsConsultaPacifictel.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsConsultaPacifictel.xsd" id="dsConsultaPacifictel" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsConsultaPacifictel">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtConsultaIn">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Cod_Banco" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Cod_Transaccion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Cod_Seguridad" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Sec_Transaccion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Fecha_Envio" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Hora_Envio" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Tipo_Transaccion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Operacion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CI_RUC" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Numero" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Area" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtConsultaOUT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Cod_Banco" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Cod_Transaccion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Cod_Seguridad" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Sec_Transaccion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Fecha_Envio" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Hora_Envio" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Cod_Retorno" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Operacion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CI_RUC" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Numero" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Nombre_Cliente" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Direccion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Lectura_Inicial" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Lectura_Final" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Fecha_Emision_Doc" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Categoria" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PBX" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Num_Doc" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Cod_SRI" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Anio_Mes" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Mensaje" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Valor" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Estado_Tramite" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Rubros" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

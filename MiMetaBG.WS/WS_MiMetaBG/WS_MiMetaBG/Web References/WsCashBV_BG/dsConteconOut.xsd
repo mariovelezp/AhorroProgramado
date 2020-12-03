@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsConteconOut.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsConteconOut.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsConteconOut.xsd" id="dsConteconOut" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsConteconOut">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtResConsulta">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CodigoDocumento" type="xs:string" />
+              <xs:element minOccurs="0" name="CodigoCliente" type="xs:string" />
+              <xs:element minOccurs="0" name="Cliente" type="xs:string" />
+              <xs:element minOccurs="0" name="Total" type="xs:double" />
+              <xs:element minOccurs="0" name="TotalMenosRetencion" type="xs:double" />
+              <xs:element minOccurs="0" name="Mensaje_Respuesta" type="xs:string" />
+              <xs:element minOccurs="0" default="0000" name="Codigo_Respuesta" type="xs:string" />
+              <xs:element minOccurs="0" name="Codigo_Ret_Comunicacion" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtResPagarReversar">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="PagarResult" type="xs:string" />
+              <xs:element minOccurs="0" name="Mensaje_Respuesta" type="xs:string" />
+              <xs:element minOccurs="0" name="Codigo_Respuesta" type="xs:string" />
+              <xs:element minOccurs="0" name="Codigo_Ret_Comunicacion" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtIdentificacionData">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CodigoGW" type="xs:string" />
+              <xs:element minOccurs="0" name="CodigoIFI" type="xs:string" />
+              <xs:element minOccurs="0" name="Token" type="xs:string" />
+              <xs:element minOccurs="0" name="FirmaData" type="xs:string" />
+              <xs:element minOccurs="0" name="FirmaIdentificacion" type="xs:string" />
+              <xs:element minOccurs="0" name="FechaHoraIFI" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

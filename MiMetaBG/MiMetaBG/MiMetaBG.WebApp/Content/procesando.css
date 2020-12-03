@@ -1,0 +1,153 @@
+﻿/*---------------------------*/
+/*-------- PROCESANDO -------*/
+/*---------------------------*/
+
+.cartprocess {
+    background: #6c96de38;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: fixed;
+    z-index: 99999;
+	opacity: 0.8;
+    /* filter: alpha(opacity=50); For IE8 and earlier */
+}
+
+    .cartprocess .inbox {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        margin-left: -7%;
+        color: #FFF;
+        font-size: 30px;
+        text-align: center;
+    }
+
+        .cartprocess .inbox .a {
+            margin-bottom: 15px;
+        }
+
+        .cartprocess .inbox .b {
+        }
+
+@media screen and (max-width: 529px) {
+  
+	.cartprocess .inbox {
+		 margin-left: -30%;		
+	}
+}
+
+
+@media screen and (max-width: 729px) {
+  
+	.cartprocess .inbox {
+		 margin-left: -26%;		
+	}
+}
+
+/*
+@media (max-width:380px) {
+    .cartprocess .inbox 
+    {
+        position: absolute;
+        top: 40%;
+        left: 30%;
+        margin-left: -7%;
+        color: #FFF;
+        font-size: 30px;
+        text-align: center;
+
+    }
+}
+
+
+@media (max-width:480px) {
+    .cartprocess .inbox 
+    {
+        position: absolute;
+        top: 40%;
+        left: 30%;
+        margin-left: -7%;
+        color: #FFF;
+        font-size: 30px;
+        text-align: center;
+
+    }
+}
+
+@media (max-width:580px) {
+    .cartprocess .inbox 
+    {
+        position: absolute;
+        top: 40%;
+        left: 32%;
+        margin-left: -7%;
+        color: #FFF;
+        font-size: 30px;
+        text-align: center;
+
+    }
+}
+
+@media (max-width:640px) {
+    .cartprocess .inbox 
+    {
+        position: absolute;
+        top: 40%;
+        left: 44%;
+        margin-left: -7%;
+        color: #FFF;
+        font-size: 30px;
+        text-align: center;
+
+    }
+}
+
+@media (max-width:720px) {
+    .cartprocess .inbox 
+    {
+        position: absolute;
+        top: 40%;
+        
+        margin-left: -7%;
+        color: #FFF;
+        font-size: 30px;
+        text-align: center;
+
+    }
+}
+
+
+@media (max-width: 992px) {
+    .cartprocess .inbox 
+    {
+        position: absolute;
+        top: 40%;
+        margin-left: -7%;
+        color: #FFF;
+        font-size: 30px;
+        text-align: center;
+
+    }
+}
+
+@media (max-width: 1140px) {
+    .cartprocess .inbox 
+    {
+        position: absolute;
+        top: 40%;
+        left: 47%;
+        margin-left: -7%;
+        color: #FFF;
+        font-size: 30px;
+        text-align: center;
+
+    }
+}
+
+.justify-content-end {
+    -webkit-box-pack: end!important;
+    -ms-flex-pack: end!important;
+    justify-content: flex-end!important;
+}   */

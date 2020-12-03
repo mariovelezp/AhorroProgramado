@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsRecargaCnt.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsRecargaCnt.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsRecargaCnt.xsd" id="dsRecargaCnt" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsRecargaCnt">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dt_Transaccion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="TIPO_TRANS" type="xs:string" />
+              <xs:element minOccurs="0" name="EXTERNALID" type="xs:string" />
+              <xs:element minOccurs="0" name="BANCOID" type="xs:string" />
+              <xs:element minOccurs="0" name="TERMINALID" type="xs:string" />
+              <xs:element minOccurs="0" name="MEDIOID" type="xs:string" />
+              <xs:element minOccurs="0" name="SERVICENUMBER" type="xs:string" />
+              <xs:element minOccurs="0" name="VALORCREDITO" type="xs:string" />
+              <xs:element minOccurs="0" name="LUGARTRANS" type="xs:string" />
+              <xs:element minOccurs="0" name="PASSBAN" type="xs:string" />
+              <xs:element minOccurs="0" name="NUMBYTES" type="xs:string" />
+              <xs:element minOccurs="0" name="LENMSG" type="xs:string" />
+              <xs:element minOccurs="0" name="MSGNUM" type="xs:string" />
+              <xs:element minOccurs="0" name="BTRNNO" type="xs:string" />
+              <xs:element minOccurs="0" name="ERRCDE" type="xs:string" />
+              <xs:element minOccurs="0" name="CTRNNO" type="xs:string" />
+              <xs:element minOccurs="0" name="PPINNO" type="xs:string" />
+              <xs:element minOccurs="0" name="ACCCDT" type="xs:string" />
+              <xs:element minOccurs="0" name="EXPDTE" type="xs:string" />
+              <xs:element minOccurs="0" name="ACTBAL" type="xs:string" />
+              <xs:element minOccurs="0" name="TAXICE" type="xs:string" />
+              <xs:element minOccurs="0" name="VALTAI" type="xs:string" />
+              <xs:element minOccurs="0" name="TAXIVA" type="xs:string" />
+              <xs:element minOccurs="0" name="RAZSOC" type="xs:string" />
+              <xs:element minOccurs="0" name="DIRMAT" type="xs:string" />
+              <xs:element minOccurs="0" name="NOMCLI" type="xs:string" />
+              <xs:element minOccurs="0" name="CEDCLI" type="xs:string" />
+              <xs:element minOccurs="0" name="NUMFAC" type="xs:string" />
+              <xs:element minOccurs="0" name="AUTSRI" type="xs:string" />
+              <xs:element minOccurs="0" name="EXPSRI" type="xs:string" />
+              <xs:element minOccurs="0" name="FECEMI" type="xs:string" />
+              <xs:element minOccurs="0" name="TERMINALCICS" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_reverso">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ACCCDT" type="xs:string" />
+              <xs:element minOccurs="0" name="ERRCDE" type="xs:string" />
+              <xs:element minOccurs="0" name="DETALLE" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsAperturaPoliza.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsAperturaPoliza.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsAperturaPoliza.xsd" id="dsAperturaPoliza" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsAperturaPoliza">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtAperturaPoliza">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Transaccion" type="xs:string" />
+              <xs:element minOccurs="0" name="Direccion_IP" type="xs:string" />
+              <xs:element minOccurs="0" name="Identificador" type="xs:string" />
+              <xs:element minOccurs="0" name="Canal" type="xs:string" />
+              <xs:element minOccurs="0" name="nombre" type="xs:string" />
+              <xs:element minOccurs="0" name="fecha_emision" type="xs:string" />
+              <xs:element minOccurs="0" name="capital" type="xs:string" />
+              <xs:element minOccurs="0" name="plazo" type="xs:string" />
+              <xs:element minOccurs="0" name="tasa_interes" type="xs:string" />
+              <xs:element minOccurs="0" name="periocidad_interes" type="xs:string" />
+              <xs:element minOccurs="0" name="documento" type="xs:string" />
+              <xs:element minOccurs="0" name="fecha_vecimiento" type="xs:string" />
+              <xs:element minOccurs="0" name="interes_a_pagar" type="xs:string" />
+              <xs:element minOccurs="0" name="impuesto" type="xs:string" />
+              <xs:element minOccurs="0" name="neto_a_recibir" type="xs:string" />
+              <xs:element minOccurs="0" name="cuenta_debito_1" type="xs:string" />
+              <xs:element minOccurs="0" name="monto_debito_1" type="xs:string" />
+              <xs:element minOccurs="0" name="cuenta_debito_2" type="xs:string" />
+              <xs:element minOccurs="0" name="monto_debito_2" type="xs:string" />
+              <xs:element minOccurs="0" name="cuenta_credito_intereses" type="xs:string" />
+              <xs:element minOccurs="0" name="cuenta_credito_ncap" type="xs:string" />
+              <xs:element minOccurs="0" name="capital_anterior" type="xs:string" />
+              <xs:element minOccurs="0" name="intereses_anterior" type="xs:string" />
+              <xs:element minOccurs="0" name="agencia" type="xs:string" />
+              <xs:element minOccurs="0" name="codigoretorno" type="xs:string" />
+              <xs:element minOccurs="0" name="marca" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

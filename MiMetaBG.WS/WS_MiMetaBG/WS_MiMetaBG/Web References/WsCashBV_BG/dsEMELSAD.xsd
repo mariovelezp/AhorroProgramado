@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsEMELSAD.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsEMELSAD.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsEMELSAD.xsd" id="dsEMELSAD" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsEMELSAD">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dt_Transaccion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="CODIGO_TRANSACCION_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CANAL_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TERMINAL_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="OPID_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FECHA_PROCESO_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FECHA_CONTABLE_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="HORA_PROCESO_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="OFICINA_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="COD_FACTURA_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="VALOR_PAGAR_IO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CODIGO_ERROR_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DESC_ERROR_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NOMBRE_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="MEDIDOR_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="INGRESO_CAJA_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FECHA_CNEL_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="HORA_CNEL_O" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

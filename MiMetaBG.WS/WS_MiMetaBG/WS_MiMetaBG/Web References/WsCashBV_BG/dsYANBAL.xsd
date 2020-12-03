@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsYANBAL.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsYANBAL.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsYANBAL.xsd" id="dsYANBAL" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsYANBAL">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dt_Transaccion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="TIPO_TRANSACION_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CANAL_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TERMINAL_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="OPID_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FECHA_TRANSACCION_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="HORA_TRANSACCION_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TIPO_CONSULTA_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PARAMETRO_BUSQUEDA_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="MONEDA_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="VALOR_PAGO_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TERMINAL_YANBAL_ID_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TIPO_PROCESO_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="MODO_PROCESO_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="ID_TRANSACCION_IO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="COD_RESPUESTA_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DES_RESPUESTA_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NOMBRE_CLIENTE_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CEDULA_CODIGO_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DEUDA_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="ID_TXR_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="VALOR_DISP_OC_O" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

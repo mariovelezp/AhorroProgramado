@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsTVCable2.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsTVCable2.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsTVCable2.xsd" id="dsTVCable2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsTVCable2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dt_TVCableIn">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="identificador" type="xs:string" />
+              <xs:element minOccurs="0" name="tip_identificador" type="xs:string" />
+              <xs:element minOccurs="0" name="transaccionid" type="xs:string" />
+              <xs:element minOccurs="0" name="valor_pago" type="xs:double" />
+              <xs:element minOccurs="0" name="secuencial" type="xs:string" />
+              <xs:element minOccurs="0" name="docid" type="xs:string" />
+              <xs:element minOccurs="0" name="terminal" type="xs:string" />
+              <xs:element minOccurs="0" name="operadorid" type="xs:string" />
+              <xs:element minOccurs="0" name="sucursal" type="xs:string" />
+              <xs:element minOccurs="0" name="canal" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_TVCableOut">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="nombre_cliente" type="xs:string" />
+              <xs:element minOccurs="0" name="cant_cuentas" type="xs:string" />
+              <xs:element minOccurs="0" name="coderror" type="xs:string" />
+              <xs:element minOccurs="0" name="msgerror" type="xs:string" />
+              <xs:element minOccurs="0" name="emp_facturadora" type="xs:string" />
+              <xs:element minOccurs="0" name="doc_id" type="xs:string" />
+              <xs:element minOccurs="0" name="secuencial" type="xs:string" />
+              <xs:element minOccurs="0" name="coderrorBG" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_TVCableDetalle">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="saldos" type="xs:string" />
+              <xs:element minOccurs="0" name="nombre_cta" type="xs:string" />
+              <xs:element minOccurs="0" name="emp_facturadora" type="xs:string" />
+              <xs:element minOccurs="0" name="ciudad" type="xs:string" />
+              <xs:element minOccurs="0" name="negocio" type="xs:string" />
+              <xs:element minOccurs="0" name="num_cta" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

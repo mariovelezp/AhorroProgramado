@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsSimPortaOut.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsSimPortaOut.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsSimPortaOut.xsd" id="dsSimPortaOut" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsSimPortaOut">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dt_Transaccion_SimPorta">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Codigo_Ret_Comunicacion" type="xs:string" />
+              <xs:element minOccurs="0" name="Codigo_Respuesta" type="xs:string" />
+              <xs:element minOccurs="0" name="Mensaje_Respuesta" type="xs:string" />
+              <xs:element minOccurs="0" name="Producto" type="xs:string" />
+              <xs:element minOccurs="0" name="Preguntas" type="xs:string" />
+              <xs:element minOccurs="0" name="Opciones_Preguntas" type="xs:string" />
+              <xs:element minOccurs="0" name="Identificacion" type="xs:string" />
+              <xs:element minOccurs="0" name="NombreCliente" type="xs:string" />
+              <xs:element minOccurs="0" name="Num_Autorizacion_Porta" type="xs:string" />
+              <xs:element minOccurs="0" name="Valor" type="xs:string" />
+              <xs:element minOccurs="0" name="Valor_Iva" type="xs:string" />
+              <xs:element minOccurs="0" name="Numero_Cuenta" type="xs:string" />
+              <xs:element minOccurs="0" name="Descripcion_Cantidad" type="xs:string" />
+              <xs:element minOccurs="0" name="Descripcion_Producto" type="xs:string" />
+              <xs:element minOccurs="0" name="Numero_Factura" type="xs:string" />
+              <xs:element minOccurs="0" name="Intento" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TIPO_IDENTIFICACION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" default="" name="IDENTIFICACION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" default="" name="NOMBRE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="70" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_Transaccion_AmigoChip">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Identificacion" type="xs:string" />
+              <xs:element minOccurs="0" name="Codigo_Ret_Comunicacion" type="xs:string" />
+              <xs:element minOccurs="0" name="Codigo_Respuesta" type="xs:string" />
+              <xs:element minOccurs="0" name="Mensaje_Respuesta" type="xs:string" />
+              <xs:element minOccurs="0" name="NombreCliente" type="xs:string" />
+              <xs:element minOccurs="0" name="Descripcion_Cantidad" type="xs:string" />
+              <xs:element minOccurs="0" name="Descripcion_Producto" type="xs:string" />
+              <xs:element minOccurs="0" name="Valor" type="xs:string" />
+              <xs:element minOccurs="0" name="Descuento" type="xs:string" />
+              <xs:element minOccurs="0" name="Valor_Iva" type="xs:string" />
+              <xs:element minOccurs="0" name="Num_Autorizacion_Porta" type="xs:string" />
+              <xs:element minOccurs="0" name="Numero_Factura" type="xs:string" />
+              <xs:element minOccurs="0" name="Numero_Telefono" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TIPO_IDENTIFICACION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" default="" name="IDENTIFICACION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" default="" name="NOMBRE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="70" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

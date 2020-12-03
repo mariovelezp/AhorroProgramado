@@ -1,0 +1,1160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="MiMetaBG_ConsultaSegmentos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="reques" type="tns:SegmentoRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SegmentoRequest">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MarcaImagen" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ip" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Aplicacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="idPantalla" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MiMetaBG_ConsultaSegmentosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MiMetaBG_ConsultaSegmentosResult" type="tns:SegmentoResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SegmentoResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="codigoRetorno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mensajeRetorno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="listaSegmento" type="tns:ArrayOfSegmentoBG" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSegmentoBG">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SegmentoBG" nillable="true" type="tns:SegmentoBG" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SegmentoBG">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="idSegmento" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="imagen" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="emojin" type="s:base64Binary" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MiMetaBG_Monto_Tiempo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:ParametroRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ParametroRequest">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MarcaImagen" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="idSegmento" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ip" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Aplicacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="idPantalla" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MiMetaBG_Monto_TiempoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MiMetaBG_Monto_TiempoResult" type="tns:ParametroResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ParametroResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="codigoRetorno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mensajeRetorno" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="montoInicial" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="montoFinal" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="tiempoIncial" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="tiempoFinal" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="mensaje" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="imagSegmento" type="tns:ArrayOfImagSegmento" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfImagSegmento">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ImagSegmento" nillable="true" type="tns:ImagSegmento" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ImagSegmento">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="segmentoId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="emojid" type="s:base64Binary" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MiMetaBG_ValidacionCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:ValidacionClienteRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ValidacionClienteRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="identificacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tipoIdentificacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ip" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="aplicacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="idPantalla" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MiMetaBG_ValidacionClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MiMetaBG_ValidacionClienteResult" type="tns:ValidacionClienteResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ValidacionClienteResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="codigoRetorno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mensajeRetorno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="correoElectronico" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombreCliente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="correoSinMascara" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="fullName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MiMetaBG_ValidacionOTP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:ValidacionClienteOTPRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ValidacionClienteOTPRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="identificacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tipoIdentificacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="codigoOTP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ip" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="aplicacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="idPantalla" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MiMetaBG_ValidacionOTPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MiMetaBG_ValidacionOTPResult" type="tns:ValidacionClienteOTPResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ValidacionClienteOTPResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="tokenValidacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="codigoRetorno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mensajeRetorno" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MiMetaBG_ListaCuentas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:CuentasRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CuentasRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="tokenValidacion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="idSegmento" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ip" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="aplicacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="idPantalla" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MiMetaBG_ListaCuentasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MiMetaBG_ListaCuentasResult" type="tns:CuentasResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CuentasResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="codigoRetorno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mensajeRetorno" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="idSegmento" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="imagenes" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListaUna" type="tns:ArrayOfObtenerUna" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListaTodas" type="tns:ArrayOfObtenerTodas" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfObtenerUna">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ObtenerUna" nillable="true" type="tns:ObtenerUna" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ObtenerUna">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="cta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ctaEnm" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tipo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfObtenerTodas">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ObtenerTodas" nillable="true" type="tns:ObtenerTodas" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ObtenerTodas">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="cta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ctaEnm" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tipo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MiMetaBG_Creacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:MetaRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MetaRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="tokenValidacion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="idSegmento" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombreMeta" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="fechaCreacion" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="direccionIP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="macAdress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="accion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="cuentaMultiple" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="numeroSolicitud" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="tipoCtaDebito" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cuentaDebito" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="montoDebito" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="frencuencia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="diaUnoDebito" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="diaDosDebito" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="montoMeta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="fechaVencimiento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="idPantalla" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="correoSinMascara" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="fullName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="montoFinalMeta" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MiMetaBG_CreacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MiMetaBG_CreacionResult" type="tns:MetaResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MetaResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="codigoRetorno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mensajeRetorno" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="numeroSolicitud" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MiMetaBG_ConsultaMasiva">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:ConsultaMetasRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ConsultaMetasRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="tokenValidacion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="idSegmento" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ip" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="aplicacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="idPantalla" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MiMetaBG_ConsultaMasivaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MiMetaBG_ConsultaMasivaResult" type="tns:ConsultaMetasResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ConsultaMetasResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="codigoRetorno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mensajeRetorno" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="tiempoIncial" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="tiempoFinal" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="montoInicial" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="montoFinal" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="listasMetasCreadas" type="tns:ArrayOfListaMetas" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListaTodas" type="tns:ArrayOfObtenerTodasEditar" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListaVentasCruzadas" type="tns:ArrayOfVentasCruzadas" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfListaMetas">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ListaMetas" nillable="true" type="tns:ListaMetas" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ListaMetas">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="cuentaAhorro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cuenta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="numeroSolicitud" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cuentaDebito" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tipoCuentaDebito" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="frecuenciaDebito" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="diaDebito1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="diaDebito2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="montoMeta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cuotaMeta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="fechaEmision" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="valorDebitosAcumulados" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="montoMetaform" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="plazoMeta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombreMeta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cuotaMetaform" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="plazoMetaform" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="idSegmento" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="emojid" type="s:base64Binary" />
+          <s:element minOccurs="1" maxOccurs="1" name="porcentaje" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfObtenerTodasEditar">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ObtenerTodasEditar" nillable="true" type="tns:ObtenerTodasEditar" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ObtenerTodasEditar">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="cta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ctaEnm" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tipo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfVentasCruzadas">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="VentasCruzadas" nillable="true" type="tns:VentasCruzadas" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="VentasCruzadas">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="codigoCruzar" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="valorCruzar" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MiMetaBG_ValorAdicional">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:MetaAdicionalRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MetaAdicionalRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="tokenValidacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ctaD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ctaC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="valorD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ip" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="macAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tipoTarD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tipoTarC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ctaEmpresa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="numeroSolicitud" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="referencia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdTipoBeneficiario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="aplicativo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="idPantalla" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MiMetaBG_ValorAdicionalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MiMetaBG_ValorAdicionalResult" type="tns:MetaAdicionalResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MetaAdicionalResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="codigoRetorno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mensajeRetorno" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MiMetaBG_ValidarToken">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:TokenRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TokenRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="tokenValidacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ip" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="aplicacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="idPantalla" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MiMetaBG_ValidarTokenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MiMetaBG_ValidarTokenResult" type="tns:TokenResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TokenResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="codigoRetorno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mensajeRetorno" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MiMetaBG_VentasCruzadas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:VentasCruzadasRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="VentasCruzadasRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="tokenValidacion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="cantidadVecesMostradas" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ip" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="aplicacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="idPantalla" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MiMetaBG_VentasCruzadasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MiMetaBG_VentasCruzadasResult" type="tns:VentaCruzadaResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="VentaCruzadaResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="codigoRetorno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mensajeRetorno" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MiMetaBG_GrabaSegmento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdSegmento" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:prvSegmentoRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="prvSegmentoRequest">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="idSegmento" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="codimagen" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="umbral" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="estado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="prod_cruz" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="prioridad" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mensaje_seg" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cod_host" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MiMetaBG_GrabaSegmentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MiMetaBG_GrabaSegmentoResult" type="tns:prvSegmentoResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="prvSegmentoResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="codigoRetorno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mensajeRetorno" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MiMetaBG_ConsGeneralSegmento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="reques" type="tns:prvSegmentoGralRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="prvSegmentoGralRequest">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MarcaImagen" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ip" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Aplicacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="idPantalla" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MiMetaBG_ConsGeneralSegmentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MiMetaBG_ConsGeneralSegmentoResult" type="tns:prvSegmentoGralResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="prvSegmentoGralResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="codigoRetorno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mensajeRetorno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="listaSegmento" type="tns:ArrayOfSegmentoGralBG" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSegmentoGralBG">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SegmentoGralBG" nillable="true" type="tns:SegmentoGralBG" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SegmentoGralBG">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="idSegmento" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="imagen" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="emojin" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="codimagen" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="umbral" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="estado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="prod_cruz" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="prioridad" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mensaje_seg" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cod_host" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MiMetaBG_ConsGeneralImagen">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="reques" type="tns:prvImagenGralRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="prvImagenGralRequest">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MarcaImagen" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ip" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Aplicacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="idPantalla" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MiMetaBG_ConsGeneralImagenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MiMetaBG_ConsGeneralImagenResult" type="tns:prvImagenGralResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="prvImagenGralResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="codigoRetorno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mensajeRetorno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="listaImagen" type="tns:ArrayOfImagenGralBG" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfImagenGralBG">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ImagenGralBG" nillable="true" type="tns:ImagenGralBG" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ImagenGralBG">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="codimagen" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="imagen" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="emojin" type="s:base64Binary" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MiMetaBG_ConsGeneralProducto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="reques" type="tns:prvProductoGralRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="prvProductoGralRequest">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MarcaImagen" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ip" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Aplicacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="idPantalla" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MiMetaBG_ConsGeneralProductoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MiMetaBG_ConsGeneralProductoResult" type="tns:prvProductoGralResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="prvProductoGralResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="codigoRetorno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mensajeRetorno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="listaProducto" type="tns:ArrayOfProductoGralBG" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfProductoGralBG">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ProductoGralBG" nillable="true" type="tns:ProductoGralBG" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProductoGralBG">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="idproducto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="descripcionproducto" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MiMetaBG_ConsultaUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="reques" type="tns:prvLoginRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="prvLoginRequest">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id_codigo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MiMetaBG_ConsultaUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MiMetaBG_ConsultaUsuarioResult" type="tns:prvLoginResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="prvLoginResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="codigoRetorno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mensajeRetorno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="listaUsuario" type="tns:ArrayOfUsuarioBG" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfUsuarioBG">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="UsuarioBG" nillable="true" type="tns:UsuarioBG" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="UsuarioBG">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id_codigo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Aplicacion" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MiMetaBG_GrabaImagen">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Codimagen" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:prvImagenRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="prvImagenRequest">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Codimagen" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="imagen" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="emojin" type="s:base64Binary" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MiMetaBG_GrabaImagenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MiMetaBG_GrabaImagenResult" type="tns:prvImagenResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="prvImagenResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="codigoRetorno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mensajeRetorno" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="MiMetaBG_ConsultaSegmentosSoapIn">
+    <wsdl:part name="parameters" element="tns:MiMetaBG_ConsultaSegmentos" />
+  </wsdl:message>
+  <wsdl:message name="MiMetaBG_ConsultaSegmentosSoapOut">
+    <wsdl:part name="parameters" element="tns:MiMetaBG_ConsultaSegmentosResponse" />
+  </wsdl:message>
+  <wsdl:message name="MiMetaBG_Monto_TiempoSoapIn">
+    <wsdl:part name="parameters" element="tns:MiMetaBG_Monto_Tiempo" />
+  </wsdl:message>
+  <wsdl:message name="MiMetaBG_Monto_TiempoSoapOut">
+    <wsdl:part name="parameters" element="tns:MiMetaBG_Monto_TiempoResponse" />
+  </wsdl:message>
+  <wsdl:message name="MiMetaBG_ValidacionClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:MiMetaBG_ValidacionCliente" />
+  </wsdl:message>
+  <wsdl:message name="MiMetaBG_ValidacionClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:MiMetaBG_ValidacionClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="MiMetaBG_ValidacionOTPSoapIn">
+    <wsdl:part name="parameters" element="tns:MiMetaBG_ValidacionOTP" />
+  </wsdl:message>
+  <wsdl:message name="MiMetaBG_ValidacionOTPSoapOut">
+    <wsdl:part name="parameters" element="tns:MiMetaBG_ValidacionOTPResponse" />
+  </wsdl:message>
+  <wsdl:message name="MiMetaBG_ListaCuentasSoapIn">
+    <wsdl:part name="parameters" element="tns:MiMetaBG_ListaCuentas" />
+  </wsdl:message>
+  <wsdl:message name="MiMetaBG_ListaCuentasSoapOut">
+    <wsdl:part name="parameters" element="tns:MiMetaBG_ListaCuentasResponse" />
+  </wsdl:message>
+  <wsdl:message name="MiMetaBG_CreacionSoapIn">
+    <wsdl:part name="parameters" element="tns:MiMetaBG_Creacion" />
+  </wsdl:message>
+  <wsdl:message name="MiMetaBG_CreacionSoapOut">
+    <wsdl:part name="parameters" element="tns:MiMetaBG_CreacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="MiMetaBG_ConsultaMasivaSoapIn">
+    <wsdl:part name="parameters" element="tns:MiMetaBG_ConsultaMasiva" />
+  </wsdl:message>
+  <wsdl:message name="MiMetaBG_ConsultaMasivaSoapOut">
+    <wsdl:part name="parameters" element="tns:MiMetaBG_ConsultaMasivaResponse" />
+  </wsdl:message>
+  <wsdl:message name="MiMetaBG_ValorAdicionalSoapIn">
+    <wsdl:part name="parameters" element="tns:MiMetaBG_ValorAdicional" />
+  </wsdl:message>
+  <wsdl:message name="MiMetaBG_ValorAdicionalSoapOut">
+    <wsdl:part name="parameters" element="tns:MiMetaBG_ValorAdicionalResponse" />
+  </wsdl:message>
+  <wsdl:message name="MiMetaBG_ValidarTokenSoapIn">
+    <wsdl:part name="parameters" element="tns:MiMetaBG_ValidarToken" />
+  </wsdl:message>
+  <wsdl:message name="MiMetaBG_ValidarTokenSoapOut">
+    <wsdl:part name="parameters" element="tns:MiMetaBG_ValidarTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="MiMetaBG_VentasCruzadasSoapIn">
+    <wsdl:part name="parameters" element="tns:MiMetaBG_VentasCruzadas" />
+  </wsdl:message>
+  <wsdl:message name="MiMetaBG_VentasCruzadasSoapOut">
+    <wsdl:part name="parameters" element="tns:MiMetaBG_VentasCruzadasResponse" />
+  </wsdl:message>
+  <wsdl:message name="MiMetaBG_GrabaSegmentoSoapIn">
+    <wsdl:part name="parameters" element="tns:MiMetaBG_GrabaSegmento" />
+  </wsdl:message>
+  <wsdl:message name="MiMetaBG_GrabaSegmentoSoapOut">
+    <wsdl:part name="parameters" element="tns:MiMetaBG_GrabaSegmentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="MiMetaBG_ConsGeneralSegmentoSoapIn">
+    <wsdl:part name="parameters" element="tns:MiMetaBG_ConsGeneralSegmento" />
+  </wsdl:message>
+  <wsdl:message name="MiMetaBG_ConsGeneralSegmentoSoapOut">
+    <wsdl:part name="parameters" element="tns:MiMetaBG_ConsGeneralSegmentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="MiMetaBG_ConsGeneralImagenSoapIn">
+    <wsdl:part name="parameters" element="tns:MiMetaBG_ConsGeneralImagen" />
+  </wsdl:message>
+  <wsdl:message name="MiMetaBG_ConsGeneralImagenSoapOut">
+    <wsdl:part name="parameters" element="tns:MiMetaBG_ConsGeneralImagenResponse" />
+  </wsdl:message>
+  <wsdl:message name="MiMetaBG_ConsGeneralProductoSoapIn">
+    <wsdl:part name="parameters" element="tns:MiMetaBG_ConsGeneralProducto" />
+  </wsdl:message>
+  <wsdl:message name="MiMetaBG_ConsGeneralProductoSoapOut">
+    <wsdl:part name="parameters" element="tns:MiMetaBG_ConsGeneralProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="MiMetaBG_ConsultaUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:MiMetaBG_ConsultaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="MiMetaBG_ConsultaUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:MiMetaBG_ConsultaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="MiMetaBG_GrabaImagenSoapIn">
+    <wsdl:part name="parameters" element="tns:MiMetaBG_GrabaImagen" />
+  </wsdl:message>
+  <wsdl:message name="MiMetaBG_GrabaImagenSoapOut">
+    <wsdl:part name="parameters" element="tns:MiMetaBG_GrabaImagenResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WS_MiMetaBGSoap">
+    <wsdl:operation name="MiMetaBG_ConsultaSegmentos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MiMetaBG: Consultas de Segmentos</wsdl:documentation>
+      <wsdl:input message="tns:MiMetaBG_ConsultaSegmentosSoapIn" />
+      <wsdl:output message="tns:MiMetaBG_ConsultaSegmentosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_Monto_Tiempo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MiMetaBG: Consulta Parametrización de Monto y Tiempo</wsdl:documentation>
+      <wsdl:input message="tns:MiMetaBG_Monto_TiempoSoapIn" />
+      <wsdl:output message="tns:MiMetaBG_Monto_TiempoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_ValidacionCliente">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MiMetaBG: Validacion de Cliente OTP</wsdl:documentation>
+      <wsdl:input message="tns:MiMetaBG_ValidacionClienteSoapIn" />
+      <wsdl:output message="tns:MiMetaBG_ValidacionClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_ValidacionOTP">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MiMetaBG: Validacion de OTP</wsdl:documentation>
+      <wsdl:input message="tns:MiMetaBG_ValidacionOTPSoapIn" />
+      <wsdl:output message="tns:MiMetaBG_ValidacionOTPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_ListaCuentas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MiMetaBG: Consulta datos cuentas</wsdl:documentation>
+      <wsdl:input message="tns:MiMetaBG_ListaCuentasSoapIn" />
+      <wsdl:output message="tns:MiMetaBG_ListaCuentasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_Creacion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MiMetaBG: Crear, editar, cancelar Metas</wsdl:documentation>
+      <wsdl:input message="tns:MiMetaBG_CreacionSoapIn" />
+      <wsdl:output message="tns:MiMetaBG_CreacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_ConsultaMasiva">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MiMetaBG: Consulta Masiva Sueño</wsdl:documentation>
+      <wsdl:input message="tns:MiMetaBG_ConsultaMasivaSoapIn" />
+      <wsdl:output message="tns:MiMetaBG_ConsultaMasivaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_ValorAdicional">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MiMetaBG: Valor Extraordinario</wsdl:documentation>
+      <wsdl:input message="tns:MiMetaBG_ValorAdicionalSoapIn" />
+      <wsdl:output message="tns:MiMetaBG_ValorAdicionalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_ValidarToken">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MiMetaBG: Validación de Token</wsdl:documentation>
+      <wsdl:input message="tns:MiMetaBG_ValidarTokenSoapIn" />
+      <wsdl:output message="tns:MiMetaBG_ValidarTokenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_VentasCruzadas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MiMetaBG: Actualizar Ventas Cruzada</wsdl:documentation>
+      <wsdl:input message="tns:MiMetaBG_VentasCruzadasSoapIn" />
+      <wsdl:output message="tns:MiMetaBG_VentasCruzadasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_GrabaSegmento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MiMetaBG: Graba Segmento</wsdl:documentation>
+      <wsdl:input message="tns:MiMetaBG_GrabaSegmentoSoapIn" />
+      <wsdl:output message="tns:MiMetaBG_GrabaSegmentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_ConsGeneralSegmento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MiMetaBG: Consultas de Segmentos todos sus campos</wsdl:documentation>
+      <wsdl:input message="tns:MiMetaBG_ConsGeneralSegmentoSoapIn" />
+      <wsdl:output message="tns:MiMetaBG_ConsGeneralSegmentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_ConsGeneralImagen">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MiMetaBG: Consultas de Imagenes</wsdl:documentation>
+      <wsdl:input message="tns:MiMetaBG_ConsGeneralImagenSoapIn" />
+      <wsdl:output message="tns:MiMetaBG_ConsGeneralImagenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_ConsGeneralProducto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MiMetaBG: Consultas de Producto Cruzar</wsdl:documentation>
+      <wsdl:input message="tns:MiMetaBG_ConsGeneralProductoSoapIn" />
+      <wsdl:output message="tns:MiMetaBG_ConsGeneralProductoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_ConsultaUsuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MiMetaBG: Consultas Login Usuario</wsdl:documentation>
+      <wsdl:input message="tns:MiMetaBG_ConsultaUsuarioSoapIn" />
+      <wsdl:output message="tns:MiMetaBG_ConsultaUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_GrabaImagen">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">MiMetaBG: Graba Imagen</wsdl:documentation>
+      <wsdl:input message="tns:MiMetaBG_GrabaImagenSoapIn" />
+      <wsdl:output message="tns:MiMetaBG_GrabaImagenSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS_MiMetaBGSoap" type="tns:WS_MiMetaBGSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="MiMetaBG_ConsultaSegmentos">
+      <soap:operation soapAction="http://tempuri.org/MiMetaBG_ConsultaSegmentos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_Monto_Tiempo">
+      <soap:operation soapAction="http://tempuri.org/MiMetaBG_Monto_Tiempo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_ValidacionCliente">
+      <soap:operation soapAction="http://tempuri.org/MiMetaBG_ValidacionCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_ValidacionOTP">
+      <soap:operation soapAction="http://tempuri.org/MiMetaBG_ValidacionOTP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_ListaCuentas">
+      <soap:operation soapAction="http://tempuri.org/MiMetaBG_ListaCuentas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_Creacion">
+      <soap:operation soapAction="http://tempuri.org/MiMetaBG_Creacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_ConsultaMasiva">
+      <soap:operation soapAction="http://tempuri.org/MiMetaBG_ConsultaMasiva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_ValorAdicional">
+      <soap:operation soapAction="http://tempuri.org/MiMetaBG_ValorAdicional" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_ValidarToken">
+      <soap:operation soapAction="http://tempuri.org/MiMetaBG_ValidarToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_VentasCruzadas">
+      <soap:operation soapAction="http://tempuri.org/MiMetaBG_VentasCruzadas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_GrabaSegmento">
+      <soap:operation soapAction="http://tempuri.org/MiMetaBG_GrabaSegmento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_ConsGeneralSegmento">
+      <soap:operation soapAction="http://tempuri.org/MiMetaBG_ConsGeneralSegmento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_ConsGeneralImagen">
+      <soap:operation soapAction="http://tempuri.org/MiMetaBG_ConsGeneralImagen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_ConsGeneralProducto">
+      <soap:operation soapAction="http://tempuri.org/MiMetaBG_ConsGeneralProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_ConsultaUsuario">
+      <soap:operation soapAction="http://tempuri.org/MiMetaBG_ConsultaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_GrabaImagen">
+      <soap:operation soapAction="http://tempuri.org/MiMetaBG_GrabaImagen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_MiMetaBGSoap12" type="tns:WS_MiMetaBGSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="MiMetaBG_ConsultaSegmentos">
+      <soap12:operation soapAction="http://tempuri.org/MiMetaBG_ConsultaSegmentos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_Monto_Tiempo">
+      <soap12:operation soapAction="http://tempuri.org/MiMetaBG_Monto_Tiempo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_ValidacionCliente">
+      <soap12:operation soapAction="http://tempuri.org/MiMetaBG_ValidacionCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_ValidacionOTP">
+      <soap12:operation soapAction="http://tempuri.org/MiMetaBG_ValidacionOTP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_ListaCuentas">
+      <soap12:operation soapAction="http://tempuri.org/MiMetaBG_ListaCuentas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_Creacion">
+      <soap12:operation soapAction="http://tempuri.org/MiMetaBG_Creacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_ConsultaMasiva">
+      <soap12:operation soapAction="http://tempuri.org/MiMetaBG_ConsultaMasiva" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_ValorAdicional">
+      <soap12:operation soapAction="http://tempuri.org/MiMetaBG_ValorAdicional" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_ValidarToken">
+      <soap12:operation soapAction="http://tempuri.org/MiMetaBG_ValidarToken" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_VentasCruzadas">
+      <soap12:operation soapAction="http://tempuri.org/MiMetaBG_VentasCruzadas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_GrabaSegmento">
+      <soap12:operation soapAction="http://tempuri.org/MiMetaBG_GrabaSegmento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_ConsGeneralSegmento">
+      <soap12:operation soapAction="http://tempuri.org/MiMetaBG_ConsGeneralSegmento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_ConsGeneralImagen">
+      <soap12:operation soapAction="http://tempuri.org/MiMetaBG_ConsGeneralImagen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_ConsGeneralProducto">
+      <soap12:operation soapAction="http://tempuri.org/MiMetaBG_ConsGeneralProducto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_ConsultaUsuario">
+      <soap12:operation soapAction="http://tempuri.org/MiMetaBG_ConsultaUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MiMetaBG_GrabaImagen">
+      <soap12:operation soapAction="http://tempuri.org/MiMetaBG_GrabaImagen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WS_MiMetaBG">
+    <wsdl:port name="WS_MiMetaBGSoap" binding="tns:WS_MiMetaBGSoap">
+      <soap:address location="http://172.26.60.165:8082/MiMetaBG.WS/WS_MiMetaBG.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WS_MiMetaBGSoap12" binding="tns:WS_MiMetaBGSoap12">
+      <soap12:address location="http://172.26.60.165:8082/MiMetaBG.WS/WS_MiMetaBG.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

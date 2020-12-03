@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsServicios.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsServicios.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsServicios.xsd" id="dsServicios" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsServicios">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dsConImpuestoSRI">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="codigo_entidad" type="xs:string" />
+              <xs:element minOccurs="0" name="tipo_transaccion" type="xs:string" />
+              <xs:element minOccurs="0" name="numero_ruc" type="xs:string" />
+              <xs:element minOccurs="0" name="numero_serial" type="xs:string" />
+              <xs:element minOccurs="0" name="codigo_impuesto" type="xs:string" />
+              <xs:element minOccurs="0" name="canal_pago" type="xs:string" />
+              <xs:element minOccurs="0" name="provincia_agencia" type="xs:string" />
+              <xs:element minOccurs="0" name="periodo_desde" type="xs:string" />
+              <xs:element minOccurs="0" name="periodo_hasta" type="xs:string" />
+              <xs:element minOccurs="0" name="fecha_recepcion_cep" type="xs:string" />
+              <xs:element minOccurs="0" name="clase_contribuyente" type="xs:string" />
+              <xs:element minOccurs="0" name="original_sustitutiva" type="xs:string" />
+              <xs:element minOccurs="0" name="razon_social" type="xs:string" />
+              <xs:element minOccurs="0" name="valor_impuesto" type="xs:string" />
+              <xs:element minOccurs="0" name="valor_multa" type="xs:string" />
+              <xs:element minOccurs="0" name="valor_interes" type="xs:string" />
+              <xs:element minOccurs="0" name="total_pago" type="xs:string" />
+              <xs:element minOccurs="0" name="compensaciones" type="xs:string" />
+              <xs:element minOccurs="0" name="notas_credito" type="xs:string" />
+              <xs:element minOccurs="0" name="numero_cuota" type="xs:string" />
+              <xs:element minOccurs="0" name="codigo_log_monitor" type="xs:string" />
+              <xs:element minOccurs="0" name="cod_ope_cod_men" type="xs:string" />
+              <xs:element minOccurs="0" name="debito_banco" type="xs:string" />
+              <xs:element minOccurs="0" name="fecha_pago" type="xs:string" />
+              <xs:element minOccurs="0" name="tipo_cuenta" type="xs:string" />
+              <xs:element minOccurs="0" name="cuenta" type="xs:string" />
+              <xs:element minOccurs="0" name="codigo_error" type="xs:string" />
+              <xs:element minOccurs="0" name="mensaje_error" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtResultados">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ValorP" type="xs:string" />
+              <xs:element minOccurs="0" name="ValorImp1" type="xs:string" />
+              <xs:element minOccurs="0" name="ValorImp2" type="xs:string" />
+              <xs:element minOccurs="0" name="ValorImp3" type="xs:string" />
+              <xs:element minOccurs="0" name="ValorAux" type="xs:string" />
+              <xs:element minOccurs="0" name="ValorMin" type="xs:string" />
+              <xs:element minOccurs="0" name="ValorMax" type="xs:string" />
+              <xs:element minOccurs="0" name="Nombre" type="xs:string" />
+              <xs:element minOccurs="0" name="FechaMax" type="xs:string" />
+              <xs:element minOccurs="0" name="Observaciones" type="xs:string" />
+              <xs:element minOccurs="0" name="Periodo" type="xs:string" />
+              <xs:element minOccurs="0" name="Aux1" type="xs:string" />
+              <xs:element minOccurs="0" name="Aux2" type="xs:string" />
+              <xs:element minOccurs="0" name="Aux3" type="xs:string" />
+              <xs:element minOccurs="0" name="Aux4" type="xs:string" />
+              <xs:element minOccurs="0" name="Cuenta" type="xs:string" />
+              <xs:element minOccurs="0" name="Tipo" type="xs:string" />
+              <xs:element minOccurs="0" name="SecuenciaBG" type="xs:string" />
+              <xs:element minOccurs="0" name="SecuenciaEMP" type="xs:string" />
+              <xs:element minOccurs="0" name="Estado" type="xs:string" />
+              <xs:element minOccurs="0" name="CodRetorno" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsDatosCliente_OFAC_SENTINEL.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsDatosCliente_OFAC_SENTINEL.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsDatosCliente_OFAC_SENTINEL.xsd" id="dsDatosCliente_OFAC_SENTINEL" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsDatosCliente_OFAC_SENTINEL">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TB_DatosCabecera">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Transaccion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DireccionIP" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="MacAdress" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CodigoCanal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Opid" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Terminal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Sucursal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Agencia" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Fecha" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Hora" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TipoIdentificacion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Identificacion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SecuencialCash" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TB_DatosRespuesta">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CodRetorno" type="xs:string" />
+              <xs:element minOccurs="0" name="MsjRetorno" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TB_DatosAdicionales_OS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="DatoNumerico" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DatoAlfanumerico" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TB_DatosPerfil">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="ClienteCodigo" type="xs:string" />
+              <xs:element msdata:Caption="IdentificacionCliente" minOccurs="0" default="" name="ClienteIdentificacion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NombreCliente" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="RelacionCliente" type="xs:string" />
+              <xs:element msdata:Caption="PerfilValor" minOccurs="0" default="" name="PerfilCliente" type="xs:string" />
+              <xs:element msdata:Caption="AcumuladoValor" minOccurs="0" default="" name="AcumuladoCliente" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PerfilTransaccion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="AcumuladoTransaccion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="ExcedePerfil" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PorcentajePerfil" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TB_DatosTransaccion_OS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="CodigoTransaccion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NumeroTransaccion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NombreCliente" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CodigoIdentidad" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DebitoCredito" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="MotivoTransaccion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TipoCuenta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NumeroCuenta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="ValorTransaccion" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TB_DatosIntegrantes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="NombreBusqueda" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NombreRelacion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NombreEdadAA" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="ComentarioOFAC" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SimilitudOFAC" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PorcentajeOFAC" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

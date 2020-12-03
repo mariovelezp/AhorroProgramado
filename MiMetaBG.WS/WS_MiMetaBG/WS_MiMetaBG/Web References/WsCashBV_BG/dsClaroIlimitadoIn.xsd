@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsClaroIlimitadoIn.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsClaroIlimitadoIn.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsClaroIlimitadoIn.xsd" id="dsClaroIlimitadoIn" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsClaroIlimitadoIn">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dt_PromocionesClaroIlimitadoIn">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Canal" type="xs:string" />
+              <xs:element minOccurs="0" name="Terminal" type="xs:string" />
+              <xs:element minOccurs="0" name="MarcaPrimeraVez" type="xs:string" />
+              <xs:element minOccurs="0" name="ConsultaParcial" type="xs:string" />
+              <xs:element minOccurs="0" name="Ip" type="xs:string" />
+              <xs:element minOccurs="0" name="CantidadItemsEsperados" type="xs:int" />
+              <xs:element minOccurs="0" name="CantidadItemsPresentados" type="xs:int" />
+              <xs:element minOccurs="0" name="PresentadosItemsSolicitadosAnt" type="xs:boolean" />
+              <xs:element minOccurs="0" name="PrimerItemMostrado" type="xs:long" />
+              <xs:element minOccurs="0" name="UltimoItemMostrado" type="xs:long" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_PagoRecargaPaqueteDatosIn">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="IdTransaccion" type="xs:string" />
+              <xs:element minOccurs="0" name="Referencia" type="xs:string" />
+              <xs:element minOccurs="0" name="TipoTransaccion" type="xs:string" />
+              <xs:element minOccurs="0" name="Contrato" type="xs:string" />
+              <xs:element minOccurs="0" name="CodigoInstitucionFinanciera" type="xs:string" />
+              <xs:element minOccurs="0" name="Canal" type="xs:string" />
+              <xs:element minOccurs="0" name="Terminal" type="xs:string" />
+              <xs:element minOccurs="0" name="FechaTransaccion" type="xs:string" />
+              <xs:element minOccurs="0" name="HoraTransaccion" type="xs:string" />
+              <xs:element minOccurs="0" name="NumeroCelular" type="xs:string" />
+              <xs:element minOccurs="0" name="CodigoProductoClaro" type="xs:string" />
+              <xs:element minOccurs="0" name="FechaContable" type="xs:string" />
+              <xs:element minOccurs="0" name="IdSecuencial" type="xs:string" />
+              <xs:element minOccurs="0" name="FormaPago" type="xs:string" />
+              <xs:element minOccurs="0" name="NroPagos" type="xs:string" />
+              <xs:element minOccurs="0" name="Periodo" type="xs:string" />
+              <xs:element minOccurs="0" name="ValorCobrar" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

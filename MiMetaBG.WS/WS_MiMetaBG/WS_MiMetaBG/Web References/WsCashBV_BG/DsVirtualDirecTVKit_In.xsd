@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/DsVirtualDirecTVKit_In.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/DsVirtualDirecTVKit_In.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DsVirtualDirecTVKit_In.xsd" id="DsVirtualDirecTVKit_In" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="DsVirtualDirecTVKit_In">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DtVirtualDirecTVKit_In">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="NULL" name="TYPE" type="xs:string" />
+              <xs:element minOccurs="0" default="NULL" name="TRANSACTIONID" type="xs:string" />
+              <xs:element minOccurs="0" default="NULL" name="CUSTOMERID" type="xs:string" />
+              <xs:element minOccurs="0" default="NULL" name="CUSTOMERPHONE" type="xs:string" />
+              <xs:element minOccurs="0" default="NULL" name="CUSTOMERNAME" type="xs:string" />
+              <xs:element minOccurs="0" default="NULL" name="CUSTOMERLASTNAME" type="xs:string" />
+              <xs:element minOccurs="0" default="NULL" name="CUSTOMERADDRESS" type="xs:string" />
+              <xs:element minOccurs="0" default="NULL" name="CUSTOMERCITY" type="xs:string" />
+              <xs:element minOccurs="0" default="NULL" name="CUSTOMERPROVINCE" type="xs:string" />
+              <xs:element minOccurs="0" default="NULL" name="POINTOFSALEID" type="xs:string" />
+              <xs:element minOccurs="0" default="NULL" name="TIPO_METODO" type="xs:string" />
+              <xs:element minOccurs="0" default="NULL" name="TICKET" type="xs:string" />
+              <xs:element minOccurs="0" default="NULL" name="OPID" type="xs:string" />
+              <xs:element minOccurs="0" default="NULL" name="CANAL" type="xs:string" />
+              <xs:element minOccurs="0" default="NULL" name="TERMINAL" type="xs:string" />
+              <xs:element minOccurs="0" default="NULL" name="CUSTOMEREMAIL" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DtVirtualDirecTVKit_Out">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="NULL" name="RESPONSEID" type="xs:string" />
+              <xs:element minOccurs="0" default="NULL" name="MESSAGE" type="xs:string" />
+              <xs:element minOccurs="0" default="NULL" name="PRICE" type="xs:string" />
+              <xs:element minOccurs="0" default="NULL" name="TICKETNUMBER" type="xs:string" />
+              <xs:element minOccurs="0" default="NULL" name="NAME" type="xs:string" />
+              <xs:element minOccurs="0" default="NULL" name="APELLIDO" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

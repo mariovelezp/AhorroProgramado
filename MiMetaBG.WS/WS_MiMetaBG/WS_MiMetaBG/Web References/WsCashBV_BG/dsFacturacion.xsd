@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsFacturacion.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsFacturacion.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsFacturacion.xsd" id="dsFacturacion" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsFacturacion">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtFacturacionIN">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Transaccion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Marca_Primera_Vez" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Numero_Registro" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Identificacion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Clave1" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Clave2" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Codigo_Empresa" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Direccion_IP" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Mac_Address" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Tipo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Codigo_Canal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Cuenta_1" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Cuenta_2" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Tarjeta_1" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Tarjeta_2" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Codigo_Servicio" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Valor_Transaccion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Codigo_Aplica" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Autoriza" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Cajero" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Canal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Tipo_Id_Retenido" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Id_Retenido" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Nombre" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Direccion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Concepto" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Referencia" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Moneda" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Total" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Punto_Venta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Secuencia" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Oficina_BG" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FVigencia_Hasta" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtFacturacionINDetalle">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Cantidad_Rubro" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Codigo_Rubro" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Precio_Unitario" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Valor" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtFacturacionOUT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Codigo_Retorno" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Numero_Generado" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Oficina_SRI" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Punto_Venta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Secuencia" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Oficina_BG" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Nombre_Oficina_BG" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FVigencia_Desde" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FVigencia_Hasta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Base_0" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Base_12" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Base_No_Obj_IVA" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="ICE" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="IVA" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Total_Factura" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Direccion_Oficina_BG" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Clave" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Fecha_Emision" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Desc_Detalle" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

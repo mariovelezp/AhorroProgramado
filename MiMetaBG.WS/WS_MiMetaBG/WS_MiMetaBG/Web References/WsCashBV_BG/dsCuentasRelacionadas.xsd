@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsCuentasRelacionadas.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsCuentasRelacionadas.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsCuentasRelacionadas.xsd" id="dsCuentasRelacionadas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsCuentasRelacionadas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TB_DetalleCtasRelacionadas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Codigo_Banco" type="xs:string" />
+              <xs:element minOccurs="0" name="Tipo_Cuenta" type="xs:string" />
+              <xs:element minOccurs="0" name="Numero_Cuenta" type="xs:string" />
+              <xs:element minOccurs="0" name="Descripcion_Cuenta" type="xs:string" />
+              <xs:element minOccurs="0" name="Estado_Cuenta" type="xs:string" />
+              <xs:element minOccurs="0" name="Moneda_Cuenta" type="xs:string" />
+              <xs:element minOccurs="0" name="Tipo_Firma" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Cuenta_Especial" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TB_CtasRelacionadas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Cod_Retorno">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

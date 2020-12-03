@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsAhorroMeta.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsAhorroMeta.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsAhorroMeta.xsd" id="dsAhorroMeta" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsAhorroMeta">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TB_AhorroMetaIN">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="CodTransaccion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CodAplicacion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NumeroRegistro" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DireccionIP" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="MacAdress" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CodigoCanal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Accion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CuentaMultiple" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NumeroSolicitud" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TipoCtaDebito" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CuentaDebito" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="MontoDebito" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Frencuencia" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DiaUnoDebito" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DiaDosDebito" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="MontoMeta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FechaVencimiento" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="MarcaMasDatos" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TB_AhorroMetaOUT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="CodRetorno" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="MsjRetorno" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CuentaMultiple" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NumeroSolicitud" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TipoCtaDebito" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CuentaDebito" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="MontoDebito" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Frencuencia" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DiaUnoDebito" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DiaDosDebito" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="MontoMeta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FechaVencimiento" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Status" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PagosInteres" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="ValorAcumulado" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CantCuotasAcum" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="InteresAcumulado" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="HoraAdicion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FechaAdicion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="OpidAdicion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TerminalAdicion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="HoraPagoActualiza" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FechaPagoActualiza" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="OpidPagoActualiza" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TerminalPagoActualiza" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="MarcaPrecancelado" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="OpidPrecancelado" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TerminalPrecancelado" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="HoraPrecancelado" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FechaPrecancelado" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TB_Abonos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="FechaAbono" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="MontoAbono" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Tasa" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="OpidAbono" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

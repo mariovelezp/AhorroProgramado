@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsOFACConsultas.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsOFACConsultas.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsOFACConsultas.xsd" id="dsOFACConsultas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsOFACConsultas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dt_Matches_RQ">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="UserName" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FullName" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_Matches_RS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Rank" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="EntityName" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="BestName" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DenyReason" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="ListName" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Listing" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_Percentage">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default=" " name="Codigo1_RQ" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Codigo2_RQ" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Codigo3_RQ" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="UserName_RQ" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="MachineName_RQ" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FullName_RQ" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Matching_RS" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="MatchingPercent_RS" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SameOrder_RS" type="xs:string" />
+              <xs:element minOccurs="0" name="Remarks_RS" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_OFAC">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Id" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Cliente" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TipoDoc" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="XmlExecpcion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="XmlError" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TipoOfac" type="xs:string" />
+              <xs:element minOccurs="0" default="0000" name="CodError" type="xs:string" />
+              <xs:element minOccurs="0" name="ResultHost" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="ResultOfac" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="PorcentajeOfac" type="xs:int" />
+              <xs:element minOccurs="0" name="Resultado" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

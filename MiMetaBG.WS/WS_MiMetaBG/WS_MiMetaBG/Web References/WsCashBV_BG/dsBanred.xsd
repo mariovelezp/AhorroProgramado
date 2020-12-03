@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsBanred.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsBanred.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsBanred.xsd" id="dsBanred" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsBanred">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtBanredIN">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ContractID" type="xs:string" />
+              <xs:element minOccurs="0" name="Channel" type="xs:string" />
+              <xs:element minOccurs="0" name="PrimaryAcctNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="TxCode" type="xs:string" />
+              <xs:element minOccurs="0" name="Amount" type="xs:string" />
+              <xs:element minOccurs="0" name="AcquirerAuditNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="TransactionTime" type="xs:string" />
+              <xs:element minOccurs="0" name="TransactionDate" type="xs:string" />
+              <xs:element minOccurs="0" name="BusinessDate" type="xs:string" />
+              <xs:element minOccurs="0" name="CardSequenceNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="AcquirerInstitutionID" type="xs:string" />
+              <xs:element minOccurs="0" name="Track2" type="xs:string" />
+              <xs:element minOccurs="0" name="RetrievalReferenceNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="TerminalNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="CardAcceptorIdCode" type="xs:string" />
+              <xs:element minOccurs="0" name="CardAcceptorNameLoc" type="xs:string" />
+              <xs:element minOccurs="0" name="TerminalData" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="AccountId1" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FinancialAccount" type="xs:string" />
+              <xs:element minOccurs="0" name="TellerCode" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="BillReference" type="xs:string" />
+              <xs:element minOccurs="0" name="BranchCode" type="xs:string" />
+              <xs:element minOccurs="0" name="ReversalIndicator" type="xs:string" />
+              <xs:element minOccurs="0" name="PaymentTransactionDate" type="xs:string" />
+              <xs:element minOccurs="0" name="PaymentTransactionTime" type="xs:string" />
+              <xs:element minOccurs="0" name="ReasonReversal" type="xs:string" />
+              <xs:element minOccurs="0" name="PaymentReferenceNumber" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="BillServiceCode" type="xs:string" />
+              <xs:element minOccurs="0" name="ReceivingInstitutionIdCode" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtBanredOUT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ResultCode" type="xs:string" />
+              <xs:element minOccurs="0" name="ErrorMessage" type="xs:string" />
+              <xs:element minOccurs="0" name="SwitchAuditNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="BillerCutoverDate" type="xs:string" />
+              <xs:element minOccurs="0" name="PartialPaypment" type="xs:string" />
+              <xs:element minOccurs="0" name="Commissions" type="xs:string" />
+              <xs:element minOccurs="0" name="Amount" type="xs:string" />
+              <xs:element minOccurs="0" name="AdditionalData" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtResponseData">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CouponCode" type="xs:string" />
+              <xs:element minOccurs="0" name="CustomerName" type="xs:string" />
+              <xs:element minOccurs="0" name="Address" type="xs:string" />
+              <xs:element minOccurs="0" name="PaydayLimit" type="xs:string" />
+              <xs:element minOccurs="0" name="PaymentConciliationCode" type="xs:string" />
+              <xs:element minOccurs="0" name="PaymentEntityCode" type="xs:string" />
+              <xs:element minOccurs="0" name="PayPoint" type="xs:string" />
+              <xs:element minOccurs="0" name="PaymentDate" type="xs:string" />
+              <xs:element minOccurs="0" name="PaymentTransactionNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="PaymentMethod" type="xs:string" />
+              <xs:element minOccurs="0" name="PaymentEntExpDocument" type="xs:string" />
+              <xs:element minOccurs="0" name="PaymentNumberMonths" type="xs:string" />
+              <xs:element minOccurs="0" name="PaymentProgram" type="xs:string" />
+              <xs:element minOccurs="0" name="ConciliationCode" type="xs:string" />
+              <xs:element minOccurs="0" name="TotalBaseAmountPaid" type="xs:string" />
+              <xs:element minOccurs="0" name="TotalNoBaseAmountPaid" type="xs:string" />
+              <xs:element minOccurs="0" name="TotalBaseIva12Paid" type="xs:string" />
+              <xs:element minOccurs="0" name="TotalNoBaseIva12Paid" type="xs:string" />
+              <xs:element minOccurs="0" name="ReasonReversal" type="xs:string" />
+              <xs:element minOccurs="0" name="CodeErrorMessage" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

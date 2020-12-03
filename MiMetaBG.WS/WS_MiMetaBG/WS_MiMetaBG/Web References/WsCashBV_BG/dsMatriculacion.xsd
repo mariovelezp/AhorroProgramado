@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsMatriculacion.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsMatriculacion.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsMatriculacion.xsd" id="dsMatriculacion" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsMatriculacion">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dt_Matriculacion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="TRANSACCION" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CODIGO_IFI" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRX_PROVE" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRX_REVERSO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRX_REVERSO_IFI" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="REVERSO_SRI" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="LOG_REVERSO_SRI" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="COD_AGENCIA_IFI" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CANAL_PAGO_IFI" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="COD_OPERADOR_IFI" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="COD_P_SWITCH_IFI" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PLACA_CAMV_CPN" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PSI_PROVINCIA_IFI" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PSI_TIPO_TRANSACCION" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PCO_VALOR_PAGO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PDO_FECHA_CAD_MATRI" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PNO_COD_CANTON_VEHICULO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PNO_COD_OPER_COD_MSJ" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PNO_LOG_SRI" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PNO_VALOR_AVAL_VEHI" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PSO_ANIO_VEHICULO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PSO_CHASIS_VEHICULO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PSO_CLASE_VEHICULO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PSO_COD_ENT_POL_VEHI" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PSO_EST_MATRI_VEHI" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PSO_MARCA_VEHICULO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PSO_MODELO_VEHICULO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PSO_MOTOR_VEHICULO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PSO_NOMBRE_PROPIET" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PSO_NUM_IDEN_PROPI" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PSO_PAIS_VEHICULO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PSO_PLACA_VEHICULO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PSO_SERVICIO_VEHI" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PNIO_COD_VEHICULO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PNIO_VALOR_TOT_PAG" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PSIO_COD_TERM_IFI" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PSIO_FECHA_CONT_IFI" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PSI_TIPO_DEUDA" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PNIO_VALOR_IMP_FIS" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PNIO_VALOR_BRIGADA" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PNIO_VALOR_CETUR" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PNIO_VALOR_IMP_ROD" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PNIO_TASAS_DNT" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PNIO_TASAS_DIRECC" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SECUENCIA" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CODIGO_ERROR" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="MENSAJE_ERROR" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CLAVE" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PNIO_JUNTA_BG" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PNIO_DNT_CTG" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

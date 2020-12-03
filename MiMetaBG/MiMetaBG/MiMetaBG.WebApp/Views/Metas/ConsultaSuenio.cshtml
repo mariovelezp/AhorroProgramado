@@ -1,0 +1,303 @@
+﻿@model MiMetaBG.WebApp.Models.MetasCreadas
+@{
+    ViewBag.Title = "";
+}
+
+
+<script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+
+<script>
+    window.onload = function () {
+        $(".cartprocess").fadeTo(1700, 0.50,
+         function () {
+             var lis = $("#idVenta").val();
+
+             if (lis == "SI")
+                 $("#multicreditModal").modal('show');
+
+             $(".cartprocess").hide();
+         });
+    }
+
+    function Cerrar() {
+        $("#multicreditModal").modal('hide');
+    }
+</script>
+
+<link rel="stylesheet" href="~/Content/procesando.css">
+
+<main>
+      <div class="container">
+
+        @Html.Partial("_VentaCruzadas")  
+
+        <input type="hidden" id="idMC" name="idMC" value="@ViewBag.Multicredito" />
+        <input type="hidden" id="idTC" name="idTC" value="@ViewBag.TarjetaCredito" />
+        
+
+        <div class="row">
+          <div class="col-12 text-center">
+              <h1 class="heading1">Mis metas</h1>
+              <p class="subheading">Aquí puedes consultar y editar tus metas</p>
+          </div>
+        </div>
+
+        @Html.Partial("_ListaMetasCreadas")
+      
+        <div class="row justify-content-center">
+          <div class="col-sm-6 col-lg-4 mt-0 mt-md-3 mt-lg-4 px-sm-3 px-4"><a class="btn btn-primary d-block" href="~/Definir/consultaSegmentos">Crear una nueva meta</a>
+          </div>
+        </div>
+   </div>
+
+   <!-- Pre-Cancelacion -->
+    <!-- Agregado Kevin Guacho -->
+    <div class="modal fade" id="dreamEditModal" tabindex="-1" role="dialog" aria-labelledby="dreamEditModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+              <div class="row">
+                <div class="col-12 text-center">
+                  <h5 class="modal-title"><span id="lblNombre"></span></h5>
+                </div>
+                <div class="col-12 text-center">
+                  <p class="dream-goal">Meta estimada<span id="spMonto"></span></p>
+                     <div class="form-group">
+                        <label class="range" for="dreamSaveRangeEdit">Ahorro mensual<span id="spMensual"></span></label>
+                        <input class="form-control-range" step="10" type="range" min="@ViewData["montoInicial"]" max="@ViewData["montoFinal"]" id="dreamSaveRangeEdit" value="" oninput="RefreshTotalConsultaSuenio()"  onchange="spMensual.value = value; cambioAhorroConsultaSuenio()" />
+                        <div class="range-values"><span>$@ViewData["montoInicial"]</span><span>$@ViewData["montoFinal"]</span></div>
+                     </div>
+                </div>
+                <div class="col-12">
+                   <div class="form-group">
+                      <label for="cuentaInicioEdit">Debitar de:</label>
+                      @Html.DropDownList("cuentasAC", ViewData["cuentasAC"] as SelectList, new { id = "cuentasAC", name = "cuentasAC", @Class = "form-control" })
+                   </div>
+                </div>
+                <div id="divFecha" class="col-12">
+                    <label for="plazoEdit">Plazo definido:</label>
+                    <div class="row">
+                        <div class="form-group col-6">
+                          <select class="form-control" id="plazoEdit" onchange="calFecha()">
+                            @foreach (string item in (List<string>)ViewData["meses"])
+                            {
+                                <option value="@item">@item</option>
+                            }						
+                          </select>
+
+                    
+                       </div>
+                        <div class="form-group col-6">
+                        <select class="form-control" id="AnioEdit" onchange="calFecha()">
+						    @foreach (int item in (List<int>)ViewData["anio"])
+                            {
+                                <option value="@item">@item</option>
+                            }	
+                          </select>
+                        </div>
+                    </div>
+                </div>
+                <div id="divMonto" class="col-12">
+                    <label for="plazoEdit">Monto:</label>
+                    <div class="row">
+                        <div class="form-group col-12">
+                          <input type="text" id="txtMontoMeta" onkeypress="return validarNum(event)" maxlength="6" class="form-group form-control "/>
+                       </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                  <label>Débito programado los:</label>
+                    <div class="row">
+                        <div class="form-group col-6">
+                            <div >
+                             <div class="form-group">
+                                <select id="diaMensual" class="form-control">
+                                @for (var i = 1; i <= 30; i++)
+                                {
+                                       <option value="@i">@i</option>
+                                }
+                                </select>
+                             </div>                 
+                            <div class="">
+                                <p class="b">día de cada mes</p>
+                              </div>
+                            </div>
+                        </div>
+
+                        <div id="divQuincenal" class="form-group col-6">
+                            <div >
+                             <div class="form-group">
+                                <select id="diaQuincena" class="form-control">
+                                @for (var i = 1; i <= 30; i++)
+                                {
+                                       <option value="@i">@i</option>
+                                }
+                                </select>
+                             </div>                 
+                            <div class="">
+                                <p class="b">día de cada quincena</p>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 mt-2 text-center">
+                  <button class="btn btn-link btn-link-danger" type="button" data-dismiss="modal">Cancelar</button>
+                  <button class="btn btn-primary" type="submit" onclick="sendDataEditar()">Actualizar</button>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pre-Cancelacion -->
+    <!-- Agregado Joseph Pluas -->
+    <div class="modal fade" id="dreamAddModal" tabindex="-1" role="dialog" aria-labelledby="dreamAddModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+              <div class="row">
+                <div class="col-12 text-center">
+                  <h5 class="modal-title"><span id="lblNombreE"></span></h5>
+                  <p class="modal-text">Añade una cuota extra a tu meta cada vez que quieras.</p>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                       <label for="cuentaInicioAdd">Debitar de:</label>  
+					   @Html.DropDownList("listasM", ViewData["listasM"] as SelectList, new { id = "listasM", name = "listasM", @Class = "form-control" })
+                    </div>
+                </div>
+                <div class="col-12">
+                   <div class="form-group">
+                      <label for="agregarMonto">Monto a transferir</label>
+                      <input class="form-control" onkeypress="return validarNum(event)" type="text" placeholder="0" id="agregarMonto">
+                   </div>
+                </div>
+                  <div class="col-12">
+                     <div class="alert alert-danger" id="msgAlertaM" style='display:none; text-align:center'>
+                        <span class="icon-danger"></span>
+                       <div align="center">
+                         <p>Por favor ingrese su monto a transferir.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 mt-2 text-center">
+                  <button class="btn btn-link btn-link-danger" type="button" data-dismiss="modal">Cancelar</button>
+                  <button class="btn btn-primary" type="submit" onclick="AgregarSuenio()">Transferir</button>
+                </div>
+              </div>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+
+	<!-- Pre-Cancelacion -->
+    <!-- Agregado Joseph Pluas -->
+    <div class="modal fade" id="dreamCancelModal" tabindex="-1" role="dialog" aria-labelledby="dreamCancelModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="row">
+	
+				
+              <div class="col-12 text-center">
+                  <div class="modal-icon icon-warning"></div>
+                <h5 class="modal-title">¿Estás Seguro de cancelar esta Meta?</h5>
+                <p class="modal-text">Los fondos de esta meta quedarán habilitados al siguiente dia laborable en tu cuenta de ahorros <span id="idCuenta"/> </p>
+              </div>
+			 
+              <div class="col-12 mt-2 text-center">
+                <button class="btn btn-link btn-link-danger" type="button" data-dismiss="modal">Salir</button>
+				<button class="btn btn-primary" type="button" onclick="CancelarSuenio()">Cancelar meta</button> 
+			  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="error" tabindex="-1" role="dialog" aria-labelledby="noClientModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered container" role="document">
+            <div class="modal-content">
+                <div class="modal-body container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <div class="modal-icon icon-account-error"></div>
+                            <h5 class="modal-title">¡Lo sentimos!</h5>
+                            <p class="modal-text" id="mensajerror"></p>
+                        </div>
+                        <div class="col-12 mt-2 text-center">
+                            <button class="btn btn-link btn-link-danger" type="button" onclick="cierra();">Salir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- *** -->
+    <!-- Agregado Kevin Guacho -->
+    <div class="modal fade" id="compartir" tabindex="-1" role="dialog" aria-labelledby="dreamAddModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="row">
+            <div class="col-12 text-center">
+                <h5 class="modal-title">Comparte tu Meta</h5>
+            </div>
+            <div class="col-12">
+                <div class="form-group text-center" style='padding-top:20px'>
+                    <div class="fb-share-button" 
+                        data-href="@ViewData["urlFacebook"]" 
+                        data-layout="button"
+                        data-size="large">
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-group text-center">
+                    <a class="twitter-share-button"
+                      href="https://twitter.com/intent/tweet"
+                      data-size="large"
+                      data-text="@ViewData["DescripcionBancoProduccion"]"
+                      data-url="@ViewData["urlFacebook"]"
+                      data-hashtags="@ViewData["hashtagsBancoProduccion"]"
+                      data-via="BancoGuayaquil"
+                      data-related="twitterapi,twitter">
+                        Tweet
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-12 mt-2 text-center">
+                <button class="btn btn-link btn-link-danger" type="button" data-dismiss="modal">Salir</button>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ventas Cruzadas -->
+    <div class="modal fade" id="multicreditModal" tabindex="-1" role="dialog" aria-labelledby="multicreditModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button class="close modal-close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <div class="row justify-content-center">
+              <div class="col-12 text-center"><img class="img-fluid mb-3" src="~/img/credito.png" alt="Multicrédito">
+                <h5 class="modal-title">¡Felicidades!</h5>
+                <p class="modal-text">Tienes crédito pre-aprobado para ayudarte a hacer realidad tus metas.</p>
+              </div>
+              <div class="col-sm-6 mt-2 text-center"><a class="btn btn-primary d-block;" data-dismiss="modal" style="color:white">Descúbrelo</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</main>
+
+
+

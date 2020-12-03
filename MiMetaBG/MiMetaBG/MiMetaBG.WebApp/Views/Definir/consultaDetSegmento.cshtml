@@ -1,0 +1,158 @@
+﻿@model MiMetaBG.WebApp.Models.ParametroResponse
+@{
+    ViewBag.Title = "consultaDetSegmento";
+}
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <ul class="steps-list">
+                    <li><a class="active" href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="heading1">@Model.mensaje</h1>
+                <p class="subheading">Calcula tu ahorro estimado estableciendo un monto mensual y plazo.</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-10 col-md-8 col-lg-6 mb-4 px-sm-3 px-4">
+                <div class="card shadow-sm">
+                    <form class="p-3">
+                        <div class="row">
+                            <div class="col-icon">
+                                <label for="dreanIcon">Ícono</label>
+                                <div class="dream-icon-select">
+                                    <div class="dream-icon-copy"><input type="hidden" id="idSegmento" value="@Model.imagSegmento[0].segmentoId"/><img src="data:image;base64,@System.Convert.ToBase64String(@Model.imagSegmento[0].emojid)" alt="" width="20" height="20"></div>
+                                    <div class="dream-icon-list">
+                                        <ul>
+                                            @foreach (var img in Model.imagSegmento)
+                                            {
+                                               <li data-icon="icon1"><input type="hidden" id="idSegmentos" value="@img.segmentoId"/><img src="data:image;base64,@System.Convert.ToBase64String(img.emojid)" alt="" width="25" height="25"></li>
+                                            }
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-7 col-sm-8 col-xl-9">
+                                <div class="form-group">
+                                    <label for="dreamName">¿Cuál es el nombre de tu meta?</label>
+                                    <input class="form-control" id="dreamName" type="text" placeholder="Ingresa el nombre de tu meta" maxlength="50" onkeypress="Characters(event)"  onpaste="return false" onkeydown="mostrar('0');">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="alert alert-danger" id="msgAlerta" style='display:none;'>
+                                    <span class="icon-danger"></span>
+                                    <p>Por favor ingrese el nombre de tu meta.</p>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <p class="dream-goal">Ahorro estimado <span id="TotalAhorro">$ @(Model.montoInicial * Model.tiempoIncial)</span></p>
+                                <div class="form-group">
+                                    <label class="range" for="dreamSaveRange2">¿Cuánto deseas ahorrar al mes?
+                                        <span id="montoAhorro"> </span>
+                                        <span>$ 
+                                            <output name="slider_output1" id="slider_output1" for="dreamSaveRange">@Model.montoInicial</output>
+                                        </span>
+                                    </label>
+                                    <input class="form-control-range" id="dreamSaveRange" type="range" min="@Model.montoInicial" max="@Model.montoFinal" onchange="slider_output1.value = value; cambioAhorro()" value="@Model.montoInicial" step="10" oninput="RefreshTotal()"/>
+                                    <div class="range-values"><span>$@Model.montoInicial</span><span id="montofinal">$@(Model.montoFinal.ToString("N0"))</span></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="range" for="dreamTimeRange2">¿Por cuánto tiempo?
+                                        <span id="montoTiempo"></span>
+                                        <span>
+                                            <output name="slider_output2" id="slider_output2" for="dreamTimeRange">@Model.tiempoIncial</output> meses
+                                        </span>
+                                    </label>
+                                    <input class="form-control-range" id="dreamTimeRange" type="range" min="@Model.tiempoIncial" max="@Model.tiempoFinal" onchange="slider_output2.value = value; cambioTiempo()" value="@Model.tiempoIncial" oninput="RefreshTotal()"/>
+                                    <div class="range-values"><span>@Model.tiempoIncial meses</span><span id="tiempofinal">@Model.tiempoFinal meses</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+		@using (Html.BeginForm("ValidarToken", "Definir", FormMethod.Post, new { @class = "p-3 p-md-4" })) 
+        {
+			<input type="hidden" id="idSegmentoIN" name="idSegmentoIN" value="" />
+
+			<div class="row justify-content-center">
+				<div class="col-sm-6 col-lg-4 mt-0 mt-md-3 mt-lg-4 px-sm-3 px-4">
+					<input type="submit" class="btn btn-primary d-block col-lg-12" value="Continuar" onclick="CampoBlancoDream()"/>
+				</div>
+			</div> 
+		}
+    </div>
+</main>
+<script>
+    RefreshTotal();
+
+    function calculo1() {
+        var montoAhorro = document.getElementById("dreamSaveRange").value;
+        var montoTiempo = document.getElementById("dreamTimeRange").value;
+        document.getElementById("TotalAhorro").innerText = "$ " + formatearNumero(montoAhorro * montoTiempo);
+    }
+
+    function formatearNumero(monto) {
+        var valor = new Intl.NumberFormat().format(monto);
+        var str = valor;
+        var res = str.replace(",", ".");
+        return res;
+    }
+    
+
+    function RefreshTotal() {
+        slider_output1.value = dreamSaveRange.value;
+        slider_output2.value = dreamTimeRange.value;
+        calculo1();
+    }
+    
+    function CampoBlancoDream() {
+        
+        var value = document.getElementById("dreamName").value;
+        value = value.trim();
+        if (value.length == 0) {
+            mostrar("1");
+            event.preventDefault();
+        } else {
+            var montoTotal = $('#TotalAhorro').html();
+            var nombreMeta = document.getElementById("dreamName").value;
+            montoTotal = montoTotal.replace("$ ", "");
+            
+            var montoDebito = document.getElementById("slider_output1").value;
+            var fechafinalDebito = document.getElementById("slider_output2").value;
+            var idSegmento = document.getElementById("idSegmentos").value;
+           
+		    document.getElementById("idSegmentoIN").value = idSegmento;
+
+            if (typeof (Storage) != "undefined")
+            {
+                
+                localStorage.setItem("MontoTotal", montoTotal);
+                localStorage.setItem("NombreMeta", nombreMeta);
+                localStorage.setItem("IdSegmento", idSegmento);
+                localStorage.setItem("MontoDebito", montoDebito);
+                localStorage.setItem("FechaFinalDebito", fechafinalDebito);
+            }
+        }
+    }
+    function mostrar(flag) {
+        if (flag == "1") {
+            document.getElementById('msgAlerta').style.display = 'block';
+        }
+        if (flag == "0") {
+            document.getElementById('msgAlerta').style.display = 'none';
+        }
+    }
+</script>
+<script>
+    document.getElementById("btnAtras").style.display = "block";
+</script>

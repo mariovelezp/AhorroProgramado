@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/CabeceraHost.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/CabeceraHost.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/CabeceraHost.xsd" id="CabeceraHost" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="CabeceraHost">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="HeaderHost">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="cab_transaccion" type="xs:string" />
+              <xs:element minOccurs="0" name="cab_marca_primera_vez" type="xs:string" />
+              <xs:element minOccurs="0" name="cab_codigo_retorno" type="xs:string" />
+              <xs:element minOccurs="0" name="cab_numero_registro" type="xs:string" />
+              <xs:element minOccurs="0" name="cab_identificador" type="xs:string" />
+              <xs:element minOccurs="0" name="cab_cuenta_uno" type="xs:string" />
+              <xs:element minOccurs="0" name="cab_archivo" type="xs:string" />
+              <xs:element minOccurs="0" name="cab_puntero" type="xs:string" />
+              <xs:element minOccurs="0" name="cab_resto" type="xs:string" />
+              <xs:element minOccurs="0" name="cab_direccion_ip" type="xs:string" />
+              <xs:element minOccurs="0" name="cab_codigo_empresa" type="xs:string" />
+              <xs:element minOccurs="0" name="cab_tipo_transaccion" type="xs:string" />
+              <xs:element minOccurs="0" name="cab_clave" type="xs:string" />
+              <xs:element minOccurs="0" name="cab_identificador_perfil" type="xs:string" />
+              <xs:element minOccurs="0" name="cab_clave_enc" type="xs:string" />
+              <xs:element minOccurs="0" name="cab_codigo_canal" type="xs:string" />
+              <xs:element minOccurs="0" name="cab_cuenta_dos" type="xs:string" />
+              <xs:element minOccurs="0" name="cab_tarjeta_uno" type="xs:string" />
+              <xs:element minOccurs="0" name="cab_tarjeta_dos" type="xs:string" />
+              <xs:element minOccurs="0" name="cab_codigo_servicio" type="xs:string" />
+              <xs:element minOccurs="0" name="cab_valor_transaccion" type="xs:string" />
+              <xs:element minOccurs="0" name="cab_codigo_mensaje" type="xs:string" />
+              <xs:element minOccurs="0" name="cab_secuencia" type="xs:string" />
+              <xs:element minOccurs="0" name="cab_ui" type="xs:string" />
+              <xs:element minOccurs="0" name="Tipo_Saldo" type="xs:string" />
+              <xs:element minOccurs="0" name="Tipo_Estado" type="xs:string" />
+              <xs:element minOccurs="0" name="FechaInicio" type="xs:string" />
+              <xs:element minOccurs="0" name="FechaFin" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Mes" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Anio" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Tipo_identificacion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Categoria_Tc" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Valida_Clave" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

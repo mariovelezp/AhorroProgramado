@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsOficiales.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsOficiales.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsOficiales.xsd" id="dsOficiales" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsOficiales">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtOficiales">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="SE_OPI" type="xs:string" />
+              <xs:element minOccurs="0" name="SE_NOM" type="xs:string" />
+              <xs:element minOccurs="0" name="SE_CORREO" type="xs:string" />
+              <xs:element minOccurs="0" name="SE_STATUS" type="xs:string" />
+              <xs:element minOccurs="0" name="SE_TPID" type="xs:string" />
+              <xs:element minOccurs="0" name="SE_CEDULA_X" type="xs:string" />
+              <xs:element minOccurs="0" name="JEFEOFICIAL" type="xs:string" />
+              <xs:element minOccurs="0" name="EMAILJEFEOFICIAL" type="xs:string" />
+              <xs:element minOccurs="0" name="CLCDID" type="xs:string" />
+              <xs:element minOccurs="0" name="CLNOMB" type="xs:string" />
+              <xs:element minOccurs="0" name="CLKEY" type="xs:string" />
+              <xs:element minOccurs="0" name="CLRESP" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtRetorno">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODRETORNO" type="xs:string" />
+              <xs:element minOccurs="0" name="MENSAJE" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

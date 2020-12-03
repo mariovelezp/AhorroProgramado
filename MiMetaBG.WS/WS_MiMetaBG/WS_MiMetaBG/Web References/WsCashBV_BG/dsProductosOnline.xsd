@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsProductosOnline.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsProductosOnline.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsProductosOnline.xsd" id="dsProductosOnline" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsProductosOnline">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tbSolicitudProductoIN">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="codAplicacion" type="xs:string" />
+              <xs:element minOccurs="0" name="idCanal" type="xs:int" />
+              <xs:element minOccurs="0" name="idCatalogo" type="xs:int" />
+              <xs:element minOccurs="0" name="idPadre" type="xs:int" />
+              <xs:element minOccurs="0" name="diaPago" type="xs:int" />
+              <xs:element minOccurs="0" name="idBancoCredito" type="xs:int" />
+              <xs:element minOccurs="0" name="idBancoDebito" type="xs:int" />
+              <xs:element minOccurs="0" name="idPeriocidad" type="xs:int" />
+              <xs:element minOccurs="0" default="-1" name="idProducto" type="xs:int" />
+              <xs:element minOccurs="0" default="-1" name="idTablaAmortizacion" type="xs:int" />
+              <xs:element minOccurs="0" default="-1" name="idTipoCtaCredito" type="xs:int" />
+              <xs:element minOccurs="0" default="" name="nroCtaCredito" type="xs:string" />
+              <xs:element minOccurs="0" default="-1" name="idTipoCtaDebito" type="xs:int" />
+              <xs:element minOccurs="0" default="" name="nroCtaDebito" type="xs:string" />
+              <xs:element minOccurs="0" default="-1" name="plazo" type="xs:int" />
+              <xs:element minOccurs="0" default="" name="proposito" type="xs:string" />
+              <xs:element minOccurs="0" default="-1" name="tasaInteres" type="xs:double" />
+              <xs:element minOccurs="0" default="-1" name="totalFinanciar" type="xs:double" />
+              <xs:element minOccurs="0" default="-1" name="idExpediente" type="xs:long" />
+              <xs:element minOccurs="0" default="" name="usuarioGestor" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="opid" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="terminal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="correspondencia" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="identificacionCliente" type="xs:string" />
+              <xs:element minOccurs="0" name="idMotivoRechazo" type="xs:string" />
+              <xs:element minOccurs="0" name="ComentarioRechazo" type="xs:string" />
+              <xs:element minOccurs="0" name="idEtapa" type="xs:string" />
+              <xs:element minOccurs="0" name="idEstado" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbDetalleCatlogo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="0" name="idCodigo" type="xs:int" />
+              <xs:element minOccurs="0" default="" name="Descripcion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CodigoHost" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbSolicitudProductoOUT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="codRetorno" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="msjRetorno" type="xs:string" />
+              <xs:element minOccurs="0" name="idDictamen" type="xs:int" />
+              <xs:element minOccurs="0" name="dictamen" type="xs:string" />
+              <xs:element minOccurs="0" name="motiboDictamen" type="xs:string" />
+              <xs:element minOccurs="0" name="idExpediente" type="xs:long" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbSolicitudTasaIN">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="codAplicacion" type="xs:string" />
+              <xs:element minOccurs="0" name="idCanal" type="xs:int" />
+              <xs:element minOccurs="0" name="idProducto" type="xs:int" />
+              <xs:element minOccurs="0" name="periodoDias" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbSolicitudTasaOUT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="codRetorno" type="xs:string" />
+              <xs:element minOccurs="0" name="msjRetorno" type="xs:string" />
+              <xs:element minOccurs="0" name="tasaNominal" type="xs:decimal" />
+              <xs:element minOccurs="0" name="tasaEfectiva" type="xs:decimal" />
+              <xs:element minOccurs="0" name="factorReajuste" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbDatosOficClienteIN">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="codAplicacion" type="xs:string" />
+              <xs:element minOccurs="0" name="idCanal" type="xs:int" />
+              <xs:element minOccurs="0" name="idTipoIdentificacion" type="xs:int" />
+              <xs:element minOccurs="0" name="identificacion" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbDatosOficClienteOUT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="codRetorno" type="xs:string" />
+              <xs:element minOccurs="0" name="msjRetorno" type="xs:string" />
+              <xs:element minOccurs="0" name="usuarioOficial" type="xs:string" />
+              <xs:element minOccurs="0" name="nombreOficial" type="xs:string" />
+              <xs:element minOccurs="0" name="correoOficial" type="xs:string" />
+              <xs:element minOccurs="0" name="telefonoOficial" type="xs:string" />
+              <xs:element minOccurs="0" name="extensionOficial" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbDatosCliente">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="codAplicacion" type="xs:string" />
+              <xs:element minOccurs="0" name="codRetorno" type="xs:string" />
+              <xs:element minOccurs="0" name="msjRetorno" type="xs:string" />
+              <xs:element minOccurs="0" name="idTipoIdentificacion" type="xs:int" />
+              <xs:element minOccurs="0" name="identificacion" type="xs:string" />
+              <xs:element minOccurs="0" name="opid" type="xs:string" />
+              <xs:element minOccurs="0" name="terminal" type="xs:string" />
+              <xs:element minOccurs="0" name="primerNombre" type="xs:string" />
+              <xs:element minOccurs="0" name="segundoNombre" type="xs:string" />
+              <xs:element minOccurs="0" name="primerApellido" type="xs:string" />
+              <xs:element minOccurs="0" name="segundoApellido" type="xs:string" />
+              <xs:element minOccurs="0" name="idEstadoCivil" type="xs:int" />
+              <xs:element minOccurs="0" name="idTipoVivienda" type="xs:int" />
+              <xs:element minOccurs="0" name="idRelacionDependencia" type="xs:int" />
+              <xs:element minOccurs="0" name="antiguedadLaboral" type="xs:string" />
+              <xs:element minOccurs="0" name="idProfesion" type="xs:int" />
+              <xs:element minOccurs="0" name="sueldoMensual" type="xs:double" />
+              <xs:element minOccurs="0" name="otrosIngresos" type="xs:double" />
+              <xs:element minOccurs="0" name="ventas" type="xs:double" />
+              <xs:element minOccurs="0" name="costoVentas" type="xs:double" />
+              <xs:element minOccurs="0" name="gastos" type="xs:double" />
+              <xs:element minOccurs="0" name="neto" type="xs:double" />
+              <xs:element minOccurs="0" name="totalIngresos" type="xs:double" />
+              <xs:element minOccurs="0" name="identificacionConyuge" type="xs:string" />
+              <xs:element minOccurs="0" name="idNacionalidad" type="xs:int" />
+              <xs:element minOccurs="0" name="idRegimenMatrimonio" type="xs:int" />
+              <xs:element minOccurs="0" name="ingresos" type="xs:double" />
+              <xs:element minOccurs="0" name="utilidad" type="xs:double" />
+              <xs:element minOccurs="0" name="fechaNacimiento" type="xs:string" />
+              <xs:element minOccurs="0" name="idPaisDomicilio" type="xs:int" />
+              <xs:element minOccurs="0" name="idProvinciaDomicilio" type="xs:int" />
+              <xs:element minOccurs="0" name="idCiudadDomicilio" type="xs:int" />
+              <xs:element minOccurs="0" name="idParroquiaDomicilio" type="xs:int" />
+              <xs:element minOccurs="0" name="callePrincipalDomicilio" type="xs:string" />
+              <xs:element minOccurs="0" name="calleInterceptaDomicilio" type="xs:string" />
+              <xs:element minOccurs="0" name="villaDomicilio" type="xs:string" />
+              <xs:element minOccurs="0" name="manzanaDomicilio" type="xs:string" />
+              <xs:element minOccurs="0" name="usuarioGestor" type="xs:string" />
+              <xs:element minOccurs="0" name="clteCliente" type="xs:string" />
+              <xs:element minOccurs="0" name="telefonoDomicilio" type="xs:string" />
+              <xs:element minOccurs="0" name="tiempoResidencia" type="xs:int" />
+              <xs:element minOccurs="0" name="cargasFamiliares" type="xs:int" />
+              <xs:element minOccurs="0" name="referenciaDomicilio" type="xs:string" />
+              <xs:element minOccurs="0" name="barrioDomicilio" type="xs:string" />
+              <xs:element minOccurs="0" name="nombreEmpresa" type="xs:string" />
+              <xs:element minOccurs="0" name="idActividadEconomica" type="xs:int" />
+              <xs:element minOccurs="0" name="idGenero" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbDocumentoIN">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="codAplicacion" type="xs:string" />
+              <xs:element minOccurs="0" default="-1" name="idExpediente" type="xs:long" />
+              <xs:element minOccurs="0" default="" name="producto" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="tipoPersona" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="opcion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="tipoDocumento" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="opid" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="canal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="terminal" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbDocumentoOUT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="codRetorno" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="msjRetorno" type="xs:string" />
+              <xs:element minOccurs="0" name="contrato" type="xs:base64Binary" />
+              <xs:element minOccurs="0" name="tablaAmortizacion" type="xs:base64Binary" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbExpedienteTramaOUT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="codRetorno" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="msjRetorno" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbPeriocidadPago">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="codAplicacion" type="xs:string" />
+              <xs:element minOccurs="0" name="codRetorno" type="xs:string" />
+              <xs:element minOccurs="0" name="msjRetorno" type="xs:string" />
+              <xs:element minOccurs="0" name="idProducto" type="xs:int" />
+              <xs:element minOccurs="0" name="idPeriodicidad" type="xs:int" />
+              <xs:element minOccurs="0" name="descripcionPeriodicidad" type="xs:string" />
+              <xs:element minOccurs="0" name="diasPeriodo" type="xs:int" />
+              <xs:element minOccurs="0" name="numMinimoCuotas" type="xs:int" />
+              <xs:element minOccurs="0" name="numMaximoCuotas" type="xs:int" />
+              <xs:element minOccurs="0" name="opid" type="xs:string" />
+              <xs:element minOccurs="0" name="terminal" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbSimulador">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="codAplicacion" type="xs:string" />
+              <xs:element minOccurs="0" name="TipoIDCliente" type="xs:string" />
+              <xs:element minOccurs="0" name="Identificacion" type="xs:string" />
+              <xs:element minOccurs="0" name="ClteCliente" type="xs:string" />
+              <xs:element minOccurs="0" name="NomCliente" type="xs:string" />
+              <xs:element minOccurs="0" name="MarcaCodeudor" type="xs:string" />
+              <xs:element minOccurs="0" name="DescripcionTabla" type="xs:string" />
+              <xs:element minOccurs="0" name="TipoProducto" type="xs:string" />
+              <xs:element minOccurs="0" name="DestFinan" type="xs:string" />
+              <xs:element minOccurs="0" name="Periodicidad" type="xs:string" />
+              <xs:element minOccurs="0" name="NroDividendos" type="xs:string" />
+              <xs:element minOccurs="0" name="FecIniPago" type="xs:string" />
+              <xs:element minOccurs="0" name="ValorCredNum" type="xs:string" />
+              <xs:element minOccurs="0" name="TasaInteres" type="xs:string" />
+              <xs:element minOccurs="0" name="SeguroCes" type="xs:string" />
+              <xs:element minOccurs="0" name="ValSeguroCes" type="xs:string" />
+              <xs:element minOccurs="0" name="DiaPago" type="xs:string" />
+              <xs:element minOccurs="0" name="TasaSegDes" type="xs:string" />
+              <xs:element minOccurs="0" name="Opcion" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbDetalleExpediente">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="codRetorno" type="xs:string" />
+              <xs:element minOccurs="0" name="msjRetorno" type="xs:string" />
+              <xs:element minOccurs="0" name="Identificacioncliente" type="xs:string" />
+              <xs:element minOccurs="0" name="NombreCliente" type="xs:string" />
+              <xs:element minOccurs="0" name="IngresoMensual" type="xs:string" />
+              <xs:element minOccurs="0" name="MontoFinanciar" type="xs:string" />
+              <xs:element minOccurs="0" name="Plazo" type="xs:string" />
+              <xs:element minOccurs="0" name="TasaInteresEfectiva" type="xs:string" />
+              <xs:element minOccurs="0" name="TasaInteresNominal" type="xs:string" />
+              <xs:element minOccurs="0" name="FactorReajuste" type="xs:string" />
+              <xs:element minOccurs="0" name="DiaPago" type="xs:string" />
+              <xs:element minOccurs="0" name="IdTablaAmortizacion" type="xs:string" />
+              <xs:element minOccurs="0" name="TablaAmortizacion" type="xs:string" />
+              <xs:element minOccurs="0" name="Proposito" type="xs:string" />
+              <xs:element minOccurs="0" name="IdTipoCuentaCredito" type="xs:string" />
+              <xs:element minOccurs="0" name="TipoCuentaCredito" type="xs:string" />
+              <xs:element minOccurs="0" name="CuentaDebito" type="xs:string" />
+              <xs:element minOccurs="0" name="IdTipoCuentaDebito" type="xs:string" />
+              <xs:element minOccurs="0" name="TipoCuentaDebito" type="xs:string" />
+              <xs:element minOccurs="0" name="CuentaCredito" type="xs:string" />
+              <xs:element minOccurs="0" name="Correspondencia" type="xs:string" />
+              <xs:element minOccurs="0" name="ProvinciaJurisdiccion" type="xs:string" />
+              <xs:element minOccurs="0" name="CiudadJurisdiccion" type="xs:string" />
+              <xs:element minOccurs="0" name="IdEtapa" type="xs:string" />
+              <xs:element minOccurs="0" name="Etapa" type="xs:string" />
+              <xs:element minOccurs="0" name="IdEstado" type="xs:string" />
+              <xs:element minOccurs="0" name="Estado" type="xs:string" />
+              <xs:element minOccurs="0" name="IdExpediente" type="xs:string" />
+              <xs:element minOccurs="0" name="IdProducto" type="xs:string" />
+              <xs:element minOccurs="0" name="Producto" type="xs:string" />
+              <xs:element minOccurs="0" name="SegmentoCredito" type="xs:string" />
+              <xs:element minOccurs="0" name="SubSegmentoCredito" type="xs:string" />
+              <xs:element minOccurs="0" name="PeriodicidadReajustable" type="xs:string" />
+              <xs:element minOccurs="0" name="DiasPeriodicidadReajustable" type="xs:string" />
+              <xs:element minOccurs="0" name="IdProductoPadre" type="xs:string" />
+              <xs:element minOccurs="0" name="Mensaje" type="xs:string" />
+              <xs:element minOccurs="0" name="ProductoHost" type="xs:string" />
+              <xs:element minOccurs="0" default="false" name="DocumentoExigible" type="xs:boolean" />
+              <xs:element minOccurs="0" name="FormaPago" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbExpedienteTramaIN">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="codAplicacion" type="xs:string" />
+              <xs:element minOccurs="0" default="-1" name="idExpediente" type="xs:long" />
+              <xs:element minOccurs="0" default="" name="campo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="valor" type="xs:string" />
+              <xs:element minOccurs="0" name="idProducto" type="xs:string" />
+              <xs:element minOccurs="0" name="idCanal" type="xs:string" />
+              <xs:element minOccurs="0" name="fechaInicio" type="xs:string" />
+              <xs:element minOccurs="0" name="fechaFin" type="xs:string" />
+              <xs:element minOccurs="0" name="identificacionCliente" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbConsultaProductoCR">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="tipoIdentificacion" type="xs:string" />
+              <xs:element minOccurs="0" name="identificacion" type="xs:string" />
+              <xs:element minOccurs="0" name="tipoProducto" type="xs:string" />
+              <xs:element minOccurs="0" name="usuario" type="xs:string" />
+              <xs:element minOccurs="0" name="opID" type="xs:string" />
+              <xs:element minOccurs="0" name="terminal" type="xs:string" />
+              <xs:element minOccurs="0" name="codAplicacion" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbConsultaProductoOut">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="codigoNeo" type="xs:string" />
+              <xs:element minOccurs="0" name="descripProducto" type="xs:string" />
+              <xs:element minOccurs="0" name="codigoExt" type="xs:string" />
+              <xs:element minOccurs="0" name="canal" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbProdInfoComercial">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="idCodigo" type="xs:string" />
+              <xs:element minOccurs="0" name="definicion" type="xs:string" />
+              <xs:element minOccurs="0" name="caracteristicas" type="xs:string" />
+              <xs:element minOccurs="0" name="costoActivacion" type="xs:string" />
+              <xs:element minOccurs="0" name="codigoProdRelacionado" type="xs:string" />
+              <xs:element minOccurs="0" name="nombreProducto" type="xs:string" />
+              <xs:element minOccurs="0" name="beneficios" type="xs:string" />
+              <xs:element minOccurs="0" name="numTipoTasa" type="xs:string" />
+              <xs:element minOccurs="0" name="tipoTasa" type="xs:string" />
+              <xs:element minOccurs="0" name="numMontoDepInicial" type="xs:string" />
+              <xs:element minOccurs="0" name="numMontoDepIniJuridica" type="xs:string" />
+              <xs:element minOccurs="0" name="requiereHojaAhorro" type="xs:string" />
+              <xs:element minOccurs="0" name="aplicaSeguro" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbDetalleProducto">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="IDCONTROL" type="xs:string" />
+              <xs:element minOccurs="0" name="TipoProd" type="xs:string" />
+              <xs:element minOccurs="0" name="CodProd" type="xs:string" />
+              <xs:element minOccurs="0" name="OESTADO" type="xs:string" />
+              <xs:element minOccurs="0" name="VALOR" type="xs:string" />
+              <xs:element minOccurs="0" name="SIGNO" type="xs:string" />
+              <xs:element minOccurs="0" name="EfeDispO" type="xs:string" />
+              <xs:element minOccurs="0" name="SignoEfeDispO" type="xs:string" />
+              <xs:element minOccurs="0" name="FecEmi" type="xs:string" />
+              <xs:element minOccurs="0" name="FecVen" type="xs:string" />
+              <xs:element minOccurs="0" name="NivLetras" type="xs:string" />
+              <xs:element minOccurs="0" name="NivNum" type="xs:string" />
+              <xs:element minOccurs="0" name="NivUtil" type="xs:string" />
+              <xs:element minOccurs="0" name="CifrasUtil" type="xs:string" />
+              <xs:element minOccurs="0" name="NivCupo" type="xs:string" />
+              <xs:element minOccurs="0" name="CifrasCupo" type="xs:string" />
+              <xs:element minOccurs="0" name="NivVcdo" type="xs:string" />
+              <xs:element minOccurs="0" name="CifrasVcdo" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbResultado">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="codRetorno" type="xs:string" />
+              <xs:element minOccurs="0" name="msjRetorno" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbInfoSolicitudCR">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="codAplicacion" type="xs:string" />
+              <xs:element minOccurs="0" name="correoPara" type="xs:string" />
+              <xs:element minOccurs="0" name="correoCC" type="xs:string" />
+              <xs:element minOccurs="0" name="correoPlantilla" type="xs:string" />
+              <xs:element minOccurs="0" name="correoXmlPathVar" type="xs:string" />
+              <xs:element minOccurs="0" name="dirigidoA" type="xs:string" />
+              <xs:element minOccurs="0" name="idFormaPago" type="xs:int" />
+              <xs:element minOccurs="0" name="idIdioma" type="xs:int" />
+              <xs:element minOccurs="0" name="incluirSaldoCta" type="xs:string" />
+              <xs:element minOccurs="0" name="numCtaPago" type="xs:string" />
+              <xs:element minOccurs="0" name="idCanal" type="xs:int" />
+              <xs:element minOccurs="0" name="idTipoID" type="xs:int" />
+              <xs:element minOccurs="0" name="identificacion" type="xs:string" />
+              <xs:element minOccurs="0" name="codeHostCR" type="xs:string" />
+              <xs:element minOccurs="0" name="usuario" type="xs:string" />
+              <xs:element minOccurs="0" name="OpID" type="xs:string" />
+              <xs:element minOccurs="0" name="terminal" type="xs:string" />
+              <xs:element minOccurs="0" name="costoServicio" type="xs:double" />
+              <xs:element minOccurs="0" name="idProductoCR" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbDetalleCatlogoXTipo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="0" name="idCodigo" type="xs:int" />
+              <xs:element minOccurs="0" default="" name="Descripcion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CodigoHost" type="xs:string" />
+              <xs:element minOccurs="0" name="TipoCatalogo" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

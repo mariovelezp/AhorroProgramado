@@ -1,0 +1,82 @@
+﻿@model List<MiMetaBG.WebApp.Models.SegmentoGral>
+@{
+    ViewBag.Title = "SegPrincipal";
+}
+
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="heading1">Mantenimiento de Segmentos</h1>
+                <p class="subheading">Consulta general de segmentos</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <table>
+                <tr>
+                    <td><a href="~/Private/SaveSegment">CREAR NUEVO SEGMENTO</a></td>
+                    <td width="20"></td>
+                    <td><a href="~/Private/ImgPrincipal">MANTENIMIENTO IMAGEN</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="row">
+            <div class="table-responsive">
+            <table class="table">
+                <tr>
+                    <td width="100"><h5 class="card-title">Acciones</h5></td>   <!--col01-->
+                    <td><h5 class="card-title">Código</h5></td>                 <!--col02-->
+                    <td><h5 class="card-title">Nombre</h5></td>                 <!--col03-->
+                    <td><h5 class="card-title">Descripción</h5></td>            <!--col04-->
+                    <td><h5 class="card-title">Código Imagen</h5></td>          <!--col05-->
+                    <td width="100"><h5 class="card-title">Imagen</h5></td>     <!--col06-->
+                    <td width="100"><h5 class="card-title">Emoji</h5></td>      <!--col07-->
+                    <td><h5 class="card-title">% Umbral</h5></td>               <!--col08-->
+                    <td><h5 class="card-title">Estado</h5></td>                 <!--col09-->
+                    <td><h5 class="card-title">Prod. Cruzado</h5></td>          <!--col10-->
+                    <td><h5 class="card-title">Prioridad</h5></td>              <!--col11-->
+                    <td><h5 class="card-title">Mensaje Segmento</h5></td>       <!--col12-->
+                    <td><h5 class="card-title">Cod Host</h5></td>               <!--col13-->
+                </tr>
+                @if (Model != null) {
+                foreach (var Seg in Model)
+                {
+                    <tr>
+                        <td><input type="button" value="Editar" onclick="SalvarDatosSP('@Seg.idSegmento', '@Seg.nombre', '@Seg.descripcion', '@Seg.codimagen', '@Seg.umbral', '@Seg.estado', '@Seg.prod_cruz', '@Seg.prioridad', '@Seg.mensaje_seg', '@Seg.cod_host')" />
+                        </td>
+                        <td>@Seg.idSegmento</td>
+                        <td>@Seg.nombre</td>
+                        <td>@Seg.descripcion</td>
+                        <td>@Seg.codimagen</td>
+                        <td><img src="data:image;base64,@System.Convert.ToBase64String(Seg.imagen)" width="60" height="30" alt=""></td>
+                        <td><img src="data:image;base64,@System.Convert.ToBase64String(Seg.emojin)" width="30" height="30" /></td>
+                        <td>@Seg.umbral</td>
+                        <td>@Seg.estado</td>
+                        <td>@Seg.prod_cruz</td>
+                        <td>@Seg.prioridad</td>
+                        <td>@Seg.mensaje_seg</td>
+                        <td>@Seg.cod_host</td>
+                    </tr>
+                    }
+                }
+            </table>
+
+            @using (Html.BeginForm("SaveSegmentEdit", "Private", FormMethod.Post, new { @class = "p-3 py-md-4 px-md-5", @name = "myform", @id = "myform" }))
+            {
+                <input type="hidden" id="opcion"      name="opcion"      value="" />
+                <input type="hidden" id="IdSegmento"  name="IdSegmento"  value="" />
+                <input type="hidden" id="nombre"      name="nombre"      value="" />
+                <input type="hidden" id="descripcion" name="descripcion" value="" />
+                <input type="hidden" id="codimagen"   name="codimagen"   value="" />
+                <input type="hidden" id="umbral"      name="umbral"      value="" />
+                <input type="hidden" id="estado"      name="estado"      value="" />
+                <input type="hidden" id="producto"    name="producto"    value="" />
+                <input type="hidden" id="prioridad"   name="prioridad"   value="" />
+                <input type="hidden" id="mensaje_seg" name="mensaje_seg" value="" />
+                <input type="hidden" id="cod_host"    name="cod_host"    value="" />
+            }
+            </div>
+        </div>
+    </div>
+</main>

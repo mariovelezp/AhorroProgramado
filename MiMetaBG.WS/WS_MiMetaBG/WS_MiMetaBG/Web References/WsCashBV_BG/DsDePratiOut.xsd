@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/DsDePratiOut.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/DsDePratiOut.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DsDePratiOut.xsd" id="DsDePratiOut" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="DsDePratiOut">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DtConsultaOut">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:Caption="Nombre Cliente" minOccurs="0" name="Nombre_Cliente">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:Caption="Valor Cobro" minOccurs="0" name="Valor_Cobro" type="xs:double" />
+              <xs:element msdata:Caption="Valor Minimo Cobro" minOccurs="0" name="Valor_Minimo_Cobro" type="xs:double" />
+              <xs:element msdata:Caption="Fecha Vencimiento Cobro" minOccurs="0" name="Fecha_Vencimiento_Cobro">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Referencia">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:Caption="Codigo Respuesta" minOccurs="0" name="CodigoRespuesta" type="xs:int" />
+              <xs:element msdata:Caption="Mensaje Error" minOccurs="0" name="MsgError">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:Caption="Valor Pendiente Cobro" minOccurs="0" name="Valor_Pendiente_Cobro" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

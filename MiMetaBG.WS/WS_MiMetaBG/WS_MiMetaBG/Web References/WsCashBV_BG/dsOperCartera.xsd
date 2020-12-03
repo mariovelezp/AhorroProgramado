@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsOperCartera.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsOperCartera.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsOperCartera.xsd" id="dsOperCartera" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsOperCartera">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtCabeceraOperCarteraIN">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="maquina">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" default="" name="netname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" default="" name="opid">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" default="" name="terminal">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" default="1" name="operador">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" default="" name="tiposervicio">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" default="" name="tiporequerimiento">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" default="" name="transaccion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="aplicacion" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtTran0005IN">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="tipoidentificacion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" default="" name="codigoidentificacion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" default="" name="codigocliente">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtTran0005OUT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="codigocliente">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="nombrecliente">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="70" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="fechanacimiento">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="tipoidentificacion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="codigoidentificacion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="direccion1" type="xs:string" />
+              <xs:element minOccurs="0" name="ciudad1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="telefono1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="direccion2">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="70" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ciudad2">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="telefono2">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="codigonacionalidad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="codigooficialcredito">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="nombreoficialcredito">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="telefonocelular">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="email">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtCabeceraOperCarteraOUT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="codigoretorno">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="mensajeretorno">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtTran0010IN">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="codigocliente">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="fechaconcesion" type="xs:string" />
+              <xs:element minOccurs="0" name="indicecabecera" type="xs:string" />
+              <xs:element minOccurs="0" name="marcamasdatos" type="xs:string" />
+              <xs:element minOccurs="0" name="fechavctofinal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="indicevencimiento" type="xs:string" />
+              <xs:element minOccurs="0" name="tipocuentapago" type="xs:string" />
+              <xs:element minOccurs="0" name="numerocuenta" type="xs:string" />
+              <xs:element minOccurs="0" name="montopago" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtTran0010OUT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="cantcargados" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtTran0010OUTDetPrestamo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="tipoprestamo" type="xs:string" />
+              <xs:element minOccurs="0" name="documento" type="xs:string" />
+              <xs:element msdata:Caption="fechaconsecion" minOccurs="0" name="fechaconcesion" type="xs:string" />
+              <xs:element minOccurs="0" name="fechavencimiento" type="xs:string" />
+              <xs:element minOccurs="0" name="cantidadcuotas" type="xs:string" />
+              <xs:element minOccurs="0" name="indicecabecera" type="xs:string" />
+              <xs:element minOccurs="0" name="capitalvencido" type="xs:decimal" />
+              <xs:element minOccurs="0" name="capitalporvencer" type="xs:decimal" />
+              <xs:element minOccurs="0" name="montooriginal" type="xs:decimal" />
+              <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtTran0010OUTTabAmortizacion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="tipoprestamo" type="xs:string" />
+              <xs:element minOccurs="0" name="documento" type="xs:string" />
+              <xs:element msdata:Caption="fechaconsecion" minOccurs="0" name="fechaconcesion" type="xs:string" />
+              <xs:element minOccurs="0" name="fechavencimiento" type="xs:string" />
+              <xs:element minOccurs="0" name="cantidadcuotas" type="xs:string" />
+              <xs:element msdata:Caption="indicecabecera" minOccurs="0" name="capitalreducido" type="xs:decimal" />
+              <xs:element msdata:Caption="capitalvencido" minOccurs="0" name="valorcuota" type="xs:decimal" />
+              <xs:element msdata:Caption="capitalporvencer" minOccurs="0" name="capitalvencido" type="xs:decimal" />
+              <xs:element msdata:Caption="montooriginal" minOccurs="0" name="capitalporvencer" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtTran0010OUTVPagVcdo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="cantidadcuotasvencidas" type="xs:decimal" />
+              <xs:element minOccurs="0" name="capitalporpagar" type="xs:decimal" />
+              <xs:element minOccurs="0" name="interesporpagar" type="xs:decimal" />
+              <xs:element minOccurs="0" name="comisionporpagar" type="xs:decimal" />
+              <xs:element minOccurs="0" name="comisioncobranzaporpagar" type="xs:decimal" />
+              <xs:element minOccurs="0" name="moraporpagar" type="xs:decimal" />
+              <xs:element minOccurs="0" name="solcaporpagar" type="xs:decimal" />
+              <xs:element minOccurs="0" name="gastosadmporpagar" type="xs:decimal" />
+              <xs:element minOccurs="0" name="fiduciaporpagar" type="xs:decimal" />
+              <xs:element minOccurs="0" name="cesporpagar" type="xs:decimal" />
+              <xs:element minOccurs="0" name="totalporpagar" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtTran0010OUTVPagProxVcdo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="cantidadcuotasvencidas" type="xs:decimal" />
+              <xs:element minOccurs="0" name="capitalporpagar" type="xs:decimal" />
+              <xs:element minOccurs="0" name="interesporpagar" type="xs:decimal" />
+              <xs:element minOccurs="0" name="comisionporpagar" type="xs:decimal" />
+              <xs:element minOccurs="0" name="comisioncobranzaporpagar" type="xs:decimal" />
+              <xs:element minOccurs="0" name="moraporpagar" type="xs:decimal" />
+              <xs:element minOccurs="0" name="solcaporpagar" type="xs:decimal" />
+              <xs:element minOccurs="0" name="gastosadmporpagar" type="xs:decimal" />
+              <xs:element minOccurs="0" name="fiduciaporpagar" type="xs:decimal" />
+              <xs:element minOccurs="0" name="cesporpagar" type="xs:decimal" />
+              <xs:element minOccurs="0" name="totalporpagar" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtTran0010OUTValPag">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:Caption="cantidadcuotasvencidas" minOccurs="0" name="cantidadcuotaspag" type="xs:decimal" />
+              <xs:element msdata:Caption="capitalporpagar" minOccurs="0" name="capitalpag" type="xs:decimal" />
+              <xs:element msdata:Caption="interesporpagar" minOccurs="0" name="interespag" type="xs:decimal" />
+              <xs:element msdata:Caption="comisionporpagar" minOccurs="0" name="comisionpag" type="xs:decimal" />
+              <xs:element msdata:Caption="comisioncobranzaporpagar" minOccurs="0" name="comisioncobranzapag" type="xs:decimal" />
+              <xs:element msdata:Caption="moraporpagar" minOccurs="0" name="morapag" type="xs:decimal" />
+              <xs:element msdata:Caption="solcaporpagar" minOccurs="0" name="solcapag" type="xs:decimal" />
+              <xs:element msdata:Caption="gastosadmporpagar" minOccurs="0" name="gastosadmpag" type="xs:decimal" />
+              <xs:element msdata:Caption="fiduciaporpagar" minOccurs="0" name="fiduciapag" type="xs:decimal" />
+              <xs:element msdata:Caption="cesporpagar" minOccurs="0" name="cespag" type="xs:decimal" />
+              <xs:element msdata:Caption="totalporpagar" minOccurs="0" name="totalpag" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

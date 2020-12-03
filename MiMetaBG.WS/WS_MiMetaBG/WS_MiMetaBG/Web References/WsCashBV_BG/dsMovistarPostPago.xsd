@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsMovistarPostPago.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsMovistarPostPago.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsMovistarPostPago.xsd" id="dsMovistarPostPago" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsMovistarPostPago">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dt_TransaccionIn">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="codEntidad" type="xs:string" />
+              <xs:element minOccurs="0" name="IdTransaccion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="canalPago" type="xs:string" />
+              <xs:element minOccurs="0" name="numCelular" type="xs:string" />
+              <xs:element minOccurs="0" name="numCedula" type="xs:string" />
+              <xs:element minOccurs="0" name="RUC" type="xs:string" />
+              <xs:element minOccurs="0" name="codCliente" type="xs:string" />
+              <xs:element minOccurs="0" name="fechaPago" type="xs:string" />
+              <xs:element minOccurs="0" name="fechaContable" type="xs:string" />
+              <xs:element minOccurs="0" name="numComPagoBanco" type="xs:string" />
+              <xs:element minOccurs="0" name="numComPagoMovistar" type="xs:string" />
+              <xs:element minOccurs="0" name="impPago" type="xs:string" />
+              <xs:element minOccurs="0" name="terminalCICS" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_TransaccionOut">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="msgError" type="xs:string" />
+              <xs:element minOccurs="0" name="numEvento" type="xs:string" />
+              <xs:element minOccurs="0" name="codError" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_TransaccionOut_det">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="codCliente" type="xs:int" />
+              <xs:element minOccurs="0" name="saldoDeuda" type="xs:string" />
+              <xs:element minOccurs="0" name="nomCliente" type="xs:string" />
+              <xs:element minOccurs="0" name="apeCliente" type="xs:string" />
+              <xs:element minOccurs="0" name="impPago" type="xs:string" />
+              <xs:element minOccurs="0" name="canalPago" type="xs:string" />
+              <xs:element minOccurs="0" name="numComPagoBanco" type="xs:string" />
+              <xs:element minOccurs="0" name="numComPagoMovistar" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_TransaccionIn_det">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="FormaCobro" type="xs:string" />
+              <xs:element minOccurs="0" name="ImpFormaCobro" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

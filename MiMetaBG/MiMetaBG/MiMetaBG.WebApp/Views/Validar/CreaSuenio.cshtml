@@ -1,0 +1,114 @@
+﻿
+@{
+    ViewBag.Title = "CreaSuenio";
+}
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <ul class="steps-list">
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a class="active" href="#"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="heading1">¡Listo, es hora de ahorrar!</h1>
+                <p class="subheading">Define la cuenta y frecuencia de ahorro</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-10 col-md-8 col-lg-6 mb-4 px-sm-3 px-4">
+                <div class="card shadow-sm">
+                    <div class="dream-detail-header">
+                        <div class="dream-detail-img"><img src="img/icon-1.png" alt=""></div>
+                        <div class="dream-detail-text">
+                            <h5>Viaje a Galápagos</h5>
+                        </div>
+                    </div>
+                    <div class="dream-detail-divider"></div>
+                    <div class="dream-detail-body">
+                        <div class="dream-detail-goal">
+                            <p>Meta:<span>$10.000,00</span></p>
+                        </div>
+                        <div class="dream-detail-save">
+                            <p>Cuota:<span>$600</span></p>
+                        </div>
+                        <div class="dream-detail-time">
+                            <p>Plazo:<span>15/Julio/2020</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-10 col-md-8 col-lg-6 mb-4 px-sm-3 px-4">
+                <div class="card shadow-sm">
+                    <form class="p-3 p-md-4">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="cuentaInicio">Fondos provienen de:</label>
+                                    <select class="form-control" id="cuentaInicio">
+                                        <option>Cta. Corriente 102342</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="cuentaDestino">Se acreditarán en:</label>
+                                    <select class="form-control" id="cuentaDestino">
+                                        <option>Cta. Ahorros 23443</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <p class="dream-goal text-sm-left">¿Qué día deseas que se debite de tu cuenta?</p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="col-number">
+                                    <div class="form-group">
+                                        <select class="form-control">
+                                            <option>15</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-number-parent pl-0">
+                                    <p class="b">días de cada mes</p>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-6 col-lg-4 mt-0 mt-md-3 mt-lg-4 px-sm-3 px-4"><a class="btn btn-primary d-block" href="#" data-toggle="modal" data-target="#successModal">Listo, crear mi sueño</a></div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-8 col-lg-6 mt-4 text-center">
+                <p class="s">Al hacer clic en el siguiente botón estoy autorizando a Banco de Guayaquil a debitar el monto ingresado de forma mensual.</p>
+                <p class="s">Puedes cancelar tu meta en cualquier momento.</p>
+            </div>
+        </div>
+    </div>
+</main>
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <div class="modal-icon icon-success"></div>
+                        <h5 class="modal-title">¡Felicitaciones!</h5>
+                        <p class="modal-text">Tu sueño a sido creado con éxito. Ahora puedes auto gestionarlo de forma rápida y sencilla.</p>
+                    </div>
+                    <div class="col-12 mt-2 text-center"><a class="btn btn-link btn-link-success" href="5.html">Continuar</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

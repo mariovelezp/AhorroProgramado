@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsPorta.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsPorta.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsPorta.xsd" id="dsPorta" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsPorta">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtPorta">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Cod_Transaccion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Tipo_Transaccion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Num_Telefono" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Num_Cta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Tarjeta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Identificacion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Secuencial_Trx_BG" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Clave" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Valor_Compra" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Cod_Respuesta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Msj_Respuesta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Nombre_Cuenta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Num_Activacion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Num_Autorizacion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Num_Referencia" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Nota_Venta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Monto_Tiempo_Aire" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Valor_ICE" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Valor_IVA" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Num_Serie_Prepago" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Fecha_Expiracion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Canal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Terminal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Num_Trx_ATM" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Valor_Recibido" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Filler" type="xs:string" />
+              <xs:element minOccurs="0" default="0" name="Cod_Ubica" type="xs:string" />
+              <xs:element minOccurs="0" default="0" name="Cod_Ptoventa" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Tipo_Identificacion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" default="" name="Identificacion2">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" default="" name="Nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="70" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

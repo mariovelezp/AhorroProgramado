@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsCORPAIREIn.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsCORPAIREIn.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsCORPAIREIn.xsd" id="dsCORPAIREIn" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsCORPAIREIn">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dt_Transaccion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="TIPO_CONSULTA" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PARAMETRO_BUSQUEDA" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TIPO_PROCESO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CONTRAPARTIDA" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SECUENCIAL_COBRO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="MONEDA_PAGO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="VALOR_PAGO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SECUENCIAL_BANCO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FECHA_PAGO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="HORA_PAGO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="MODO_PROCESO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CANAL_PROCESO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="COD_AGENCIA" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="OP_ID" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TERMINAL_ID" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

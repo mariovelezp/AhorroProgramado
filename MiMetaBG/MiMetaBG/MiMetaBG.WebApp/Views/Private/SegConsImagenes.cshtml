@@ -1,0 +1,42 @@
+﻿@model List<MiMetaBG.WebApp.Models.ImagenGral>
+@{
+    ViewBag.Title = "SegConsImagenes";
+}
+
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="heading1">Imagenes Segmentos</h1>
+                <p class="subheading">Consulta general de imágenes de segmentos</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="table-responsive">
+                <table class="table">
+                    <tr>
+                        <td width="100"><h5 class="card-title">Acciones</h5></td>   <!--col01-->
+                        <td><h5 class="card-title">Código Imagen</h5></td>          <!--col02-->
+                        <td width="100"><h5 class="card-title">Imagen</h5></td>     <!--col03-->
+                        <td width="100"><h5 class="card-title">Emoji</h5></td>      <!--col04-->
+                    </tr>
+                    @if (Model != null)
+                    {
+                        foreach (var Seg in Model)
+                        {
+                            <tr>
+                                <td>
+                                    <input type="button" id="seleccion" name="seleccion" value="Seleccionar" onclick="SalvarDatosCI('@Seg.codimagen')" />
+                                </td>
+                                <td>@Seg.codimagen</td>
+                                <td><img src="data:image;base64,@System.Convert.ToBase64String(Seg.imagen)" width="60" height="30" alt=""></td>
+                                <td><img src="data:image;base64,@System.Convert.ToBase64String(Seg.emojin)" width="30" height="30" /></td>
+                            </tr>
+                        }
+                    }
+                </table>
+
+            </div>
+        </div>
+    </div>
+</main>

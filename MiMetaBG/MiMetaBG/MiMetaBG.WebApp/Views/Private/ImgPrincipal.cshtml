@@ -1,0 +1,56 @@
+﻿@model List<MiMetaBG.WebApp.Models.ImagenGral>
+@{
+    ViewBag.Title = "ImgPrincipal";
+}
+
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="heading1">Mantenimiento de Imagenes</h1>
+                <p class="subheading">Consulta general de imágenes de segmentos</p>
+            </div>
+        </div>
+        <div class="row">
+            <table>
+                <tr>
+                    <td><a href="~/Private/SaveImagen">CREAR NUEVA IMAGEN </a></td>
+                    <td width="20"></td>
+                    <td><a href="~/Private/SegPrincipal"> INICIO</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="row">
+            <div class="table-responsive">
+                <table class="table">
+                    <tr>
+                        <td width="100"><h5 class="card-title">Acciones</h5></td>  
+                        <td><h5 class="card-title">Código Imagen</h5></td>       
+                        <td width="100"><h5 class="card-title">Imagen</h5></td>  
+                        <td width="100"><h5 class="card-title">Emoji</h5></td>   
+                    </tr>
+                    @if (Model != null)
+                    {
+                        foreach (var Seg in Model)
+                        {
+                            <tr>
+                                <td>
+                                    
+                                    <input type="button" value="Editar" onclick="SalvarDatosImg('@Seg.codimagen')" />
+                                </td>
+                                <td>@Seg.codimagen</td>
+                                <td><img src="data:image;base64,@System.Convert.ToBase64String(Seg.imagen)" width="60" height="30" alt=""></td>
+                                <td><img src="data:image;base64,@System.Convert.ToBase64String(Seg.emojin)" width="30" height="30" /></td>
+                            </tr>
+                        }
+                    }
+                </table>
+                @using (Html.BeginForm("SaveImagenEdit", "Private", FormMethod.Post, new { @class = "p-3 py-md-4 px-md-5", @name = "myform", @id = "myform" }))
+                {
+                    <input type="hidden" id="opcion" name="opcion" value="" />
+                    <input type="hidden" id="CodImagen" name="CodImagen" value="" />
+                }
+            </div>
+        </div>
+    </div>
+</main>

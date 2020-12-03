@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsStandardIn.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsStandardIn.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsStandardIn.xsd" id="dsStandardIn" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsStandardIn">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dt_Transaccion_Standard">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Tipo_Transaccion" type="xs:string" />
+              <xs:element minOccurs="0" name="Tipo_Producto" type="xs:string" />
+              <xs:element minOccurs="0" name="Codigo_Institucion_Financiera" type="xs:string" />
+              <xs:element minOccurs="0" name="Canal" type="xs:string" />
+              <xs:element minOccurs="0" name="Terminal" type="xs:string" />
+              <xs:element minOccurs="0" name="Fecha_Transaccion" type="xs:string" />
+              <xs:element minOccurs="0" name="Hora_Transaccion" type="xs:string" />
+              <xs:element minOccurs="0" name="Cod_Obligacion" type="xs:string" />
+              <xs:element minOccurs="0" name="Nro_Pagos" type="xs:int" />
+              <xs:element minOccurs="0" name="Valor_Total_Pagado" type="xs:double" />
+              <xs:element minOccurs="0" name="Fecha_Contable" type="xs:string" />
+              <xs:element minOccurs="0" name="ID_Secuencia" type="xs:string" />
+              <xs:element minOccurs="0" name="Forma_De_Pago_1" type="xs:string" />
+              <xs:element minOccurs="0" name="Monto_1" type="xs:double" />
+              <xs:element minOccurs="0" name="Forma_De_Pago_2" type="xs:string" />
+              <xs:element minOccurs="0" name="Monto_2" type="xs:double" />
+              <xs:element minOccurs="0" name="ID_Transaccion_Empresa" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ITEM">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="IDTransaccion" type="xs:int" />
+              <xs:element minOccurs="0" name="Referencia" type="xs:string" />
+              <xs:element minOccurs="0" name="Periodo" type="xs:string" />
+              <xs:element minOccurs="0" name="Valor_Pagado" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

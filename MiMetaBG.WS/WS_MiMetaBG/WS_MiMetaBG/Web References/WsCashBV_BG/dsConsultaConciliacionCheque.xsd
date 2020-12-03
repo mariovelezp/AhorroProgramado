@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsConsultaConciliacionCheque.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsConsultaConciliacionCheque.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsConsultaConciliacionCheque.xsd" id="dsConsultaConciliacionCheque" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsConsultaConciliacionCheque">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtCabecera">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="codigoretorno" type="xs:string" />
+              <xs:element minOccurs="0" name="tipo" type="xs:string" />
+              <xs:element minOccurs="0" name="nombre" type="xs:string" />
+              <xs:element minOccurs="0" name="documento" type="xs:string" />
+              <xs:element minOccurs="0" name="seleccion" type="xs:string" />
+              <xs:element minOccurs="0" name="numero_registro" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtDetalle">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:AutoIncrement="true" minOccurs="0" name="id" type="xs:int" />
+              <xs:element minOccurs="0" name="documento" type="xs:string" />
+              <xs:element minOccurs="0" name="filler" type="xs:string" />
+              <xs:element minOccurs="0" name="monto" type="xs:string" />
+              <xs:element minOccurs="0" name="agencia_emision" type="xs:string" />
+              <xs:element minOccurs="0" name="fecha_emision" type="xs:string" />
+              <xs:element minOccurs="0" name="agencia_cobro" type="xs:string" />
+              <xs:element minOccurs="0" name="fecha_cobro" type="xs:string" />
+              <xs:element minOccurs="0" name="transfer" type="xs:string" />
+              <xs:element minOccurs="0" name="beneficiario" type="xs:string" />
+              <xs:element minOccurs="0" name="estado" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="dtCabeceraKey1">
+      <xs:selector xpath=".//mstns:dtCabecera" />
+      <xs:field xpath="mstns:documento" />
+    </xs:unique>
+    <xs:unique name="dtDetalleKey1">
+      <xs:selector xpath=".//mstns:dtDetalle" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

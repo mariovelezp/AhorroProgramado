@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsPinesMoviles.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsPinesMoviles.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsPinesMoviles.xsd" id="dsPinesMoviles" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsPinesMoviles">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtPinesMovilesIn">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="IdContrato" type="xs:string" />
+              <xs:element minOccurs="0" name="Esquema" type="xs:string" />
+              <xs:element minOccurs="0" name="NumeroBase" type="xs:string" />
+              <xs:element minOccurs="0" name="Cantidad" type="xs:string" />
+              <xs:element minOccurs="0" name="Producto" type="xs:string" />
+              <xs:element minOccurs="0" name="MedioAcceso" type="xs:string" />
+              <xs:element minOccurs="0" name="CodigoDestino" type="xs:string" />
+              <xs:element minOccurs="0" name="ReferenciaBGPago" type="xs:string" />
+              <xs:element minOccurs="0" name="ReferenciaBGReverso" type="xs:string" />
+              <xs:element minOccurs="0" name="Canal" type="xs:string" />
+              <xs:element minOccurs="0" name="Opid" type="xs:string" />
+              <xs:element minOccurs="0" name="Terminal" type="xs:string" />
+              <xs:element minOccurs="0" name="Ip" type="xs:string" />
+              <xs:element minOccurs="0" name="FechaTrx" type="xs:string" />
+              <xs:element minOccurs="0" name="HoraTrx" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtPinesMovilesOut">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CodigoRetorno" type="xs:string" />
+              <xs:element minOccurs="0" name="MensajeRetorno" type="xs:string" />
+              <xs:element minOccurs="0" name="IdTransaccion" type="xs:string" />
+              <xs:element minOccurs="0" name="PinesDisponible" type="xs:string" />
+              <xs:element minOccurs="0" name="ValorPagar" type="xs:string" />
+              <xs:element minOccurs="0" name="IdTransferencia" type="xs:string" />
+              <xs:element minOccurs="0" name="CodigoPuntoVenta" type="xs:string" />
+              <xs:element minOccurs="0" name="NombrePuntoVenta" type="xs:string" />
+              <xs:element minOccurs="0" name="ContactoPuntoVenta" type="xs:string" />
+              <xs:element minOccurs="0" name="ReferenciaBG" type="xs:string" />
+              <xs:element minOccurs="0" name="CodigoRetornoEmpresa" type="xs:string" />
+              <xs:element minOccurs="0" name="MensajeRetornoEmpresa" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

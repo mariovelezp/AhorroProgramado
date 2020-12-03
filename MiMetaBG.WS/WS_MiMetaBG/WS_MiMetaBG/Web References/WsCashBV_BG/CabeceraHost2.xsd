@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/CabeceraHost2.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/CabeceraHost2.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/CabeceraHost2.xsd" id="CabeceraHost2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="CabeceraHost2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="HeaderHost">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Transaccion" type="xs:string" />
+              <xs:element minOccurs="0" name="Marca_primera_vez" type="xs:string" />
+              <xs:element minOccurs="0" name="Numero_registro" type="xs:string" />
+              <xs:element minOccurs="0" name="Identificacion" type="xs:string" />
+              <xs:element minOccurs="0" name="Clave" type="xs:string" />
+              <xs:element minOccurs="0" name="Clave2" type="xs:string" />
+              <xs:element minOccurs="0" name="Codempresa" type="xs:string" />
+              <xs:element minOccurs="0" name="Direccion_ip" type="xs:string" />
+              <xs:element minOccurs="0" name="Mac_address" type="xs:string" />
+              <xs:element minOccurs="0" name="Tipo" type="xs:string" />
+              <xs:element minOccurs="0" name="Codigo_canal" type="xs:string" />
+              <xs:element minOccurs="0" name="Cuenta_uno" type="xs:string" />
+              <xs:element minOccurs="0" name="Cuenta_dos" type="xs:string" />
+              <xs:element minOccurs="0" name="Tarjeta_uno" type="xs:string" />
+              <xs:element minOccurs="0" name="Tarjeta_dos" type="xs:string" />
+              <xs:element minOccurs="0" name="Codigo_servicio" type="xs:string" />
+              <xs:element minOccurs="0" name="Valor_transaccion" type="xs:string" />
+              <xs:element minOccurs="0" name="Codigo_aplica" type="xs:string" />
+              <xs:element minOccurs="0" name="Autoriza" type="xs:string" />
+              <xs:element minOccurs="0" name="Fecha_inicio" type="xs:string" />
+              <xs:element minOccurs="0" name="Fecha_fin" type="xs:string" />
+              <xs:element minOccurs="0" name="Cod_retorno" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Filler1" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

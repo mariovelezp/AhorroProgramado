@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/DsTransitoMunicipal_In.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/DsTransitoMunicipal_In.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DsTransitoMunicipal_In.xsd" id="DsTransitoMunicipal_In" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="DsTransitoMunicipal_In">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DtTransitoMunicipal_In">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="TIPO_IDEN" type="xs:string" />
+              <xs:element minOccurs="0" name="IDENTIFICA" type="xs:string" />
+              <xs:element minOccurs="0" name="PLACA" type="xs:string" />
+              <xs:element minOccurs="0" name="T_SERVICIO" type="xs:string" />
+              <xs:element minOccurs="0" name="BANCO" type="xs:string" />
+              <xs:element minOccurs="0" name="SUCURSAL" type="xs:string" />
+              <xs:element minOccurs="0" name="CANAL" type="xs:string" />
+              <xs:element minOccurs="0" name="PROVINCIA" type="xs:string" />
+              <xs:element minOccurs="0" name="SOLICITUD" type="xs:string" />
+              <xs:element minOccurs="0" name="VALOR_PAGO" type="xs:string" />
+              <xs:element minOccurs="0" name="CODIGO_TRANSACCION" type="xs:string" />
+              <xs:element minOccurs="0" name="FECHA_HORA_TRX" type="xs:string" />
+              <xs:element minOccurs="0" name="FECHA_HORA_CONT" type="xs:string" />
+              <xs:element minOccurs="0" name="MOTIVO_REVERSO" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPO_METODO" type="xs:string" />
+              <xs:element minOccurs="0" name="EMPRESA" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DtAutoridadMunicipal_Out">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="TIPO_IDEN" type="xs:string" />
+              <xs:element minOccurs="0" name="IDENTIFICA" type="xs:string" />
+              <xs:element minOccurs="0" name="NOMBRE" type="xs:string" />
+              <xs:element minOccurs="0" name="CANTIDAD" type="xs:string" />
+              <xs:element minOccurs="0" name="VALOR" type="xs:string" />
+              <xs:element minOccurs="0" name="NOMBRE_TRAMITE" type="xs:string" />
+              <xs:element minOccurs="0" name="COD_ERROR" type="xs:string" />
+              <xs:element minOccurs="0" name="MENSAJE" type="xs:string" />
+              <xs:element minOccurs="0" name="CIT_REGNACIONAL" type="xs:string" />
+              <xs:element minOccurs="0" name="CIT_ATM" type="xs:string" />
+              <xs:element minOccurs="0" name="PAGO_SRI" type="xs:string" />
+              <xs:element minOccurs="0" name="SOLICITUD" type="xs:string" />
+              <xs:element minOccurs="0" name="CODIGO_TRANSACCION" type="xs:string" />
+              <xs:element minOccurs="0" name="SECUENCIA_RECIBO" type="xs:string" />
+              <xs:element minOccurs="0" name="FECHA_HORA_REVERSO" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

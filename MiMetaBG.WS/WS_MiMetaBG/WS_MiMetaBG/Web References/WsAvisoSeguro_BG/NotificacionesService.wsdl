@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="EnviaMensaje">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="categoria" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="canal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="construirMail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mailConstruido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="construirSMS" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="smsConstruido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="remitente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="asunto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codigoAviso" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroSecuenciaControl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="celular" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cuenta1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cuenta2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="producto1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="producto2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="valor1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="valor2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="valor3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="campo1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="campo2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="terminal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hora" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipoID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviaMensajeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviaMensajeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidaEnvioMensaje">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="canal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numeroCuenta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="identificacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidaEnvioMensajeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidaEnvioMensajeResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidaSuscripcion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="canal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="categoria" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="identificacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidaSuscripcionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidaSuscripcionResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="EnviaMensajeSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviaMensaje" />
+  </wsdl:message>
+  <wsdl:message name="EnviaMensajeSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviaMensajeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidaEnvioMensajeSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidaEnvioMensaje" />
+  </wsdl:message>
+  <wsdl:message name="ValidaEnvioMensajeSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidaEnvioMensajeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidaSuscripcionSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidaSuscripcion" />
+  </wsdl:message>
+  <wsdl:message name="ValidaSuscripcionSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidaSuscripcionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="NotificacionesServiceSoap">
+    <wsdl:operation name="EnviaMensaje">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Envia Notificaciones según Categoría y Canal.</wsdl:documentation>
+      <wsdl:input message="tns:EnviaMensajeSoapIn" />
+      <wsdl:output message="tns:EnviaMensajeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidaEnvioMensaje">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Valida si el mensaje se debe enviar dependiendo de si el cliente está suscrito a Aviso Seguro.&lt;br&gt;Parámetros: canal=[02|01|55|53|58|08], numeroCuenta=[Ahorros|Corriente], identificacion=[(C|P|R)-0000000000000].&lt;br&gt;Devuelve True/False.</wsdl:documentation>
+      <wsdl:input message="tns:ValidaEnvioMensajeSoapIn" />
+      <wsdl:output message="tns:ValidaEnvioMensajeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidaSuscripcion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Valida si el Cliente tiene paquete de aviso seguro activo.&lt;br&gt;Parámetros: canal=[02|01|55|53|58|08], identificacion=[(C|P|R)-0000000000000].&lt;br&gt;Devuelve True/False.</wsdl:documentation>
+      <wsdl:input message="tns:ValidaSuscripcionSoapIn" />
+      <wsdl:output message="tns:ValidaSuscripcionSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NotificacionesServiceSoap" type="tns:NotificacionesServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EnviaMensaje">
+      <soap:operation soapAction="http://tempuri.org/EnviaMensaje" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidaEnvioMensaje">
+      <soap:operation soapAction="http://tempuri.org/ValidaEnvioMensaje" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidaSuscripcion">
+      <soap:operation soapAction="http://tempuri.org/ValidaSuscripcion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NotificacionesServiceSoap12" type="tns:NotificacionesServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EnviaMensaje">
+      <soap12:operation soapAction="http://tempuri.org/EnviaMensaje" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidaEnvioMensaje">
+      <soap12:operation soapAction="http://tempuri.org/ValidaEnvioMensaje" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidaSuscripcion">
+      <soap12:operation soapAction="http://tempuri.org/ValidaSuscripcion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NotificacionesService">
+    <wsdl:port name="NotificacionesServiceSoap" binding="tns:NotificacionesServiceSoap">
+      <soap:address location="http://172.26.60.165:88/BG.AvisoSeguro.Notificaciones.WS/NotificacionesService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="NotificacionesServiceSoap12" binding="tns:NotificacionesServiceSoap12">
+      <soap12:address location="http://172.26.60.165:88/BG.AvisoSeguro.Notificaciones.WS/NotificacionesService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

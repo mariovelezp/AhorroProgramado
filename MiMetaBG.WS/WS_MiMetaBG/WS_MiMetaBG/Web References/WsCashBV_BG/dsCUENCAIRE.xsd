@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsCUENCAIRE.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsCUENCAIRE.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsCUENCAIRE.xsd" id="dsCUENCAIRE" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsCUENCAIRE">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dt_Transaccion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default=" " name="TRANSACCION_I" type="xs:string" />
+              <xs:element minOccurs="0" default=" " name="INSTITUCION_IO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CLAVE_INSTITUCION_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="OPID_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CANAL_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="OFICINA_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TERMINAL_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FECHA_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="HORA_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="MODO_PROCESO_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FILLER_I" type="xs:string" />
+              <xs:element minOccurs="0" default=" " name="TRN_INSTITUCION_I" type="xs:string" />
+              <xs:element minOccurs="0" default=" " name="TRN_TIPO_BUSQUEDA_IO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRN_PLACAS_IO" type="xs:string" />
+              <xs:element minOccurs="0" default=" " name="TRN_SECUENCIA_BG_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRN_MONEDA_IO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRN_VALOR_TOTAL_IO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NUMERO_COMPROBANTE_IO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRN_FILLER_IO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="COD_RET_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CHASIS_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="REFERENCIA_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PROPIETARIO_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DIRECCION_PROPIETARIO_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CIUDAD_PROPIETARIO_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TELEFONO_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="LOCALIDAD_COBRO_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FECHA_VIGENCIA_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FLAG_EXONERADO_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CANT_REVISION_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NUM_CONVOCAT_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NUM_REVISION_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="COD_MENSAJES_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="BASE_IMPONIBLE_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TIPO_RUBRO_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="MSG_RET_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="RUBROS_IO" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

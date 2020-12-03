@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsConPrestamos.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsConPrestamos.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsConPrestamos.xsd" id="dsConPrestamos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsConPrestamos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtResCabecera">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombre" type="xs:string" />
+              <xs:element minOccurs="0" name="cantidadprestamos" type="xs:string" />
+              <xs:element minOccurs="0" name="codigoretorno" type="xs:string" />
+              <xs:element minOccurs="0" name="opid" type="xs:string" />
+              <xs:element minOccurs="0" name="fecha" type="xs:string" />
+              <xs:element minOccurs="0" name="tdoc1" type="xs:string" />
+              <xs:element minOccurs="0" name="txven" type="xs:string" />
+              <xs:element minOccurs="0" name="tdoc2" type="xs:string" />
+              <xs:element minOccurs="0" name="tvenc" type="xs:string" />
+              <xs:element minOccurs="0" name="tdoc3" type="xs:string" />
+              <xs:element minOccurs="0" name="tcast" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtResDetalle">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="nombre" type="xs:string" />
+              <xs:element minOccurs="0" name="desc" type="xs:string" />
+              <xs:element minOccurs="0" name="doc1" type="xs:string" />
+              <xs:element minOccurs="0" name="xven" type="xs:string" />
+              <xs:element minOccurs="0" name="doc2" type="xs:string" />
+              <xs:element minOccurs="0" name="venc" type="xs:string" />
+              <xs:element minOccurs="0" name="doc3" type="xs:string" />
+              <xs:element minOccurs="0" name="cast" type="xs:string" />
+              <xs:element minOccurs="0" name="CodigoPrestamo" type="xs:string" />
+              <xs:element minOccurs="0" name="FechaVencimiento" type="xs:string" />
+              <xs:element minOccurs="0" name="DiasMora" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:dtResCabecera" />
+      <xs:field xpath="mstns:nombre" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="dtResCabecera_dtResDetalle" msdata:parent="dtResCabecera" msdata:child="dtResDetalle" msdata:parentkey="nombre" msdata:childkey="nombre" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

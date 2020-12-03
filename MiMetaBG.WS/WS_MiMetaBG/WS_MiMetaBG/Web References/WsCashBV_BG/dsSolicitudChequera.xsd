@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsSolicitudChequera.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsSolicitudChequera.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsSolicitudChequera.xsd" id="dsSolicitudChequera" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsSolicitudChequera">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtSolicitudChequeraOUT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="COD_RETORNO" type="xs:string" />
+              <xs:element minOccurs="0" name="MSJ_RETORNO" type="xs:string" />
+              <xs:element minOccurs="0" name="COSTO_DEBITAR" type="xs:string" />
+              <xs:element minOccurs="0" name="HORARIO_ATEN_I" type="xs:string" />
+              <xs:element minOccurs="0" name="HORARIO_ATEN_F" type="xs:string" />
+              <xs:element minOccurs="0" name="MARCA_DIFERIDO" type="xs:string" />
+              <xs:element minOccurs="0" name="NUMERO_SOLICITUD" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtSolicitudChequeraIN">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="TipoProceso" type="xs:string" />
+              <xs:element minOccurs="0" name="TipoCuenta" type="xs:string" />
+              <xs:element minOccurs="0" name="Cuenta" type="xs:string" />
+              <xs:element minOccurs="0" name="Cantidad" type="xs:string" />
+              <xs:element minOccurs="0" name="Modelo" type="xs:string" />
+              <xs:element minOccurs="0" name="TipoChequera" type="xs:string" />
+              <xs:element minOccurs="0" name="NombreRetira" type="xs:string" />
+              <xs:element minOccurs="0" name="CedulaRetira" type="xs:string" />
+              <xs:element minOccurs="0" name="OficinaRetira" type="xs:string" />
+              <xs:element minOccurs="0" name="OficinaIngresa" type="xs:string" />
+              <xs:element minOccurs="0" name="MontoDebitar" type="xs:string" />
+              <xs:element minOccurs="0" name="InicioCheque" type="xs:string" />
+              <xs:element minOccurs="0" name="NumSolCash" type="xs:string" />
+              <xs:element minOccurs="0" name="Celular2" type="xs:string" />
+              <xs:element minOccurs="0" name="Email2" type="xs:string" />
+              <xs:element minOccurs="0" name="FechaIngreso" type="xs:string" />
+              <xs:element minOccurs="0" name="Transaccion" type="xs:string" />
+              <xs:element minOccurs="0" name="Dir_Ip" type="xs:string" />
+              <xs:element minOccurs="0" name="MacAddress" type="xs:string" />
+              <xs:element minOccurs="0" name="CodCanal" type="xs:string" />
+              <xs:element minOccurs="0" name="OPID" type="xs:string" />
+              <xs:element minOccurs="0" name="ID" type="xs:string" />
+              <xs:element minOccurs="0" name="Identificacion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Usuario" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

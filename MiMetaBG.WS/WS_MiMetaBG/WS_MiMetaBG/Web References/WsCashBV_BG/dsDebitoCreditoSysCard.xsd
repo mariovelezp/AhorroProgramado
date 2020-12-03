@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsDebitoCreditoSysCard.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsDebitoCreditoSysCard.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsDebitoCreditoSysCard.xsd" id="dsDebitoCreditoSysCard" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsDebitoCreditoSysCard">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TB_NotasDebitoCreditoHdr_IN">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Opcion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Usuario" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Estacion" type="xs:string" />
+              <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="Filas" type="xs:short" />
+              <xs:element minOccurs="0" name="Oficina" type="xs:int" />
+              <xs:element minOccurs="0" name="Empresa" type="xs:short" />
+              <xs:element minOccurs="0" default="" name="Secuencia" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TB_NotasDebitoCreditoBdy_IN">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Accion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Proceso" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Tipo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Motivo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Tarjeta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Monto" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Moneda" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Referencia" type="xs:string" />
+              <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+              <xs:element minOccurs="0" default="" name="Cedula" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TB_NotasDebitoCreditoBdy_OUT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Referencia" type="xs:string" />
+              <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TB_NotasDebitoCreditoHdr_OUT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:Caption="Opcion" minOccurs="0" default="0" name="NumFilas" type="xs:int" />
+              <xs:element msdata:Caption="Usuario" minOccurs="0" default="" name="CodRespuesta" type="xs:string" />
+              <xs:element msdata:Caption="Estacion" minOccurs="0" default="" name="Mensaje" type="xs:string" />
+              <xs:element msdata:Caption="Fecha" minOccurs="0" default="" name="Status" type="xs:string" />
+              <xs:element msdata:Caption="Filas" minOccurs="0" default="" name="Prints" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

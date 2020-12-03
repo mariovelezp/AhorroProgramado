@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsImpuestos.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsImpuestos.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsImpuestos.xsd" id="dsImpuestos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsImpuestos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dt_Impuestos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="CODIGO_TRANSACCION" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CODIGO_ENTIDAD" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CODIGO_TIPO_TRANSACCION" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NUMERO_RUC" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NUMERO_SERIAL" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CODIGO_IMPUESTO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CODIGO_CANAL_PAGO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PROVINCIA_AGENCIA" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PERIODO_FISCAL_DESDE" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PERIODO_FISCAL_HASTA" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FECHA_RECEPCION_CEP" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CLASE_CONTRIBUYENTES" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="ORIGINAL_SUSTITUTIVA" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="RAZON_SOCIAL" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="VALOR_IMPUESTO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="VALOR_MULTAS" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="VALOR_INTERES" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TOTAL_PAGO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="VALOR_COMPENSACIONES" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="VALOR_NOTAS_CREDITO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NUMERO_CUOTA" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CODIGO_LOG_MONITOR" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="COD_OPE_COD_MEN" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DEBITO_BANCO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FECHA_PAGO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TIPO_CUENTA" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CUENTA" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CODIGO_ERROR" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="MENSAJE_ERROR" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CLAVE" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SECUENCIA" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="ID_ENTIDAD_REV" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CODIGO_LOG_MONITOR_REV" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsRise.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsRise.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsRise.xsd" id="dsRise" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsRise">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dt_Rise">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="PNI_CODIGO_TRANSACCION_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PNI_CODIGO_ENTIDAD_IFI_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PSI_CODIGO_AGENCIA_IFI_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PSI_CODIGO_CANAL_PAGO_IFI_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PSI_NOMBRE_OPERADOR_IFI_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PSI_PROVINCIA_IFI_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PSI_NUMERO_RUC_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PSO_RAZON_SOCIAL_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PNO_VALOR_GLOBAL_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PSO_DETALLE_GLOBAL_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PNO_VALOR_A_LA_FECHA_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PSO_DETALLE_A_LA_FECHA_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PSI_TIPO_PAGO_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PNI_VALOR_PAGO_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PSO_DETALLE_PAGO_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PSO_NUMERO_COMPROBANTE_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PSO_FECHA_RECAUDACION_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PNI_CODIGO_TRANSACCION_PAGO_I" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PNO_RESULTADO_TRANSACCION_O" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

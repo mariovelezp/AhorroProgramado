@@ -1,0 +1,1588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Servicio Web de Gestión General para Módulo de Personas en NEO, version 1.1.0, fecha 16/01/2017 08:15 a.m., PROY-1347</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="consultasPersona">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GeneralCampos">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="lstCampos" type="tns:ArrayOfCampo" />
+          <s:element minOccurs="0" maxOccurs="1" name="codigoError" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mensajeError" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="resultadoConsultas">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="1" maxOccurs="1" name="Formulario" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="listadoCampos" type="tns:ArrayOfCampo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCampo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Campo" nillable="true" type="tns:Campo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Campo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TipoDato" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ValorDato" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TamanioDato" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NombreDato" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="consultasPersonaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarPersona">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarPersonaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarDatosJuridicos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarDatosJuridicosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="segmentoRiesgo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="segmentoRiesgoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarUbicacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarUbicacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarReferencias">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarReferenciasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarIngresosGastos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarIngresosGastosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarActivoPasivo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarActivoPasivoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validarPersonaProducto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validarPersonaProductoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="accionesDocumentosFatca">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="accionesDocumentosFatcaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="inactivarRelacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="inactivarRelacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultaExpediente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultaExpedienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validarCamposObligatorios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validarCamposObligatoriosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ingresoClienteHost">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ingresoClienteHostResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarProductosServicios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarProductosServiciosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarProveedores">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarProveedoresResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarSeguros">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarSegurosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarClientesPersonaJuridica">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarClientesPersonaJuridicaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarInstalaciones">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarInstalacionesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarCreditosOtrasEmpresas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarCreditosOtrasEmpresasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarObligaciones">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarObligacionesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarCompraVenta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarCompraVentaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarInformacionClientes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarInformacionClientesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcesarInformacionClientes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcesarInformacionClientesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DatosRepresentateAccionista">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DatosRepresentateAccionistaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="verificarCamposObligatorios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="verificarCamposObligatoriosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="permisosUsuarioFatca">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="permisosUsuarioFatcaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultaCatalogosPersonas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultaCatalogosPersonasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaAutoFacilPremiun">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_pGeneralCampos" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaAutoFacilPremiunResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_pGeneralCampos" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaDatosContactabilidad">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaDatosContactabilidadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizaCamposSegmentacionPersonas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizaCamposSegmentacionPersonasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreaActualizaDatosPersonaNatural">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreaActualizaDatosPersonaNaturalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SolicitudActualizaDatosCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlActualizaDatosCliente">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SolicitudActualizaDatosClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codigoError" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mensajeError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaDatosContacto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tipo_identificacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numIdentificacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaDatosContactoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codigoError" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mensajeError" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Correo_Electronico" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Celular" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CallePrincipal_Domicilio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CalleInterseccion_Domicilio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Manzana_Domicilio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VillaSolar_Domicilio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BarrioSectorEtapaUrb_Domicilio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Referencia_Domicilio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Ciudad_Domicilio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Telefono_Domicilio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CallePrincipal_Trabajo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CalleInterseccion_trabajo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Manzana_Trabajo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VillaSolar_Trabajo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BarrioSectorEtapaUrb_Trabajo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Referencia_Trabajo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Ciudad_trabajo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Telefono_Trabajo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Forma_Envio" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidacionPersonaExpedienteAF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidacionPersonaExpedienteAFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenCmp" type="tns:GeneralCampos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="consultasPersonaSoapIn">
+    <wsdl:part name="parameters" element="tns:consultasPersona" />
+  </wsdl:message>
+  <wsdl:message name="consultasPersonaSoapOut">
+    <wsdl:part name="parameters" element="tns:consultasPersonaResponse" />
+  </wsdl:message>
+  <wsdl:message name="actualizarPersonaSoapIn">
+    <wsdl:part name="parameters" element="tns:actualizarPersona" />
+  </wsdl:message>
+  <wsdl:message name="actualizarPersonaSoapOut">
+    <wsdl:part name="parameters" element="tns:actualizarPersonaResponse" />
+  </wsdl:message>
+  <wsdl:message name="actualizarDatosJuridicosSoapIn">
+    <wsdl:part name="parameters" element="tns:actualizarDatosJuridicos" />
+  </wsdl:message>
+  <wsdl:message name="actualizarDatosJuridicosSoapOut">
+    <wsdl:part name="parameters" element="tns:actualizarDatosJuridicosResponse" />
+  </wsdl:message>
+  <wsdl:message name="segmentoRiesgoSoapIn">
+    <wsdl:part name="parameters" element="tns:segmentoRiesgo" />
+  </wsdl:message>
+  <wsdl:message name="segmentoRiesgoSoapOut">
+    <wsdl:part name="parameters" element="tns:segmentoRiesgoResponse" />
+  </wsdl:message>
+  <wsdl:message name="actualizarUbicacionSoapIn">
+    <wsdl:part name="parameters" element="tns:actualizarUbicacion" />
+  </wsdl:message>
+  <wsdl:message name="actualizarUbicacionSoapOut">
+    <wsdl:part name="parameters" element="tns:actualizarUbicacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="actualizarReferenciasSoapIn">
+    <wsdl:part name="parameters" element="tns:actualizarReferencias" />
+  </wsdl:message>
+  <wsdl:message name="actualizarReferenciasSoapOut">
+    <wsdl:part name="parameters" element="tns:actualizarReferenciasResponse" />
+  </wsdl:message>
+  <wsdl:message name="actualizarIngresosGastosSoapIn">
+    <wsdl:part name="parameters" element="tns:actualizarIngresosGastos" />
+  </wsdl:message>
+  <wsdl:message name="actualizarIngresosGastosSoapOut">
+    <wsdl:part name="parameters" element="tns:actualizarIngresosGastosResponse" />
+  </wsdl:message>
+  <wsdl:message name="actualizarActivoPasivoSoapIn">
+    <wsdl:part name="parameters" element="tns:actualizarActivoPasivo" />
+  </wsdl:message>
+  <wsdl:message name="actualizarActivoPasivoSoapOut">
+    <wsdl:part name="parameters" element="tns:actualizarActivoPasivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="validarPersonaProductoSoapIn">
+    <wsdl:part name="parameters" element="tns:validarPersonaProducto" />
+  </wsdl:message>
+  <wsdl:message name="validarPersonaProductoSoapOut">
+    <wsdl:part name="parameters" element="tns:validarPersonaProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="accionesDocumentosFatcaSoapIn">
+    <wsdl:part name="parameters" element="tns:accionesDocumentosFatca" />
+  </wsdl:message>
+  <wsdl:message name="accionesDocumentosFatcaSoapOut">
+    <wsdl:part name="parameters" element="tns:accionesDocumentosFatcaResponse" />
+  </wsdl:message>
+  <wsdl:message name="inactivarRelacionSoapIn">
+    <wsdl:part name="parameters" element="tns:inactivarRelacion" />
+  </wsdl:message>
+  <wsdl:message name="inactivarRelacionSoapOut">
+    <wsdl:part name="parameters" element="tns:inactivarRelacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultaExpedienteSoapIn">
+    <wsdl:part name="parameters" element="tns:consultaExpediente" />
+  </wsdl:message>
+  <wsdl:message name="consultaExpedienteSoapOut">
+    <wsdl:part name="parameters" element="tns:consultaExpedienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="validarCamposObligatoriosSoapIn">
+    <wsdl:part name="parameters" element="tns:validarCamposObligatorios" />
+  </wsdl:message>
+  <wsdl:message name="validarCamposObligatoriosSoapOut">
+    <wsdl:part name="parameters" element="tns:validarCamposObligatoriosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ingresoClienteHostSoapIn">
+    <wsdl:part name="parameters" element="tns:ingresoClienteHost" />
+  </wsdl:message>
+  <wsdl:message name="ingresoClienteHostSoapOut">
+    <wsdl:part name="parameters" element="tns:ingresoClienteHostResponse" />
+  </wsdl:message>
+  <wsdl:message name="actualizarProductosServiciosSoapIn">
+    <wsdl:part name="parameters" element="tns:actualizarProductosServicios" />
+  </wsdl:message>
+  <wsdl:message name="actualizarProductosServiciosSoapOut">
+    <wsdl:part name="parameters" element="tns:actualizarProductosServiciosResponse" />
+  </wsdl:message>
+  <wsdl:message name="actualizarProveedoresSoapIn">
+    <wsdl:part name="parameters" element="tns:actualizarProveedores" />
+  </wsdl:message>
+  <wsdl:message name="actualizarProveedoresSoapOut">
+    <wsdl:part name="parameters" element="tns:actualizarProveedoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="actualizarSegurosSoapIn">
+    <wsdl:part name="parameters" element="tns:actualizarSeguros" />
+  </wsdl:message>
+  <wsdl:message name="actualizarSegurosSoapOut">
+    <wsdl:part name="parameters" element="tns:actualizarSegurosResponse" />
+  </wsdl:message>
+  <wsdl:message name="actualizarClientesPersonaJuridicaSoapIn">
+    <wsdl:part name="parameters" element="tns:actualizarClientesPersonaJuridica" />
+  </wsdl:message>
+  <wsdl:message name="actualizarClientesPersonaJuridicaSoapOut">
+    <wsdl:part name="parameters" element="tns:actualizarClientesPersonaJuridicaResponse" />
+  </wsdl:message>
+  <wsdl:message name="actualizarInstalacionesSoapIn">
+    <wsdl:part name="parameters" element="tns:actualizarInstalaciones" />
+  </wsdl:message>
+  <wsdl:message name="actualizarInstalacionesSoapOut">
+    <wsdl:part name="parameters" element="tns:actualizarInstalacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="actualizarCreditosOtrasEmpresasSoapIn">
+    <wsdl:part name="parameters" element="tns:actualizarCreditosOtrasEmpresas" />
+  </wsdl:message>
+  <wsdl:message name="actualizarCreditosOtrasEmpresasSoapOut">
+    <wsdl:part name="parameters" element="tns:actualizarCreditosOtrasEmpresasResponse" />
+  </wsdl:message>
+  <wsdl:message name="actualizarObligacionesSoapIn">
+    <wsdl:part name="parameters" element="tns:actualizarObligaciones" />
+  </wsdl:message>
+  <wsdl:message name="actualizarObligacionesSoapOut">
+    <wsdl:part name="parameters" element="tns:actualizarObligacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="actualizarCompraVentaSoapIn">
+    <wsdl:part name="parameters" element="tns:actualizarCompraVenta" />
+  </wsdl:message>
+  <wsdl:message name="actualizarCompraVentaSoapOut">
+    <wsdl:part name="parameters" element="tns:actualizarCompraVentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarInformacionClientesSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarInformacionClientes" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarInformacionClientesSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarInformacionClientesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcesarInformacionClientesSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcesarInformacionClientes" />
+  </wsdl:message>
+  <wsdl:message name="ProcesarInformacionClientesSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcesarInformacionClientesResponse" />
+  </wsdl:message>
+  <wsdl:message name="DatosRepresentateAccionistaSoapIn">
+    <wsdl:part name="parameters" element="tns:DatosRepresentateAccionista" />
+  </wsdl:message>
+  <wsdl:message name="DatosRepresentateAccionistaSoapOut">
+    <wsdl:part name="parameters" element="tns:DatosRepresentateAccionistaResponse" />
+  </wsdl:message>
+  <wsdl:message name="verificarCamposObligatoriosSoapIn">
+    <wsdl:part name="parameters" element="tns:verificarCamposObligatorios" />
+  </wsdl:message>
+  <wsdl:message name="verificarCamposObligatoriosSoapOut">
+    <wsdl:part name="parameters" element="tns:verificarCamposObligatoriosResponse" />
+  </wsdl:message>
+  <wsdl:message name="permisosUsuarioFatcaSoapIn">
+    <wsdl:part name="parameters" element="tns:permisosUsuarioFatca" />
+  </wsdl:message>
+  <wsdl:message name="permisosUsuarioFatcaSoapOut">
+    <wsdl:part name="parameters" element="tns:permisosUsuarioFatcaResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultaCatalogosPersonasSoapIn">
+    <wsdl:part name="parameters" element="tns:consultaCatalogosPersonas" />
+  </wsdl:message>
+  <wsdl:message name="consultaCatalogosPersonasSoapOut">
+    <wsdl:part name="parameters" element="tns:consultaCatalogosPersonasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaAutoFacilPremiunSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaAutoFacilPremiun" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaAutoFacilPremiunSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaAutoFacilPremiunResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaDatosContactabilidadSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaDatosContactabilidad" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaDatosContactabilidadSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaDatosContactabilidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizaCamposSegmentacionPersonasSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizaCamposSegmentacionPersonas" />
+  </wsdl:message>
+  <wsdl:message name="ActualizaCamposSegmentacionPersonasSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizaCamposSegmentacionPersonasResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreaActualizaDatosPersonaNaturalSoapIn">
+    <wsdl:part name="parameters" element="tns:CreaActualizaDatosPersonaNatural" />
+  </wsdl:message>
+  <wsdl:message name="CreaActualizaDatosPersonaNaturalSoapOut">
+    <wsdl:part name="parameters" element="tns:CreaActualizaDatosPersonaNaturalResponse" />
+  </wsdl:message>
+  <wsdl:message name="SolicitudActualizaDatosClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:SolicitudActualizaDatosCliente" />
+  </wsdl:message>
+  <wsdl:message name="SolicitudActualizaDatosClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:SolicitudActualizaDatosClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaDatosContactoSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaDatosContacto" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaDatosContactoSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaDatosContactoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidacionPersonaExpedienteAFSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidacionPersonaExpedienteAF" />
+  </wsdl:message>
+  <wsdl:message name="ValidacionPersonaExpedienteAFSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidacionPersonaExpedienteAFResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PersonasSoap">
+    <wsdl:operation name="consultasPersona">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método dentro del servicio web creado, consultasPersona consultar la información de Clientes.</wsdl:documentation>
+      <wsdl:input message="tns:consultasPersonaSoapIn" />
+      <wsdl:output message="tns:consultasPersonaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarPersona">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método dentro del servicio web creado, para actualizar o crear la información de Clientes.</wsdl:documentation>
+      <wsdl:input message="tns:actualizarPersonaSoapIn" />
+      <wsdl:output message="tns:actualizarPersonaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarDatosJuridicos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método dentro del servicio web creado, para actualizar o crear la información de Clientes Juridicos.</wsdl:documentation>
+      <wsdl:input message="tns:actualizarDatosJuridicosSoapIn" />
+      <wsdl:output message="tns:actualizarDatosJuridicosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="segmentoRiesgo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método dentro del servicio web creado, para actualizar el segmento de riesgo del Clientes.</wsdl:documentation>
+      <wsdl:input message="tns:segmentoRiesgoSoapIn" />
+      <wsdl:output message="tns:segmentoRiesgoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarUbicacion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método dentro del servicio web creado, para actualizar o crear la información de direcciones de los Clientes.</wsdl:documentation>
+      <wsdl:input message="tns:actualizarUbicacionSoapIn" />
+      <wsdl:output message="tns:actualizarUbicacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarReferencias">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método dentro del servicio web creado, para actualizar, crear o eliminar la información de referencias bancarias - personales  de los Clientes naturales.</wsdl:documentation>
+      <wsdl:input message="tns:actualizarReferenciasSoapIn" />
+      <wsdl:output message="tns:actualizarReferenciasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarIngresosGastos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método dentro del servicio web creado, para actualizar o crear la información de ingresos gastos de los Clientes naturales.</wsdl:documentation>
+      <wsdl:input message="tns:actualizarIngresosGastosSoapIn" />
+      <wsdl:output message="tns:actualizarIngresosGastosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarActivoPasivo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método dentro del servicio web creado, para actualizar, crear o eliminar la información de Bienes activos - pasivos  de los Clientes naturales.</wsdl:documentation>
+      <wsdl:input message="tns:actualizarActivoPasivoSoapIn" />
+      <wsdl:output message="tns:actualizarActivoPasivoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="validarPersonaProducto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método dentro del servicio web creado, para validarPersonaProducto.</wsdl:documentation>
+      <wsdl:input message="tns:validarPersonaProductoSoapIn" />
+      <wsdl:output message="tns:validarPersonaProductoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="accionesDocumentosFatca">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método dentro del servicio web creado, para actualizar, crear o eliminar la información de los documentos fatca de los Clientes.</wsdl:documentation>
+      <wsdl:input message="tns:accionesDocumentosFatcaSoapIn" />
+      <wsdl:output message="tns:accionesDocumentosFatcaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="inactivarRelacion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método dentro del servicio web creado, para procesar eliminar la relación del representate, accionistas de una persona juridica.</wsdl:documentation>
+      <wsdl:input message="tns:inactivarRelacionSoapIn" />
+      <wsdl:output message="tns:inactivarRelacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultaExpediente">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método dentro del servicio web creado, para consultar la información de Clientes - utilizado por expediente.</wsdl:documentation>
+      <wsdl:input message="tns:consultaExpedienteSoapIn" />
+      <wsdl:output message="tns:consultaExpedienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="validarCamposObligatorios">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método dentro del servicio web creado, para validarCamposObligatorios.</wsdl:documentation>
+      <wsdl:input message="tns:validarCamposObligatoriosSoapIn" />
+      <wsdl:output message="tns:validarCamposObligatoriosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ingresoClienteHost">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método dentro del servicio web creado, para crear la información de Clientes encontrados en host.</wsdl:documentation>
+      <wsdl:input message="tns:ingresoClienteHostSoapIn" />
+      <wsdl:output message="tns:ingresoClienteHostSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarProductosServicios">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método dentro del servicio web creado, para actualizar, crear o eliminación la información de productos - servicios de los Clientes juridicos.</wsdl:documentation>
+      <wsdl:input message="tns:actualizarProductosServiciosSoapIn" />
+      <wsdl:output message="tns:actualizarProductosServiciosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarProveedores">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método dentro del servicio web creado, para actualizar, crear o eliminación la información de proveedores de los Clientes juridicos.</wsdl:documentation>
+      <wsdl:input message="tns:actualizarProveedoresSoapIn" />
+      <wsdl:output message="tns:actualizarProveedoresSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarSeguros">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método dentro del servicio web creado, para actualizar, crear o eliminación la información de seguros de los Clientes juridicos.</wsdl:documentation>
+      <wsdl:input message="tns:actualizarSegurosSoapIn" />
+      <wsdl:output message="tns:actualizarSegurosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarClientesPersonaJuridica">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método dentro del servicio web creado, para actualizar, crear o eliminación la información de los clientes nacionales o extranjeros de los Clientes juridicos.</wsdl:documentation>
+      <wsdl:input message="tns:actualizarClientesPersonaJuridicaSoapIn" />
+      <wsdl:output message="tns:actualizarClientesPersonaJuridicaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarInstalaciones">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método dentro del servicio web creado, para actualizar, crear o eliminación la información de instalaciones de los Clientes juridicos.</wsdl:documentation>
+      <wsdl:input message="tns:actualizarInstalacionesSoapIn" />
+      <wsdl:output message="tns:actualizarInstalacionesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarCreditosOtrasEmpresas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método dentro del servicio web creado, para actualizar, crear o eliminación la información de creditos otras empresas de los Clientes juridicos.</wsdl:documentation>
+      <wsdl:input message="tns:actualizarCreditosOtrasEmpresasSoapIn" />
+      <wsdl:output message="tns:actualizarCreditosOtrasEmpresasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarObligaciones">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método dentro del servicio web creado, para actualizar, crear o eliminación la información de obligaciones de los Clientes juridicos.</wsdl:documentation>
+      <wsdl:input message="tns:actualizarObligacionesSoapIn" />
+      <wsdl:output message="tns:actualizarObligacionesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarCompraVenta">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método dentro del servicio web creado, para actualizar o crear  la información de Bienes compras-ventas de los Clientes juridicos.</wsdl:documentation>
+      <wsdl:input message="tns:actualizarCompraVentaSoapIn" />
+      <wsdl:output message="tns:actualizarCompraVentaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarInformacionClientes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método dentro del servicio web creado, para actualizar información específica de Clientes.</wsdl:documentation>
+      <wsdl:input message="tns:ActualizarInformacionClientesSoapIn" />
+      <wsdl:output message="tns:ActualizarInformacionClientesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcesarInformacionClientes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método dentro del servicio web creado, para procesar la información de Clientes.</wsdl:documentation>
+      <wsdl:input message="tns:ProcesarInformacionClientesSoapIn" />
+      <wsdl:output message="tns:ProcesarInformacionClientesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DatosRepresentateAccionista">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método dentro del servicio web creado, para procesar actualizar, crear los datos del representate, accionistas de una persona juridica.</wsdl:documentation>
+      <wsdl:input message="tns:DatosRepresentateAccionistaSoapIn" />
+      <wsdl:output message="tns:DatosRepresentateAccionistaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="verificarCamposObligatorios">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método que devuelve la validación de los campos obligatorios de los participantes de un expediente</wsdl:documentation>
+      <wsdl:input message="tns:verificarCamposObligatoriosSoapIn" />
+      <wsdl:output message="tns:verificarCamposObligatoriosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="permisosUsuarioFatca">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método que devuelve la validación de los campos obligatorios de los participantes de un expediente</wsdl:documentation>
+      <wsdl:input message="tns:permisosUsuarioFatcaSoapIn" />
+      <wsdl:output message="tns:permisosUsuarioFatcaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultaCatalogosPersonas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método que devuelve los catálogos utilizados por los formularios de personas</wsdl:documentation>
+      <wsdl:input message="tns:consultaCatalogosPersonasSoapIn" />
+      <wsdl:output message="tns:consultaCatalogosPersonasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaAutoFacilPremiun">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método para obtener información de un Personas para FacilPremiun</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaAutoFacilPremiunSoapIn" />
+      <wsdl:output message="tns:ConsultaAutoFacilPremiunSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaDatosContactabilidad">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método que devuelve los Datos de Contactibilidad del Cliente</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaDatosContactabilidadSoapIn" />
+      <wsdl:output message="tns:ConsultaDatosContactabilidadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaCamposSegmentacionPersonas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método que actualiza el tipo de banca, segmento estratégico, clte y oficial cliente.</wsdl:documentation>
+      <wsdl:input message="tns:ActualizaCamposSegmentacionPersonasSoapIn" />
+      <wsdl:output message="tns:ActualizaCamposSegmentacionPersonasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreaActualizaDatosPersonaNatural">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método que Crea o Actuliza los datos de una persona natural</wsdl:documentation>
+      <wsdl:input message="tns:CreaActualizaDatosPersonaNaturalSoapIn" />
+      <wsdl:output message="tns:CreaActualizaDatosPersonaNaturalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudActualizaDatosCliente">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método que permite actualizar datos de Cliente mediante solicitudes de otros aplicativos</wsdl:documentation>
+      <wsdl:input message="tns:SolicitudActualizaDatosClienteSoapIn" />
+      <wsdl:output message="tns:SolicitudActualizaDatosClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaDatosContacto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método que permite consultar los datos de contacto (direcciones, telefonos, correos,etc)</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaDatosContactoSoapIn" />
+      <wsdl:output message="tns:ConsultaDatosContactoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidacionPersonaExpedienteAF">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método que permite actualizar datos de Cliente mediante solicitudes de otros aplicativos</wsdl:documentation>
+      <wsdl:input message="tns:ValidacionPersonaExpedienteAFSoapIn" />
+      <wsdl:output message="tns:ValidacionPersonaExpedienteAFSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PersonasSoap" type="tns:PersonasSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="consultasPersona">
+      <soap:operation soapAction="http://tempuri.org/consultasPersona" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarPersona">
+      <soap:operation soapAction="http://tempuri.org/actualizarPersona" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarDatosJuridicos">
+      <soap:operation soapAction="http://tempuri.org/actualizarDatosJuridicos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="segmentoRiesgo">
+      <soap:operation soapAction="http://tempuri.org/segmentoRiesgo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarUbicacion">
+      <soap:operation soapAction="http://tempuri.org/actualizarUbicacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarReferencias">
+      <soap:operation soapAction="http://tempuri.org/actualizarReferencias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarIngresosGastos">
+      <soap:operation soapAction="http://tempuri.org/actualizarIngresosGastos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarActivoPasivo">
+      <soap:operation soapAction="http://tempuri.org/actualizarActivoPasivo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validarPersonaProducto">
+      <soap:operation soapAction="http://tempuri.org/validarPersonaProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="accionesDocumentosFatca">
+      <soap:operation soapAction="http://tempuri.org/accionesDocumentosFatca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inactivarRelacion">
+      <soap:operation soapAction="http://tempuri.org/inactivarRelacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultaExpediente">
+      <soap:operation soapAction="http://tempuri.org/consultaExpediente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validarCamposObligatorios">
+      <soap:operation soapAction="http://tempuri.org/validarCamposObligatorios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ingresoClienteHost">
+      <soap:operation soapAction="http://tempuri.org/ingresoClienteHost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarProductosServicios">
+      <soap:operation soapAction="http://tempuri.org/actualizarProductosServicios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarProveedores">
+      <soap:operation soapAction="http://tempuri.org/actualizarProveedores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarSeguros">
+      <soap:operation soapAction="http://tempuri.org/actualizarSeguros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarClientesPersonaJuridica">
+      <soap:operation soapAction="http://tempuri.org/actualizarClientesPersonaJuridica" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarInstalaciones">
+      <soap:operation soapAction="http://tempuri.org/actualizarInstalaciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarCreditosOtrasEmpresas">
+      <soap:operation soapAction="http://tempuri.org/actualizarCreditosOtrasEmpresas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarObligaciones">
+      <soap:operation soapAction="http://tempuri.org/actualizarObligaciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarCompraVenta">
+      <soap:operation soapAction="http://tempuri.org/actualizarCompraVenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarInformacionClientes">
+      <soap:operation soapAction="http://tempuri.org/ActualizarInformacionClientes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcesarInformacionClientes">
+      <soap:operation soapAction="http://tempuri.org/ProcesarInformacionClientes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DatosRepresentateAccionista">
+      <soap:operation soapAction="http://tempuri.org/DatosRepresentateAccionista" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verificarCamposObligatorios">
+      <soap:operation soapAction="http://tempuri.org/verificarCamposObligatorios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="permisosUsuarioFatca">
+      <soap:operation soapAction="http://tempuri.org/permisosUsuarioFatca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultaCatalogosPersonas">
+      <soap:operation soapAction="http://tempuri.org/consultaCatalogosPersonas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaAutoFacilPremiun">
+      <soap:operation soapAction="http://tempuri.org/ConsultaAutoFacilPremiun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaDatosContactabilidad">
+      <soap:operation soapAction="http://tempuri.org/ConsultaDatosContactabilidad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaCamposSegmentacionPersonas">
+      <soap:operation soapAction="http://tempuri.org/ActualizaCamposSegmentacionPersonas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreaActualizaDatosPersonaNatural">
+      <soap:operation soapAction="http://tempuri.org/CreaActualizaDatosPersonaNatural" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudActualizaDatosCliente">
+      <soap:operation soapAction="http://tempuri.org/SolicitudActualizaDatosCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaDatosContacto">
+      <soap:operation soapAction="http://tempuri.org/ConsultaDatosContacto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidacionPersonaExpedienteAF">
+      <soap:operation soapAction="http://tempuri.org/ValidacionPersonaExpedienteAF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PersonasSoap12" type="tns:PersonasSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="consultasPersona">
+      <soap12:operation soapAction="http://tempuri.org/consultasPersona" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarPersona">
+      <soap12:operation soapAction="http://tempuri.org/actualizarPersona" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarDatosJuridicos">
+      <soap12:operation soapAction="http://tempuri.org/actualizarDatosJuridicos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="segmentoRiesgo">
+      <soap12:operation soapAction="http://tempuri.org/segmentoRiesgo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarUbicacion">
+      <soap12:operation soapAction="http://tempuri.org/actualizarUbicacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarReferencias">
+      <soap12:operation soapAction="http://tempuri.org/actualizarReferencias" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarIngresosGastos">
+      <soap12:operation soapAction="http://tempuri.org/actualizarIngresosGastos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarActivoPasivo">
+      <soap12:operation soapAction="http://tempuri.org/actualizarActivoPasivo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validarPersonaProducto">
+      <soap12:operation soapAction="http://tempuri.org/validarPersonaProducto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="accionesDocumentosFatca">
+      <soap12:operation soapAction="http://tempuri.org/accionesDocumentosFatca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inactivarRelacion">
+      <soap12:operation soapAction="http://tempuri.org/inactivarRelacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultaExpediente">
+      <soap12:operation soapAction="http://tempuri.org/consultaExpediente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validarCamposObligatorios">
+      <soap12:operation soapAction="http://tempuri.org/validarCamposObligatorios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ingresoClienteHost">
+      <soap12:operation soapAction="http://tempuri.org/ingresoClienteHost" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarProductosServicios">
+      <soap12:operation soapAction="http://tempuri.org/actualizarProductosServicios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarProveedores">
+      <soap12:operation soapAction="http://tempuri.org/actualizarProveedores" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarSeguros">
+      <soap12:operation soapAction="http://tempuri.org/actualizarSeguros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarClientesPersonaJuridica">
+      <soap12:operation soapAction="http://tempuri.org/actualizarClientesPersonaJuridica" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarInstalaciones">
+      <soap12:operation soapAction="http://tempuri.org/actualizarInstalaciones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarCreditosOtrasEmpresas">
+      <soap12:operation soapAction="http://tempuri.org/actualizarCreditosOtrasEmpresas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarObligaciones">
+      <soap12:operation soapAction="http://tempuri.org/actualizarObligaciones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarCompraVenta">
+      <soap12:operation soapAction="http://tempuri.org/actualizarCompraVenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarInformacionClientes">
+      <soap12:operation soapAction="http://tempuri.org/ActualizarInformacionClientes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcesarInformacionClientes">
+      <soap12:operation soapAction="http://tempuri.org/ProcesarInformacionClientes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DatosRepresentateAccionista">
+      <soap12:operation soapAction="http://tempuri.org/DatosRepresentateAccionista" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verificarCamposObligatorios">
+      <soap12:operation soapAction="http://tempuri.org/verificarCamposObligatorios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="permisosUsuarioFatca">
+      <soap12:operation soapAction="http://tempuri.org/permisosUsuarioFatca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultaCatalogosPersonas">
+      <soap12:operation soapAction="http://tempuri.org/consultaCatalogosPersonas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaAutoFacilPremiun">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaAutoFacilPremiun" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaDatosContactabilidad">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaDatosContactabilidad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaCamposSegmentacionPersonas">
+      <soap12:operation soapAction="http://tempuri.org/ActualizaCamposSegmentacionPersonas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreaActualizaDatosPersonaNatural">
+      <soap12:operation soapAction="http://tempuri.org/CreaActualizaDatosPersonaNatural" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudActualizaDatosCliente">
+      <soap12:operation soapAction="http://tempuri.org/SolicitudActualizaDatosCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaDatosContacto">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaDatosContacto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidacionPersonaExpedienteAF">
+      <soap12:operation soapAction="http://tempuri.org/ValidacionPersonaExpedienteAF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Personas">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Servicio Web de Gestión General para Módulo de Personas en NEO, version 1.1.0, fecha 16/01/2017 08:15 a.m., PROY-1347</wsdl:documentation>
+    <wsdl:port name="PersonasSoap" binding="tns:PersonasSoap">
+      <soap:address location="http://172.26.60.71:88/BG.Neo.Ws.Persona/Personas.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PersonasSoap12" binding="tns:PersonasSoap12">
+      <soap12:address location="http://172.26.60.71:88/BG.Neo.Ws.Persona/Personas.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

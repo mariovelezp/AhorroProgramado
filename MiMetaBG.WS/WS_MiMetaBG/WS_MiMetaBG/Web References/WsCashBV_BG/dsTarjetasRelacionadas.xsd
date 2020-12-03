@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsTarjetasRelacionadas.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsTarjetasRelacionadas.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsTarjetasRelacionadas.xsd" id="dsTarjetasRelacionadas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsTarjetasRelacionadas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtTarjetasRelacionadas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Cantidad_Tarjeta" type="xs:string" />
+              <xs:element minOccurs="0" name="Opid" type="xs:string" />
+              <xs:element minOccurs="0" name="Codigo_Retorno" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtDetTarjetasRelacionadas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Tipo_Tarjeta" type="xs:string" />
+              <xs:element minOccurs="0" name="Numero_Tarjeta" type="xs:string" />
+              <xs:element minOccurs="0" name="Nombre" type="xs:string" />
+              <xs:element minOccurs="0" name="Minimo_Pagar" type="xs:string" />
+              <xs:element minOccurs="0" name="Status" type="xs:string" />
+              <xs:element minOccurs="0" name="Cantidad_Tarjeta" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="dtTarjetasRelacionadasKey1">
+      <xs:selector xpath=".//mstns:dtTarjetasRelacionadas" />
+      <xs:field xpath="mstns:Cantidad_Tarjeta" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="dtTarjetasRelacionadas_dtDetTarjetasRelacionadas" msdata:parent="dtTarjetasRelacionadas" msdata:child="dtDetTarjetasRelacionadas" msdata:parentkey="Cantidad_Tarjeta" msdata:childkey="Cantidad_Tarjeta" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

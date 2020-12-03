@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/DsConsolidadoSaldo.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/DsConsolidadoSaldo.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DsConsolidadoSaldo.xsd" id="DsConsolidadoSaldo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="DsConsolidadoSaldo">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtCabSaldosA_AH">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Cantidad_Cuentas" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Codigo_Retorno" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Responsable" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Puntero" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Pagineo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Cantidad_Cuentas1" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtDetSaldosA_AH">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="TipoMoneda" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Numero_Cuenta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Marca_Cuenta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Status" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="filler0" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_XConfirmar" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="filler1" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_Contable" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="filler2" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_Total" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="filler3" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_Disponible" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="filler4" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_Acumulativo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="filler5" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_Meta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Nombre" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtConsultaSaldos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Cantidad_Tarjeta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Codigo_Retorno" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Fecha" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Anio" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtDetConsultaSaldo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Tipo_Tarjeta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Numero_Tarjeta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Nombre" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Status" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_Anterior" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Consumo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Pago" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Minimo_Paga" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_Actual" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_Deuda" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Fecha_Tope" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Cantidad_Tarjeta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SaldoDiferido" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CupoOtorgado" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CupoDisponible" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CupoUtilizado" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_Contado" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_Vencido" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_Rotativo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_Diferido" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Fecha_Inicio_Corte" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Fecha_Fin_Corte" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_actual" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Incentivo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TipoTarjetaC" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Afinidad" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FechaCorte" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtSaldoFondo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Saldo_Fondo" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtConsultaPoliza">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Nombre" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Plazo_Promedio" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Total_Inversion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Interes_Promedio" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CodigoRetorno" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtDetallePoliza">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Documento" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FechaEmision" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FechaVencimiento" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Plazo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Capital" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Interes" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Nombre" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FechaPago" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Agencia" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtConsultaSaldoAmable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Cantidad_Tarjeta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Codigo_Retorno" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Fecha" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Anio" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtDetConsultaSaldoAmable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Tipo_Tarjeta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Numero_Tarjeta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Nombre" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Status" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_Anterior" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Consumo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Pago" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Minimo_Pagar" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_Actual" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_Deuda" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Fecha_Tope" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Cantidad_Tarjeta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SaldoDiferido" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CupoOtorgado" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CupoDisponible" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CupoUtilizado" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_Contado" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_Vencido" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_Rotativo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_Diferido" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Fecha_inicio_corte" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Fecha_fin_corte" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_actual" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Incentivo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TipoTarjetaC" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Afinidad" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FechaCorte" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtSaldoFondoAmable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Saldo_Fondo" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtPrestamosConsolidadoCab">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Puntero" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Pagineo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Contador" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CodRetorno" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="filler" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtPrestamoConsolidadDet">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Banco" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TipoObliga" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NumObliga" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NumDividen" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Capital" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Interes" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DividenMi" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SaldoCapi" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FechaCon" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FechaVenc" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtPrestamosDividendoxVencerCab">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Cuenta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NomClient" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Puntero" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Pagineo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Contador" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CodRetor" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtPrestamosDividendoxVencerDet">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="NumCheq" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FechaPago" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Estado" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Monto" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FechaCon" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FechaVenc" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtPrestamosDetalleDet">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Periodo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Capital" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Interes" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Dividendo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SaldoCapi" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FechaCon" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FechaVen" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="InteresesXM" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtPrestamosDetalleCab">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="NoOficial" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Operacion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NCliente" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NumOpera" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="MontoVence" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="MontoVenci" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Tasa" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FechaCon" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FechaVenci" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CodRetorno" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Pagineo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Puntero" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtCabSaldosA_CC">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Cantidad_Cuentas" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Codigo_Retorno" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Responsable" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Puntero" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Pagineo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Cantidad_Cuentas1" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtDetSaldosA_CC">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="TipoMoneda" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Numero_Cuenta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Marca_Cuenta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Status" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="filler0" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_XConfirmar" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="filler1" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_Contable" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="filler2" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_Total" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="filler3" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_Disponible" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="filler4" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_Acumulativo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="filler5" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_Meta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Nombre" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtConsolidado">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Codigo_Retorno" type="xs:string" />
+              <xs:element minOccurs="0" name="Mensaje" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtConsultaSaldoAmableG">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Cantidad_Tarjeta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Codigo_Retorno" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Fecha" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Anio" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtDetConsultaSaldoAmableG">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Tipo_Tarjeta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Numero_Tarjeta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Nombre" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Status" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_Anterior" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Consumo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Pago" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Minimo_Pagar" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_Actual" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_Deuda" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Fecha_Tope" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Cantidad_Tarjeta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SaldoDiferido" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CupoOtorgado" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CupoDisponible" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CupoUtilizado" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_Contado" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_Vencido" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_Rotativo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_Diferido" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Fecha_inicio_corte" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Fecha_fin_corte" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Saldo_actual" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Incentivo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TipoTarjetaC" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Afinidad" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FechaCorte" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtSaldoFondoAmableG">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Saldo_Fondo" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

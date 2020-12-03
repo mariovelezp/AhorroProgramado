@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsSimPortaIn.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsSimPortaIn.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsSimPortaIn.xsd" id="dsSimPortaIn" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsSimPortaIn">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dt_Transaccion_SimPorta">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Codigo_Institucion" type="xs:string" />
+              <xs:element minOccurs="0" name="Codigo_Canal" type="xs:string" />
+              <xs:element minOccurs="0" name="Codigo_Terminal" type="xs:string" />
+              <xs:element minOccurs="0" name="Fecha_Transaccion" type="xs:string" />
+              <xs:element minOccurs="0" name="Numero_Telefono" type="xs:string" />
+              <xs:element minOccurs="0" name="Numero_Secuencial_ATM" type="xs:string" />
+              <xs:element minOccurs="0" name="Identificacion" type="xs:string" />
+              <xs:element msdata:Caption="Numero_Ant_Porta" minOccurs="0" name="Numero_Aut_Porta" type="xs:string" />
+              <xs:element minOccurs="0" name="Nombre_Cliente" type="xs:string" />
+              <xs:element minOccurs="0" name="Valor_Recibido" type="xs:double" />
+              <xs:element minOccurs="0" name="Valor_Cobrado" type="xs:double" />
+              <xs:element minOccurs="0" name="Forma_Pago" type="xs:string" />
+              <xs:element minOccurs="0" name="Preguntas_Respuestas" type="xs:string" />
+              <xs:element msdata:Caption="Num_Ant_Cash" minOccurs="0" name="Num_Aut_Cash" type="xs:string" />
+              <xs:element minOccurs="0" name="Num_Sim_Card" type="xs:string" />
+              <xs:element minOccurs="0" name="Iva_Cobrado" type="xs:double" />
+              <xs:element minOccurs="0" name="Tipo_Transaccion" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="heading1">Acceso privado</h1>
+                <p class="subheading">Ingrese su usuario de acceso al sistema</p>
+            </div>
+        </div>
+
+        @using (Html.BeginForm("ValidaUser", "Private", FormMethod.Post, new { @class = "p-3 py-md-4 px-md-5" }))
+        {
+            <div>
+                <div class="row justify-content-center">
+                    <div class="col-sm-10 col-md-8 col-lg-6 mb-4 px-sm-3 px-4">
+                        <div class="card shadow-sm">
+                            <div class="p-3 py-md-4 px-md-5">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label for="codigo">Ingrese usuario</label>
+                                            <input class="form-control" type="text" value="" id="usuario" name="usuario" maxlength="15" />
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="alert alert-danger" id="msgAlerta" style='display:@ViewBag.display;'>
+                                            <span class="icon-danger"></span>
+                                            <p>@ViewBag.msgRetorno</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-sm-6 col-lg-4 mt-0 mt-md-3 mt-lg-4 px-sm-3 px-4">
+                                <input type="submit" class="btn btn-primary d-block col-lg-12" value="Ingresar" onclick="CampoBlancoUser();" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</main>
+
+
+

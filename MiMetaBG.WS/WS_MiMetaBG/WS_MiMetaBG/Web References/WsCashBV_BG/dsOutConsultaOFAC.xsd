@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsOutConsultaOFAC.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsOutConsultaOFAC.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsOutConsultaOFAC.xsd" id="dsOutConsultaOFAC" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsOutConsultaOFAC">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="INFORMACION">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODIGO" type="xs:string" />
+              <xs:element minOccurs="0" name="MENSAJE" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RESPUESTATRAMA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODIGO" type="xs:string" />
+              <xs:element minOccurs="0" name="DESCRIPCION" type="xs:string" />
+              <xs:element minOccurs="0" name="GRAVEDAD" type="xs:string" />
+              <xs:element minOccurs="0" name="PORCENTAJE" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TIPO_TRAMA" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PRODUCTO" type="xs:string" />
+              <xs:element minOccurs="0" name="USUARIO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TERMINAL" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NOMBRE" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Coincidencias" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SIMILITUD" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="mensaje" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
