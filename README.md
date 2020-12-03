@@ -1,2 +1,3 @@
 # AhorroProgramado
-sistema de ahorro programado desarrollado para banco BG
+Sistema de ahorro programado desarrollado
+subido 2 dic 2020
