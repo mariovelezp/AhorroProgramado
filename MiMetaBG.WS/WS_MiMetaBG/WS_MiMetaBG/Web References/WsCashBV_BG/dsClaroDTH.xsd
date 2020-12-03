@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsClaroDTH.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsClaroDTH.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsClaroDTH.xsd" id="dsClaroDTH" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsClaroDTH">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dt_Transaccion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="COD_TRANSACCION_I" type="xs:string" />
+              <xs:element minOccurs="0" name="OP_ID_I" type="xs:string" />
+              <xs:element minOccurs="0" name="CANAL_I" type="xs:string" />
+              <xs:element minOccurs="0" name="OFICINA_I" type="xs:string" />
+              <xs:element minOccurs="0" name="TERMINAL_I" type="xs:string" />
+              <xs:element minOccurs="0" name="FECHA_PROCESO_I" type="xs:string" />
+              <xs:element minOccurs="0" name="FECHA_CONTABLE_I" type="xs:string" />
+              <xs:element minOccurs="0" name="HORA_PROCESO_I" type="xs:string" />
+              <xs:element minOccurs="0" name="NUM_ID" type="xs:string" />
+              <xs:element minOccurs="0" name="VALOR_PAGO_IO" type="xs:string" />
+              <xs:element minOccurs="0" name="ID_PAGO_IO" type="xs:string" />
+              <xs:element minOccurs="0" name="SEC_BANCO_IO" type="xs:string" />
+              <xs:element minOccurs="0" name="COD_RETORNO_O" type="xs:string" />
+              <xs:element minOccurs="0" name="NOMBRE_O" type="xs:string" />
+              <xs:element minOccurs="0" name="FECHA_MAX_O" type="xs:string" />
+              <xs:element minOccurs="0" name="NUM_TRX_ATM_I" type="xs:string" />
+              <xs:element minOccurs="0" name="VALOR_RECIBIDO_I" type="xs:string" />
+              <xs:element minOccurs="0" name="COD_RESPUESTA_O" type="xs:string" />
+              <xs:element minOccurs="0" name="MSG_RESPUESTA_O" type="xs:string" />
+              <xs:element minOccurs="0" name="PLAN" type="xs:string" />
+              <xs:element minOccurs="0" name="NUM_CUENTA" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPOTRXPUBLICIDAD" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TIPO_IDENTIFICACION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" default="" name="IDENTIFICACION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" default="" name="NOMBRE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="70" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_Publicidad">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="PANTALLA" type="xs:string" />
+              <xs:element minOccurs="0" name="DETALLEPANTALLA" type="xs:string" />
+              <xs:element minOccurs="0" name="IDRESPUESTA" type="xs:string" />
+              <xs:element minOccurs="0" name="MSGRESPUESTA" type="xs:string" />
+              <xs:element minOccurs="0" name="MSGTECNICO" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,311 @@
+﻿
+@{
+    ViewBag.Title = "GetIdentification";
+}
+
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <ul class="steps-list">
+                    <li><a href="#"></a></li>
+                    <li><a class="active" href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="heading1">Conecta tu cuenta de ahorros</h1>
+                <p class="subheading">Vamos a verificar tu identidad enviando un código a tu correo registrado</p>
+            </div>
+        </div>
+
+        @using (Html.BeginForm("ValidaCliente", "Validar", FormMethod.Post, new { @class = "p-3 py-md-4 px-md-5" }))
+        {
+            <div>
+                <div class="row justify-content-center">
+                    <div class="col-sm-10 col-md-8 col-lg-6 mb-4 px-sm-3 px-4">
+                        <div class="card shadow-sm">
+                            <div class="p-3 py-md-4 px-md-5">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label for="cedula">Ingresa tu número de identificación</label>
+                                            <input class="form-control" type="text" value="@ViewBag.identificacion" id="cedula" name="cedula" placeholder="Cedula/RUC/Pasaporte" maxlength="13" onkeypress="CharactersAlfaNum(event)" onpaste="return false" onblur="verificaIdentificacion()" onkeydown="mostrar('0');"/>
+                                            <input type="hidden" id="TipoIdentificion" name="TipoIdentificion" value=""/>
+                                            <input type="hidden" id="CodError" name="CodError" value="@ViewBag.CodError"/>
+                                            <input type="hidden" id="correo" name="correo" value="@ViewBag.correo" />
+                                            <input type="hidden" id="cliente" name="cliente" value="@ViewBag.cliente" />
+                                        </div>
+                                    </div>
+                                    <div class="col-12" style="text-align:center">
+                                        <div class="alert alert-danger" id="msgAlerta" style='display:none; '>
+                                            <span class="icon-danger"></span>
+                                          <div align="center">
+                                                <p >Por favor ingrese su número de identificación.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-sm-6 col-lg-4 mt-0 mt-md-3 mt-lg-4 px-sm-3 px-4">
+                        <input type="submit" class="btn btn-primary d-block col-lg-12" value="Enviar código" onclick="CampoBlancoId();" />
+                    </div>
+                    <div class="col-12 mt-4 text-center">
+                        <p class="mb-2">¿No tienes una cuenta de ahorros en el Banco Guayaquil?</p>
+                    </div>
+                </div>
+            </div>
+        }
+        <div class="row justify-content-center">
+            <div class="col-sm-6 col-lg-4 d-flex justify-content-around text-center"><a class="link" href="@ViewBag.urlCuentas"  target="_blank">Crear una cuenta ahora</a></div>
+        </div>
+    </div>
+</main>
+
+<div class="modal fade" id="noClientModal" tabindex="-1" role="dialog" aria-labelledby="noClientModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <div class="@ViewBag.clascss"></div>
+                        <h5 class="modal-title">¡Lo sentimos!</h5>
+                        <p class="modal-text" id="mensajerror">@ViewBag.msgErrorService</p>
+                        <a class="link modal-link" id="IdentificacionLink-@ViewBag.CodError" href="@ViewBag.ahref" target="_blank">@ViewBag.link</a>
+                    </div>
+                    <div class="col-12 mt-2 text-center">
+                        <button class="btn btn-link btn-link-danger" id="IdentificacionError-@ViewBag.CodError" type="button" onclick="SetFocusCedula();">Salir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+
+    window.onload = function () {
+        if (document.getElementById("CodError").value != "0000") {
+            if (sessionStorage.getItem("BackArrow") != "1") {
+                $("#noClientModal").modal('show');
+            } else {
+                sessionStorage.setItem("BackArrow", "0");
+            }
+        }
+    }
+    
+
+    function SetFocusCedula() {
+        $("#noClientModal").modal('hide');
+        $("#cedula").val("");
+        document.getElementById("cedula").focus();
+        document.getElementById("CodError").value = "";
+    }
+
+    function CampoBlancoId() 
+	{
+        document.getElementById("CodError").value = "0000";
+        var value = document.getElementById("cedula").value;
+        value = value.trim();
+        if (value.length == 0) {
+            mostrar("1");
+            event.preventDefault();
+        } else {
+            v = verificaTipoIdentificacion();
+            if (v == "E") {
+                $("#TipoIdentificion").val("E");
+                event.preventDefault();
+            } else {
+                $("#TipoIdentificion").val(v);
+            }
+        }
+    }
+
+    function verificaIdentificacion() {
+        v = verificaTipoIdentificacion();
+        if (v == "E") {
+            $("#TipoIdentificion").val("E");
+        } else {
+            $("#TipoIdentificion").val(v);
+        }
+    }
+
+    function verificaTipoIdentificacion() {
+        cadena = document.getElementById("cedula").value;
+
+        b = "P";
+        len = cadena.length;
+
+        if (len == 10) {
+            if (ValidadorCedula(cadena)) {
+                b = "C";
+            } else {
+                $("#mensajerror").text("No. Cédula ingresado es incorrecto.");
+                $("#noClientModal").modal('show');
+                b = "E"; //Error
+            }
+        }
+        if (len == 13) {
+            if (ValidadorRuc(cadena)) {
+                b = "R";
+            } else {
+                $("#mensajerror").text("No. Ruc ingresado es incorrecto");
+                $("#noClientModal").modal('show');
+                b = "E"; //Error
+            }
+        }
+        return b;
+    }
+
+    function ValidadorCedula(ID) {
+        var Fx = 0;
+        var i = 0;
+        var residuo = 0;
+        var Numero = 0;
+        var provincia = 0;
+        var TDig = 0;
+        var verificador = 0;
+        var Suma = 0;
+        var Producto = 0;
+        var Val1 = 0;
+        var Val2 = 0;
+        cedula = ID;
+        Peso = "212121212";
+
+        if (ID.substr(0, 3) == "000") {
+            return false;
+        } else {
+            cedula = ID;
+            Numero = cedula;
+            provincia = cedula.substr(0, 2);
+
+            if ((provincia < 1 || provincia > 25) && provincia != 30) {
+                return false;
+            }
+            else {
+                TDig = cedula.substr(2, 1);
+                if (TDig > 6) {
+                    return false;
+                }
+                else {
+                    verificador = cedula.substr(9, 1);
+                    for (i = 0; i < 9; i++) {
+                        Val1 = cedula.substr(i, 1);
+                        Val2 = Peso.substr(i, 1);
+                        Producto = Val1 * Val2;
+                        if (Producto > 9) {
+                            Producto = Producto - 9;
+                        }
+                        Suma = Suma + Producto;
+                    }
+                    residuo = Suma % 10;
+                    if ((residuo == 0 && verificador == 0) || (verificador == (10 - residuo))) {
+                        return true;
+                    }
+                    else {
+                        return false;
+                    }
+                }
+            }
+        }
+    }
+
+    function ValidadorRuc(ID) {
+
+        var valor;
+        var Fx = 0;
+        var cedula = ID;
+        var Numero = 0;
+        var provincia = 0;
+        var TDig = 0;
+
+        if (ID.substr(0, 3) == "000") {
+            return false;
+        } else {
+            cedula = ID;
+            Numero = cedula;
+            provincia = cedula.substr(0, 2);
+
+            if (provincia < 1 || provincia > 24) {
+                return false;
+            } else {
+                TDig = cedula.substr(2, 1);
+
+                if (TDig < 6) {
+                    valor = verificador(cedula, "212121212", 0);
+                    if (valor) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                } else if (TDig == 6) {
+                    valor = verificador(cedula, "32765432", 1);
+                    if (valor)
+                        return true;
+                    else
+                        return false;
+
+                } else if (TDig == 9) {
+                    valor = verificador(cedula, "432765432", 0);
+                    if (valor)
+                        return true;
+                    else
+                        return false;
+                }
+                else
+                    return false;
+            }
+        }
+    }
+
+
+
+    function verificador(cedula, Peso, completador) {
+        var residuo = 0;
+        var verif = 0;
+        var Val1 = 0;
+        var Val2 = 0;
+        var Producto = 0;
+        var Suma = 0;
+        var i = 0;
+        var natural = 0;
+        var c = 9 - completador;
+        verif = cedula.substr(c, 1);
+
+        for (i = 0; i < 9 - completador; i++) {
+            Val1 = cedula.substr(i, 1);
+            Val2 = Peso.substr(i, 1);
+            Producto = Val1 * Val2;
+
+            if (Peso == "212121212") {
+                if (Producto > 9) {
+                    Producto = Producto - 9;
+                    natural = 1;
+                }
+            }
+            Suma = Suma + Producto;
+        }
+        residuo = Suma % (11 - natural);
+
+        if ((((11 - natural) - residuo) == verif) || (residuo == 0 && verif == 0)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    function mostrar(flag) {
+        if (flag == "1") {
+            document.getElementById('msgAlerta').style.display = 'block';
+        }
+        if (flag == "0") {
+            document.getElementById('msgAlerta').style.display = 'none';
+        }
+    }
+</script>

@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-site-verification" content="U5Vy8w0V38jwTqtsxlWA2jwj2y6vu0viPa4cPxlptok" />
+
+    <link rel="shortlink icon" href="~/favicon.ico"/>
+    <title>Metas - Banco Guayaquil</title>
+    <meta name="description" content="Una plataforma para tener el control de tus metas sin necesidad de acercarte al banco.">
+    
+    <meta property="og:image" content="https://apps.bancoguayaquil.com/Metas/img/bg_Principal.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Crea una meta - Banco Guayaquil">
+    <meta property="og:description" content="Una plataforma para tener el control de tus metas sin necesidad de acercarte al banco.">
+    <meta property="og:url" content="https://apps.bancoguayaquil.com/Metas/">
+    <meta property="fb:app_id" content="511048116022563">
+
+    <meta property="twitter:title" content="Crea una meta - Banco Guayaquil">
+    <meta property="twitter:image" content="https://apps.bancoguayaquil.com/Metas/img/bg_Principal.png">
+    <meta property="twitter:description" content="Una plataforma para tener el control de tus metas sin necesidad de acercarte al banco.">
+
+
+    @Styles.Render("~/Content/css/main.css")
+    
+    <link rel="stylesheet" href="~/Content/procesando.css">
+   
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+    w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+        new Date().getTime(), event: 'gtm.js'
+    }); var f = d.getElementsByTagName(s)[0],
+    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-T8ZZJD9');</script>
+    <!-- End Google Tag Manager -->
+</head>
+<body>
+
+     <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8ZZJD9"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
+    <div id="fb-root"></div>
+
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.2&appId=511048116022563&autoLogAppEvents=1';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-3 d-flex justify-content-start align-items-center"><a id="btnAtras" style="display:none" class="back-arrow" href="javascript:history.back(-1);"><span class="icon-back-arrow"></span></a></div>
+                <div class="col-6 d-flex justify-content-center align-items-center p-0"><a class="logo" href="~/Home/Index"><img class="" src="~/img/bg_logo.png" style="height:45px" /> </a></div>
+                <div class="col-1 d-flex justify-content-end align-items-center p-0"  ></div>
+                <div class="col-2 d-flex justify-content-center align-items-center p-0"  ><a class="logo" href="~/Home/CerrarSesion"><img class="" src="~/img/cerrarSesion.jpg" style="height:23px" /> </a></div>
+            </div>
+        </div>
+    </header>
+
+   
+
+    @RenderBody()
+     
+
+                <div class="cartprocess" style="display: none;">
+                    <div class="inbox">
+                        <div>
+                            <img src=@Href("~/img/procesando.gif") style="max-width:50%" />
+                        </div>
+                    </div>
+                </div>
+</body>
+
+ </html>
+
+<!--
+<script>
+    $(document).ready(function () {
+        window.onpopstate = function () {
+            
+        }; history.pushState({}, '');
+    });
+</script>  -->
+
+<script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script> 
+
+<script src="~/Scripts/js/vendor/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/js/vendor/popper.min.js"></script>
+<script src="~/Scripts/js/vendor/bootstrap.min.js"></script>
+<script src="~/Scripts/js/main.js"></script>
+<script src="~/Scripts/Private.js"></script>
+
+@Scripts.Render("~/Scripts/ComboImagen.js")
+<script src="~/Scripts/controlRangos.js"></script>
+
+@RenderSection("scripts", required: false)

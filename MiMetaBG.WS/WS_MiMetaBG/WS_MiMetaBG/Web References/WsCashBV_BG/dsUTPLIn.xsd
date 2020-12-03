@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsUTPLIn.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsUTPLIn.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsUTPLIn.xsd" id="dsUTPLIn" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsUTPLIn">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dt_Transaccion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="TIPO_CONSULTA" type="xs:string" />
+              <xs:element minOccurs="0" name="PARAMETRO_BUSQUEDA" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPO_PROCESO" type="xs:string" />
+              <xs:element minOccurs="0" name="FECHA_PAGO" type="xs:string" />
+              <xs:element minOccurs="0" name="HORA_PAGO" type="xs:string" />
+              <xs:element minOccurs="0" name="MONEDA_PAGO" type="xs:string" />
+              <xs:element minOccurs="0" name="MODO_PROCESO" type="xs:string" />
+              <xs:element minOccurs="0" name="CANAL_PROCESO" type="xs:string" />
+              <xs:element minOccurs="0" name="COD_AGENCIA" type="xs:string" />
+              <xs:element minOccurs="0" name="OP_ID" type="xs:string" />
+              <xs:element minOccurs="0" name="TERMINAL_ID" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ITEMS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="IDENTIFICACION" type="xs:string" />
+              <xs:element minOccurs="0" name="REFERENCIA" type="xs:string" />
+              <xs:element minOccurs="0" name="REFERENCIA_AUX" type="xs:string" />
+              <xs:element minOccurs="0" name="DEUDA" type="xs:string" />
+              <xs:element minOccurs="0" name="SEC_BANCO" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

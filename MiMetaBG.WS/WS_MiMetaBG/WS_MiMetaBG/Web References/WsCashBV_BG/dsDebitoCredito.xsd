@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsDebitoCredito.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsDebitoCredito.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsDebitoCredito.xsd" id="dsDebitoCredito" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsDebitoCredito">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TB_DebitoCreditoIN">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Transaccion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" default="" name="CuentaDebito">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" default="" name="CuentaCredito">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" default="" name="ValorDebito">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" default="" name="Cod_Servicio">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" default="" name="DireccionIP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" default="" name="Canal">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" default="" name="MacAddress">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" default="" name="Proceso">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" default="" name="TipoTarjetaDebito">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" default="" name="TipoTarjetaCredito">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" default="" name="NombreBeneficiario">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" default="" name="CodAplicacion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" default="" name="Identificacion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" default="" name="Cod_Banco_Beneficiario">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" default="" name="Cod_Empresa" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SecuencialHost" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SecuencialCash" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Referencia1" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Referencia2" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Tipo_transaccion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Autoriza" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="OficinaEnt" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TipoEmpresa" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CtaEmpresa" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TipoCobro" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NumeroPlazo_Solicitud" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Marca_primera_vez" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Opid" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Valor_comision" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Motivo_comision" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Terminal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Valor_descuento" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Num_cajas" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Num_inscripcion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Tipo_transferencia" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Cambio_Fecha">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" default="0" name="SemanaPago2" type="xs:string" />
+              <xs:element minOccurs="0" default="0" name="SemanaEmbarque1" type="xs:string" />
+              <xs:element minOccurs="0" default="0" name="SemanaEmbarque2" type="xs:string" />
+              <xs:element minOccurs="0" default="N" name="ProcesoCash">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" default="" name="CodServicio" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="IdProceso" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="MarcaReverso" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Cod_Cnb_Atm" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Sec_Cnb_Atm" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Ref1" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Ref2" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Ref3" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="MotivoPagEfe" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="IdTipoBeneficiario" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="IdBeneficario" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NumDocumento" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TB_DebitoCreditoOUT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Cod_Retorno" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SecuenciaHost" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SecuenciaCash" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Referencia1" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Referencia2" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="ValorPendiente" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Signo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TipoTarjetaDebito" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TipoTarjetaCredito" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NombreBeneficiario" type="xs:string" />
+              <xs:element minOccurs="0" name="Id_Pro_ND" type="xs:string" />
+              <xs:element minOccurs="0" name="Sec_Host_ND" type="xs:string" />
+              <xs:element minOccurs="0" name="Id_Pro_NC" type="xs:string" />
+              <xs:element minOccurs="0" name="Sec_Host_NC" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="OrigenCuenta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CuentaDebito" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CuentaCredito" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Buzon" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Empresa" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Extendido" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

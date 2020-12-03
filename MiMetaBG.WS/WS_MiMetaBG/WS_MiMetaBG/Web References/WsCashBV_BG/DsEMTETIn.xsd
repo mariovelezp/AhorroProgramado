@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/DsEMTETIn.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/DsEMTETIn.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DsEMTETIn.xsd" id="DsEMTETIn" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="DsEMTETIn">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DtConsultaIn">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="PNI_Codigo_Entidad_IFI" type="xs:int" />
+              <xs:element minOccurs="0" name="PSI_Codigo_Agencia_IFI" type="xs:string" />
+              <xs:element minOccurs="0" name="PSI_Codigo_Canal_Pago_IFI" type="xs:string" />
+              <xs:element minOccurs="0" name="PSI_Nombre_Operador_IFI" type="xs:string" />
+              <xs:element minOccurs="0" name="PSI_Provincia_IFI" type="xs:string" />
+              <xs:element minOccurs="0" name="PNI_Codigo_Tran_Reverso_IFI" type="xs:double" />
+              <xs:element minOccurs="0" name="PNI_Valor_Pago" type="xs:double" />
+              <xs:element minOccurs="0" name="PSI_Placa_Ramv_CPN" type="xs:string" />
+              <xs:element minOccurs="0" name="PNO_Valor_Pago" type="xs:double" />
+              <xs:element minOccurs="0" name="PNI_Codigo_Vehiculo" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

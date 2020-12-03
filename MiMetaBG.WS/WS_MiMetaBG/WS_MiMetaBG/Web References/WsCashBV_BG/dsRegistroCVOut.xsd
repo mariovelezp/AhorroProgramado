@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsRegistroCVOut.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsRegistroCVOut.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsRegistroCVOut.xsd" id="dsRegistroCVOut" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsRegistroCVOut">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tbRegistroOut">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CodigoRetorno" type="xs:string" />
+              <xs:element minOccurs="0" name="MensajeRetorno" type="xs:string" />
+              <xs:element minOccurs="0" name="NombreBeneficiario" type="xs:string" />
+              <xs:element minOccurs="0" name="DigitoVerificador" type="xs:string" />
+              <xs:element minOccurs="0" name="FechaNacimiento" type="xs:string" />
+              <xs:element minOccurs="0" name="Sexo" type="xs:string" />
+              <xs:element minOccurs="0" name="EstadoCivil" type="xs:string" />
+              <xs:element minOccurs="0" name="DireccionDomicilio" type="xs:string" />
+              <xs:element minOccurs="0" name="Provincia" type="xs:string" />
+              <xs:element minOccurs="0" name="Canton" type="xs:string" />
+              <xs:element minOccurs="0" name="Ciudad" type="xs:string" />
+              <xs:element minOccurs="0" name="NombreSolicitante" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsMOVI.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsMOVI.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsMOVI.xsd" id="dsMOVI" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsMOVI">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dt_Transaccion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="MESSAGE_TYPE_ID_IO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PROCESSING_CODE_IO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRANSACTION_AMOUNT_IO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SYST_TRACE_AUD_NUM_IO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRANS_TIME_IO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRANS_DATE_IO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NETWORK_INT_ID_IO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SUBSCRIBER_NUMBER_IO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TERMINAL_ID_IO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="MERCHANT_ID_IO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="ORDER_ID_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="AUTHORIZATION_NUMBER_O" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="RESPONSE_CODE_O" type="xs:string" />
+              <xs:element minOccurs="0" name="CANAL_I" type="xs:string" />
+              <xs:element minOccurs="0" name="OPERADOR_I" type="xs:string" />
+              <xs:element minOccurs="0" name="AGENCIA_I" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

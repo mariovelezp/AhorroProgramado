@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsACCI.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsACCI.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsACCI.xsd" id="dsACCI" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsACCI">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtACCIout">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="TRANS_TYPE" type="xs:string" />
+              <xs:element minOccurs="0" name="PAYMENT_AGENT_CD" type="xs:string" />
+              <xs:element minOccurs="0" name="PAY_ACCOUNT_TYPE" type="xs:string" />
+              <xs:element minOccurs="0" name="PAY_ACCOUNT_NM" type="xs:string" />
+              <xs:element minOccurs="0" name="OP_CODE" type="xs:string" />
+              <xs:element minOccurs="0" name="PROCESS_DATE" type="xs:string" />
+              <xs:element minOccurs="0" name="PROCESS_TIME" type="xs:string" />
+              <xs:element minOccurs="0" name="OPAY_ACC_CURRENCY" type="xs:string" />
+              <xs:element minOccurs="0" name="PAY_ACC_HOLDER_NAME" type="xs:string" />
+              <xs:element minOccurs="0" name="FIELD_ERROR" type="xs:string" />
+              <xs:element minOccurs="0" name="ERROR" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtACCIin">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="TRANS_TYPE" type="xs:string" />
+              <xs:element minOccurs="0" name="PAYMENT_AGENT_CD" type="xs:string" />
+              <xs:element minOccurs="0" name="PAY_ACCOUNT_TYPE" type="xs:string" />
+              <xs:element minOccurs="0" name="PAY_ACCOUNT_NM" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

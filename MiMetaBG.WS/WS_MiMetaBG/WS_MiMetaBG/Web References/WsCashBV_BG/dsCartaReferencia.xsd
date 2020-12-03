@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsCartaReferencia.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsCartaReferencia.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsCartaReferencia.xsd" id="dsCartaReferencia" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsCartaReferencia">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtCartaReferenciaIN">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Transaccion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TipoIdentificacion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Identificacion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TipoCarta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TipoCuenta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NumeroCuenta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NombreCuenta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Opid" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Terminal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Agencia" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DirigidoA" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NumeroImpresiones" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="OficinaSolicitud" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="AnioSolicitud" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtCartaReferenciaOUT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="CodigoRetorno" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="MensajeRetorno" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Archivo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Contenido" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

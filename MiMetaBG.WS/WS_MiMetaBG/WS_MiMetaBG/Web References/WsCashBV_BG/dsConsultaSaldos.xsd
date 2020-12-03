@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsConsultaSaldos.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsConsultaSaldos.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsConsultaSaldos.xsd" id="dsConsultaSaldos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsConsultaSaldos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtConsultaSaldos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Cantidad_Tarjeta" type="xs:string" />
+              <xs:element minOccurs="0" name="Codigo_Retorno" type="xs:string" />
+              <xs:element minOccurs="0" name="Fecha" type="xs:string" />
+              <xs:element minOccurs="0" name="Anio" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtDetConsultaSaldo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Tipo_Tarjeta" type="xs:string" />
+              <xs:element minOccurs="0" name="Numero_Tarjeta" type="xs:string" />
+              <xs:element minOccurs="0" name="Nombre" type="xs:string" />
+              <xs:element minOccurs="0" name="Status" type="xs:string" />
+              <xs:element minOccurs="0" name="Saldo_Anterior" type="xs:string" />
+              <xs:element minOccurs="0" name="Consumo" type="xs:string" />
+              <xs:element minOccurs="0" name="Pago" type="xs:string" />
+              <xs:element minOccurs="0" name="Minimo_Pagar" type="xs:string" />
+              <xs:element minOccurs="0" name="Saldo_Actual" type="xs:string" />
+              <xs:element minOccurs="0" name="Saldo_Deuda" type="xs:string" />
+              <xs:element minOccurs="0" name="Fecha_Tope" type="xs:string" />
+              <xs:element minOccurs="0" name="Cantidad_Tarjeta" type="xs:string" />
+              <xs:element minOccurs="0" name="SaldoDiferido" type="xs:string" />
+              <xs:element minOccurs="0" name="CupoOtorgado" type="xs:string" />
+              <xs:element minOccurs="0" name="CupoDisponible" type="xs:string" />
+              <xs:element minOccurs="0" name="CupoUtilizado" type="xs:string" />
+              <xs:element minOccurs="0" name="Saldo_Contado" type="xs:string" />
+              <xs:element minOccurs="0" name="Saldo_Vencido" type="xs:string" />
+              <xs:element minOccurs="0" name="Saldo_Rotativo" type="xs:string" />
+              <xs:element minOccurs="0" name="Saldo_Diferido" type="xs:string" />
+              <xs:element minOccurs="0" name="Fecha_inicio_corte" type="xs:string" />
+              <xs:element minOccurs="0" name="Fecha_fin_corte" type="xs:string" />
+              <xs:element minOccurs="0" name="Saldo_actual_puntos" type="xs:string" />
+              <xs:element minOccurs="0" name="Incentivo" type="xs:string" />
+              <xs:element minOccurs="0" name="TipoTarjetaCobro" type="xs:string" />
+              <xs:element minOccurs="0" name="Afinidad" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FechaCorte" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtSaldoFondo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Saldo_Fondo" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="dtConsultaSaldosKey1">
+      <xs:selector xpath=".//mstns:dtConsultaSaldos" />
+      <xs:field xpath="mstns:Cantidad_Tarjeta" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="dtConsultaSaldos_dtDetConsultaSaldo" msdata:parent="dtConsultaSaldos" msdata:child="dtDetConsultaSaldo" msdata:parentkey="Cantidad_Tarjeta" msdata:childkey="Cantidad_Tarjeta" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

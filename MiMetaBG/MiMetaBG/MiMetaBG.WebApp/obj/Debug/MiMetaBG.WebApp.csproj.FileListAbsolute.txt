@@ -1,0 +1,70 @@
+c:\users\vmt-jcontreras\documents\visual studio 2015\Projects\MiMetaBG\MiMetaBG.WebApp\bin\roslyn\csc.exe
+c:\users\vmt-jcontreras\documents\visual studio 2015\Projects\MiMetaBG\MiMetaBG.WebApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\vmt-jcontreras\documents\visual studio 2015\Projects\MiMetaBG\MiMetaBG.WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\vmt-jcontreras\documents\visual studio 2015\Projects\MiMetaBG\MiMetaBG.WebApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\vmt-jcontreras\documents\visual studio 2015\Projects\MiMetaBG\MiMetaBG.WebApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\vmt-jcontreras\documents\visual studio 2015\Projects\MiMetaBG\MiMetaBG.WebApp\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\vmt-jcontreras\documents\visual studio 2015\Projects\MiMetaBG\MiMetaBG.WebApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\vmt-jcontreras\documents\visual studio 2015\Projects\MiMetaBG\MiMetaBG.WebApp\bin\roslyn\System.Collections.Immutable.dll
+c:\users\vmt-jcontreras\documents\visual studio 2015\Projects\MiMetaBG\MiMetaBG.WebApp\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\vmt-jcontreras\documents\visual studio 2015\Projects\MiMetaBG\MiMetaBG.WebApp\bin\roslyn\vbc.exe
+c:\users\vmt-jcontreras\documents\visual studio 2015\Projects\MiMetaBG\MiMetaBG.WebApp\bin\roslyn\VBCSCompiler.exe
+c:\users\vmt-jcontreras\documents\visual studio 2015\Projects\MiMetaBG\MiMetaBG.WebApp\bin\roslyn\VBCSCompiler.exe.config
+c:\users\vmt-jcontreras\documents\visual studio 2015\Projects\MiMetaBG\MiMetaBG.WebApp\bin\MiMetaBG.WebApp.dll.config
+c:\users\vmt-jcontreras\documents\visual studio 2015\Projects\MiMetaBG\MiMetaBG.WebApp\bin\MiMetaBG.WebApp.dll
+c:\users\vmt-jcontreras\documents\visual studio 2015\Projects\MiMetaBG\MiMetaBG.WebApp\bin\MiMetaBG.WebApp.pdb
+c:\users\vmt-jcontreras\documents\visual studio 2015\Projects\MiMetaBG\MiMetaBG.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\vmt-jcontreras\documents\visual studio 2015\Projects\MiMetaBG\MiMetaBG.WebApp\bin\Microsoft.Web.Infrastructure.dll
+c:\users\vmt-jcontreras\documents\visual studio 2015\Projects\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Helpers.dll
+c:\users\vmt-jcontreras\documents\visual studio 2015\Projects\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Mvc.dll
+c:\users\vmt-jcontreras\documents\visual studio 2015\Projects\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Razor.dll
+c:\users\vmt-jcontreras\documents\visual studio 2015\Projects\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Webpages.Deployment.dll
+c:\users\vmt-jcontreras\documents\visual studio 2015\Projects\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Webpages.dll
+c:\users\vmt-jcontreras\documents\visual studio 2015\Projects\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Webpages.Razor.dll
+c:\users\vmt-jcontreras\documents\visual studio 2015\Projects\MiMetaBG\MiMetaBG.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\vmt-jcontreras\documents\visual studio 2015\Projects\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Razor.xml
+c:\users\vmt-jcontreras\documents\visual studio 2015\Projects\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Webpages.xml
+c:\users\vmt-jcontreras\documents\visual studio 2015\Projects\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Webpages.Deployment.xml
+c:\users\vmt-jcontreras\documents\visual studio 2015\Projects\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Webpages.Razor.xml
+c:\users\vmt-jcontreras\documents\visual studio 2015\Projects\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Helpers.xml
+c:\users\vmt-jcontreras\documents\visual studio 2015\Projects\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Mvc.xml
+c:\users\vmt-jcontreras\documents\visual studio 2015\Projects\MiMetaBG\MiMetaBG.WebApp\obj\Debug\MiMetaBG.WebApp.csprojResolveAssemblyReference.cache
+c:\users\vmt-jcontreras\documents\visual studio 2015\Projects\MiMetaBG\MiMetaBG.WebApp\obj\Debug\MiMetaBG.WebApp.dll
+c:\users\vmt-jcontreras\documents\visual studio 2015\Projects\MiMetaBG\MiMetaBG.WebApp\obj\Debug\MiMetaBG.WebApp.pdb
+C:\PROYECTO_MIMETA\MiMetaBG\MiMetaBG.WebApp\bin\MiMetaBG.WebApp.dll.config
+C:\PROYECTO_MIMETA\MiMetaBG\MiMetaBG.WebApp\bin\MiMetaBG.WebApp.dll
+C:\PROYECTO_MIMETA\MiMetaBG\MiMetaBG.WebApp\bin\MiMetaBG.WebApp.pdb
+C:\PROYECTO_MIMETA\MiMetaBG\MiMetaBG.WebApp\bin\jose-jwt.dll
+C:\PROYECTO_MIMETA\MiMetaBG\MiMetaBG.WebApp\bin\Microsoft.Web.Infrastructure.dll
+C:\PROYECTO_MIMETA\MiMetaBG\MiMetaBG.WebApp\bin\Newtonsoft.Json.dll
+C:\PROYECTO_MIMETA\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Helpers.dll
+C:\PROYECTO_MIMETA\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Mvc.dll
+C:\PROYECTO_MIMETA\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Razor.dll
+C:\PROYECTO_MIMETA\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Webpages.Deployment.dll
+C:\PROYECTO_MIMETA\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Webpages.dll
+C:\PROYECTO_MIMETA\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Webpages.Razor.dll
+C:\PROYECTO_MIMETA\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Razor.xml
+C:\PROYECTO_MIMETA\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Webpages.xml
+C:\PROYECTO_MIMETA\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Webpages.Deployment.xml
+C:\PROYECTO_MIMETA\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Webpages.Razor.xml
+C:\PROYECTO_MIMETA\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Helpers.xml
+C:\PROYECTO_MIMETA\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Mvc.xml
+C:\PROYECTO_MIMETA\MiMetaBG\MiMetaBG.WebApp\obj\Debug\MiMetaBG.WebApp.dll
+C:\PROYECTO_MIMETA\MiMetaBG\MiMetaBG.WebApp\obj\Debug\MiMetaBG.WebApp.pdb
+C:\TEAM FOUNDATION\MiMetaBG\Development Branch\MiMetaBG\MiMetaBG\MiMetaBG\MiMetaBG.WebApp\bin\MiMetaBG.WebApp.dll
+C:\TEAM FOUNDATION\MiMetaBG\Development Branch\MiMetaBG\MiMetaBG\MiMetaBG\MiMetaBG.WebApp\bin\MiMetaBG.WebApp.pdb
+C:\TEAM FOUNDATION\MiMetaBG\Development Branch\MiMetaBG\MiMetaBG\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Helpers.dll
+C:\TEAM FOUNDATION\MiMetaBG\Development Branch\MiMetaBG\MiMetaBG\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Mvc.dll
+C:\TEAM FOUNDATION\MiMetaBG\Development Branch\MiMetaBG\MiMetaBG\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Razor.dll
+C:\TEAM FOUNDATION\MiMetaBG\Development Branch\MiMetaBG\MiMetaBG\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Webpages.Deployment.dll
+C:\TEAM FOUNDATION\MiMetaBG\Development Branch\MiMetaBG\MiMetaBG\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Webpages.dll
+C:\TEAM FOUNDATION\MiMetaBG\Development Branch\MiMetaBG\MiMetaBG\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Webpages.Razor.dll
+C:\TEAM FOUNDATION\MiMetaBG\Development Branch\MiMetaBG\MiMetaBG\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Razor.xml
+C:\TEAM FOUNDATION\MiMetaBG\Development Branch\MiMetaBG\MiMetaBG\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Webpages.xml
+C:\TEAM FOUNDATION\MiMetaBG\Development Branch\MiMetaBG\MiMetaBG\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Webpages.Deployment.xml
+C:\TEAM FOUNDATION\MiMetaBG\Development Branch\MiMetaBG\MiMetaBG\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Webpages.Razor.xml
+C:\TEAM FOUNDATION\MiMetaBG\Development Branch\MiMetaBG\MiMetaBG\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Helpers.xml
+C:\TEAM FOUNDATION\MiMetaBG\Development Branch\MiMetaBG\MiMetaBG\MiMetaBG\MiMetaBG.WebApp\bin\System.Web.Mvc.xml
+C:\TEAM FOUNDATION\MiMetaBG\Development Branch\MiMetaBG\MiMetaBG\MiMetaBG\MiMetaBG.WebApp\obj\Debug\MiMetaBG.WebApp.csprojResolveAssemblyReference.cache
+C:\TEAM FOUNDATION\MiMetaBG\Development Branch\MiMetaBG\MiMetaBG\MiMetaBG\MiMetaBG.WebApp\obj\Debug\MiMetaBG.WebApp.dll
+C:\TEAM FOUNDATION\MiMetaBG\Development Branch\MiMetaBG\MiMetaBG\MiMetaBG\MiMetaBG.WebApp\obj\Debug\MiMetaBG.WebApp.pdb

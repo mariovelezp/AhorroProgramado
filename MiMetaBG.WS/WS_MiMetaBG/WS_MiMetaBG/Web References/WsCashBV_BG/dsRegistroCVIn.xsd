@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsRegistroCVIn.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsRegistroCVIn.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsRegistroCVIn.xsd" id="dsRegistroCVIn" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsRegistroCVIn">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tbRegistroIn">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="TipoTransaccion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CedulaBeneficiario" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CedulaSolicitante" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

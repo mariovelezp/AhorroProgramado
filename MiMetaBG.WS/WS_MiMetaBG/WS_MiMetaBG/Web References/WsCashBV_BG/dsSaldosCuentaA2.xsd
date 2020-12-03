@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsSaldosCuentaA2.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsSaldosCuentaA2.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsSaldosCuentaA2.xsd" id="dsSaldosCuentaA2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsSaldosCuentaA2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtCabSaldosA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="cantidad_cuentas" type="xs:string" />
+              <xs:element minOccurs="0" name="codigo_retorno" type="xs:string" />
+              <xs:element minOccurs="0" name="responsable" type="xs:string" />
+              <xs:element minOccurs="0" name="puntero" type="xs:string" />
+              <xs:element minOccurs="0" name="pagineo" type="xs:string" />
+              <xs:element minOccurs="0" name="cantidad_cuentas1" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtDetSaldosA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="tipomoneda" type="xs:string" />
+              <xs:element minOccurs="0" name="numero_cuenta" type="xs:string" />
+              <xs:element minOccurs="0" name="marca_cuenta" type="xs:string" />
+              <xs:element minOccurs="0" name="status" type="xs:string" />
+              <xs:element minOccurs="0" name="filler0" type="xs:string" />
+              <xs:element minOccurs="0" name="saldo_xconfirmar" type="xs:string" />
+              <xs:element minOccurs="0" name="filler1" type="xs:string" />
+              <xs:element minOccurs="0" name="saldo_contable" type="xs:string" />
+              <xs:element minOccurs="0" name="filler2" type="xs:string" />
+              <xs:element minOccurs="0" name="saldo_total" type="xs:string" />
+              <xs:element minOccurs="0" name="filler3" type="xs:string" />
+              <xs:element minOccurs="0" name="saldo_disponible" type="xs:string" />
+              <xs:element minOccurs="0" name="filler4" type="xs:string" />
+              <xs:element minOccurs="0" name="saldo_acumulativo" type="xs:string" />
+              <xs:element minOccurs="0" name="filler5" type="xs:string" />
+              <xs:element minOccurs="0" name="saldo_meta" type="xs:string" />
+              <xs:element minOccurs="0" name="nombre" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

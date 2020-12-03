@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsConsultaAgencia.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" xmlns:mstns="http://tempuri.org/dsConsultaAgencia.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsConsultaAgencia.xsd" id="dsConsultaAgencia" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsConsultaAgencia">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtConsultaAgenciaIN">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Transaccion" type="xs:string" />
+              <xs:element minOccurs="0" name="Dir_Ip" type="xs:string" />
+              <xs:element minOccurs="0" name="MacAddress" type="xs:string" />
+              <xs:element minOccurs="0" name="CodCanal" type="xs:string" />
+              <xs:element minOccurs="0" name="Opid" type="xs:string" />
+              <xs:element minOccurs="0" name="Id" type="xs:string" />
+              <xs:element minOccurs="0" name="Identificacion" type="xs:string" />
+              <xs:element minOccurs="0" name="MarcaPrimeraVez" type="xs:string" />
+              <xs:element minOccurs="0" name="UltimaAgencia" type="xs:string" />
+              <xs:element minOccurs="0" name="Mas" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtConsultaAgenciaOUT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="COD_AG" type="xs:string" />
+              <xs:element minOccurs="0" name="COD_PZ" type="xs:string" />
+              <xs:element minOccurs="0" name="NOM_AG" type="xs:string" />
+              <xs:element minOccurs="0" name="NOM_CIUD" type="xs:string" />
+              <xs:element minOccurs="0" name="COD_CIUD" type="xs:string" />
+              <xs:element minOccurs="0" name="DIR_AG" type="xs:string" />
+              <xs:element minOccurs="0" name="HORARIO_ATEN_I" type="xs:string" />
+              <xs:element minOccurs="0" name="HORARIO_ATEN_F" type="xs:string" />
+              <xs:element minOccurs="0" name="MAS" type="xs:string" />
+              <xs:element minOccurs="0" name="COD_RETORNO" type="xs:string" />
+              <xs:element minOccurs="0" name="MSJ_RETORNO" type="xs:string" />
+              <xs:element minOccurs="0" name="CANTON" type="xs:string" />
+              <xs:element minOccurs="0" name="PROV" type="xs:string" />
+              <xs:element minOccurs="0" name="ESTADO" type="xs:string" />
+              <xs:element msprop:Generator_UserColumnName="ENT-CHEQ" msprop:Generator_ColumnVarNameInTable="_columnENT_CHEQ" minOccurs="0" name="ENT-CHEQ" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

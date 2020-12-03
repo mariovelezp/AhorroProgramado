@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsInfoPoliza.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsInfoPoliza.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsInfoPoliza.xsd" id="dsInfoPoliza" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsInfoPoliza">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtInfoPoliza">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="agencia" type="xs:string" />
+              <xs:element minOccurs="0" name="documento" type="xs:string" />
+              <xs:element minOccurs="0" name="titular" type="xs:string" />
+              <xs:element minOccurs="0" name="beneficiario" type="xs:string" />
+              <xs:element minOccurs="0" name="fecha_emision" type="xs:string" />
+              <xs:element minOccurs="0" name="plazo" type="xs:string" />
+              <xs:element minOccurs="0" name="fecha_vencimiento" type="xs:string" />
+              <xs:element minOccurs="0" name="capital" type="xs:string" />
+              <xs:element minOccurs="0" name="tasa_interes" type="xs:string" />
+              <xs:element minOccurs="0" name="intereses_cobrados" type="xs:string" />
+              <xs:element minOccurs="0" name="interesesxcobrar" type="xs:string" />
+              <xs:element minOccurs="0" name="impuestoscobrados" type="xs:string" />
+              <xs:element minOccurs="0" name="impuestosxcobrar" type="xs:string" />
+              <xs:element minOccurs="0" name="fecha_proximo_cobro_intereses" type="xs:string" />
+              <xs:element minOccurs="0" name="monto" type="xs:string" />
+              <xs:element minOccurs="0" name="tipo_inversion" type="xs:string" />
+              <xs:element minOccurs="0" name="codigoretorno" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

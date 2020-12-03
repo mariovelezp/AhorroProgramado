@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsTVCable.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsTVCable.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsTVCable.xsd" id="dsTVCable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsTVCable">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dt_TVCable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="MESSAGE_TYPE_CODE" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SOURCE_FI_NUMBER" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SOURCE_TERMINAL_NUMBER" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SOURCE_SEQUENCE_NUMBER" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="MESSAGE_SEQUENCE_NUMBER" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRANSACTION_CODE" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRANSACTION_SIGN" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SOURCE_DATE" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SOURCE_TIME" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SOURCE_ABA_NUMBER" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SOURCE_BRANCH_NUMBER" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SOURCE_BUSINESS_DATE" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SPF_TERMINAL_TYPE" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="XTERMID" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FORCE_POST_INDICATOR" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="REVERSAL_INDICATOR" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CODIGO_CIUDAD" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRANS_ACCOUNT_NBR" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRANSACTION_AMOUNT" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRANSACTION_AMOUNT_SIGN" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="AUTH_FI_NBR" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="HOST_BUSINESS_DATE" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="STANDIN_AUTH_TYPE" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="STANDIN_AUTH_METHOD" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="STANDIN_RESULT_CODE" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PIN_VERIFY_FLAG" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRACK_II_VALID_FLAG" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="ENCRYPTED_PIN" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRACK_2_SSENTINEL" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRACK_2_DATO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CARD_APPL_CODE" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CODIGO_ERROR" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

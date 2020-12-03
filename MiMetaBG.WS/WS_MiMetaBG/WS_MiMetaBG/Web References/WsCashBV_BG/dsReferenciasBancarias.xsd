@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsReferenciasBancarias.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsReferenciasBancarias.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsReferenciasBancarias.xsd" id="dsReferenciasBancarias" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsReferenciasBancarias">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtRefBancarias">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Identificacion" type="xs:string" />
+              <xs:element minOccurs="0" name="NombreUsuario" type="xs:string" />
+              <xs:element minOccurs="0" name="TipoCuenta" type="xs:string" />
+              <xs:element minOccurs="0" name="NumeroCuenta" type="xs:string" />
+              <xs:element minOccurs="0" name="FechaApertura" type="xs:string" />
+              <xs:element minOccurs="0" name="Protestos" type="xs:string" />
+              <xs:element minOccurs="0" name="StatusCuenta" type="xs:string" />
+              <xs:element minOccurs="0" name="CodEmpresa" type="xs:string" />
+              <xs:element minOccurs="0" name="RangoSaldos" type="xs:string" />
+              <xs:element minOccurs="0" name="CodigoRetorno" type="xs:string" />
+              <xs:element minOccurs="0" name="Signo" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

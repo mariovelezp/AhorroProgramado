@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsLANin.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsLANin.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsLANin.xsd" id="dsLANin" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsLANin">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtConsulta">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="id_pago" type="xs:string" />
+              <xs:element minOccurs="0" name="Canal">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Terminal">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="OPID" type="xs:string" />
+              <xs:element msdata:Caption="Fecha Hora Transaccion" minOccurs="0" name="FechaTransaccion" type="xs:string" />
+              <xs:element minOccurs="0" name="HoraTransaccion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtPago">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="id_pago" type="xs:string" />
+              <xs:element msdata:Caption="SecuencialCash" minOccurs="0" name="folioSecCash" type="xs:string" />
+              <xs:element minOccurs="0" name="monto" type="xs:double" />
+              <xs:element minOccurs="0" name="Canal">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Terminal">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="OPID" type="xs:string" />
+              <xs:element msdata:Caption="Fecha Hora Transaccion" minOccurs="0" name="FechaTransaccion" type="xs:string" />
+              <xs:element minOccurs="0" name="HoraTransaccion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtReverso">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="id_pago" type="xs:string" />
+              <xs:element minOccurs="0" name="Canal">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Terminal">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="OPID" type="xs:string" />
+              <xs:element msdata:Caption="Fecha Hora Transaccion" minOccurs="0" name="FechaTransaccion" type="xs:string" />
+              <xs:element minOccurs="0" name="HoraTransaccion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtConfirmacionPago">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="id_pago" type="xs:string" />
+              <xs:element minOccurs="0" name="Canal">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Terminal">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="OPID" type="xs:string" />
+              <xs:element msdata:Caption="Fecha Hora Transaccion" minOccurs="0" name="FechaTransaccion" type="xs:string" />
+              <xs:element minOccurs="0" name="HoraTransaccion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

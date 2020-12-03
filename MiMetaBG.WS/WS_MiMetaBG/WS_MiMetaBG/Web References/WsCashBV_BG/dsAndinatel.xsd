@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsAndinatel.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsAndinatel.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsAndinatel.xsd" id="dsAndinatel" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsAndinatel">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dt_Cabecera">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="FECHA" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="BANCO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TIPO_TRANSACCION" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SECUENCIAL" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="AGENCIA" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CAJERO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CODIGO_ERROR" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_In">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="TELEFONO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="VALOR_TOTAL" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_Out">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="TELEFONO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NOMBRE" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CUENTAS_IMPAGAS" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CATEGORIA" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NRO_CTA_COBRO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="RUC_CI" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FECHA_EMISION" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SUBTOTAL" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="RETENCION" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="BASE_IMPONIBLE" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CICLO_FACTURACION" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FECHA_VENCIMIENTO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NRO_CARGOS" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NRO_AUTORIZACION_SRI" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FECHA_VALIDES" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NRO_FACTURA" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="VALOR_TOTAL" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_Cargo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="CODIGO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="VALOR" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

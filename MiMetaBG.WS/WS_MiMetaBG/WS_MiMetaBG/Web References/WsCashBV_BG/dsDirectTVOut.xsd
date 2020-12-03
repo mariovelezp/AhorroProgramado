@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsDirectTVOut.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsDirectTVOut.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsDirectTVOut.xsd" id="dsDirectTVOut" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsDirectTVOut">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dt_Transaccion_DirectTV">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Codigo_respuesta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NumeroSerieTarjeta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NombreSuscriptor" type="xs:string" />
+              <xs:element minOccurs="0" name="Monto" type="xs:decimal" />
+              <xs:element minOccurs="0" default="" name="Cod_Pre_Autorizacion" type="xs:string" />
+              <xs:element minOccurs="0" name="Cod_autorizacion" type="xs:int" />
+              <xs:element minOccurs="0" name="Nuevo_saldo" type="xs:decimal" />
+              <xs:element minOccurs="0" name="Bono_adicional" type="xs:decimal" />
+              <xs:element minOccurs="0" name="Dias_vigencia" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Mensaje" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="IdTransaccion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="IdPuntoVenta" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

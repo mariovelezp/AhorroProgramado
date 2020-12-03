@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsUTPLOut.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsUTPLOut.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsUTPLOut.xsd" id="dsUTPLOut" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsUTPLOut">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dt_Transaccion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODIGO_RETORNO" type="xs:string" />
+              <xs:element minOccurs="0" name="DESCRIPCION_RETORNO" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ITEMS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODIGO_RET" type="xs:string" />
+              <xs:element minOccurs="0" name="CODIGO_EST" type="xs:string" />
+              <xs:element minOccurs="0" name="IDENTIFICACION" type="xs:string" />
+              <xs:element minOccurs="0" name="NOMBRE_EST" type="xs:string" />
+              <xs:element minOccurs="0" name="REFERENCIA" type="xs:string" />
+              <xs:element minOccurs="0" name="REFERENCIA_AUX" type="xs:string" />
+              <xs:element minOccurs="0" name="DEUDA" type="xs:string" />
+              <xs:element minOccurs="0" name="SEC_BANCO" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPO_IDEN" type="xs:string" />
+              <xs:element minOccurs="0" name="PROCESADO" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

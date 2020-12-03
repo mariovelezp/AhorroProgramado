@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsCORPAIREOut.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsCORPAIREOut.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsCORPAIREOut.xsd" id="dsCORPAIREOut" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsCORPAIREOut">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ITEMS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="CODIGO_ORIENTACION" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="COMPROBANTE_COBRO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CONTRAPARTIDA" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="MONEDA" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="VALOR" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CHASIS" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NOMBRE_DUENIO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DIRECCION_DUENIO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CIUDAD_DUENIO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TELEFONO_DUENIO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="LOCALIDAD_COBRO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="REFERENCIA" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="REFERENCIA_ADICIONAL" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="BASE_IMPONIBLE" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SUBITEMS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="TIPO_REGISTRO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TIPO_RUBRO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CONCEPTO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="VALOR_BASE" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PORCENTAJE" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="VALOR_NETO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="COMPROBANTE_COBRO" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RETORNO">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="CODIGO_RETORNO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DESCRIPCION_RETORNO" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

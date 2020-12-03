@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsSaldosCuentaCte.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsSaldosCuentaCte.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsSaldosCuentaCte.xsd" id="dsSaldosCuentaCte" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsSaldosCuentaCte">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtCabSaldosC">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="codigoretorno" type="xs:string" />
+              <xs:element minOccurs="0" name="tipo_cta" type="xs:string" />
+              <xs:element minOccurs="0" name="cantidad_cuenta" type="xs:string" />
+              <xs:element minOccurs="0" name="resto" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtDetSaldosC">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="numero_cta" type="xs:string" />
+              <xs:element minOccurs="0" name="nombre" type="xs:string" />
+              <xs:element minOccurs="0" name="status" type="xs:string" />
+              <xs:element minOccurs="0" name="marca_cuenta" type="xs:string" />
+              <xs:element minOccurs="0" name="saldo_xconfirmar" type="xs:string" />
+              <xs:element minOccurs="0" name="saldo_total" type="xs:string" />
+              <xs:element minOccurs="0" name="saldo_disponible" type="xs:string" />
+              <xs:element minOccurs="0" name="saldo_meta" type="xs:string" />
+              <xs:element minOccurs="0" name="saldo_acumulativo" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

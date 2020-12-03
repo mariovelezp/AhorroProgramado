@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsMunicipios.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsMunicipios.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsMunicipios.xsd" id="dsMunicipios" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsMunicipios">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dt_Consulta">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Ciudad" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Tipo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="LlaveMunicipal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TipoTransaccion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="ValorTotal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="AvaluoCatastral" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FechaHoraBandRed" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="AvaluoImponible" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SecuencialBandRed" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="HoraTrxHost" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FechaTrxHost" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FechaCompensacion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Documento" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="InstitucionAdquirente" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CodigoOperador" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SecuencialAdquirente" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CodRetorno" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NumTerminal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NombreApellidos" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TipoMoneda" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Producto" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CodInstitucionAutorizadora" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DatosAdicionales" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="AvaluoComercial" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DetalleValoresAPagar1" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DetalleValoresAPagar2" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Direccion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Sector" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Manzana" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Lote" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Division" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CodigoCanal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="GrupoImpuesto" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Numero" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="AnoVigencia" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Semestre" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TituloCredito" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Descuento" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Recargo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Coactiva" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CodigoLiquidacion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FechaRegistro" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NumAutorizacion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PHV" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PHH" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CUIC" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CedulaComerciante" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TipoConsulta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="IdDeuda" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CodigoPuesto" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DescripcionMercado" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DescripcionTipo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TipoSolicitud" type="xs:string" />
+              <xs:element minOccurs="0" name="CodAutorizacion" type="xs:string" />
+              <xs:element minOccurs="0" name="CodSeguridad" type="xs:string" />
+              <xs:element minOccurs="0" name="FechaEmision" type="xs:string" />
+              <xs:element minOccurs="0" name="CodBanred" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_Pago">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Ciudad" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Tipo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="LlaveMunicipal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TipoTransaccion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FechaHoraBandRed" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SecuencialBandRed" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="HoraTrxHost" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FechaTrxHost" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FechaCompensacion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="InstitucionAdquirente" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CodigoOperador" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SecuencialAdquirente" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NumTerminal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TipoMoneda" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Producto" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DetalleValoresAPagar1" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DetalleValoresAPagar2" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CodigoCanal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="GrupoImpuesto" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Documento" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CodRetorno" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NombreApellidos" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CodInstitucionAutorizadora" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Direccion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NumAutorizacion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Sector" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Manzana" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Lote" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Division" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PHV" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PHH" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Numero" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="AnoVigencia" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Semestre" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="ValorTotal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="AvaluoCatastral" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="AvaluoImponible" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DatosAdicionales" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="AvaluoComercial" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TituloCredito" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Descuento" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Recargo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Coactiva" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CodigoLiquidacion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FechaRegistro" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CUIC" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CodigoImpuesto" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="AnoTributacion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CodigoDocumento" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FechaEmision" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Costas" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DescripcionVarios" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DetalleRubros" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="ValorRubro" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Intereses" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CedulaComerciante" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="IdDeuda" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="ValorPagar" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TipoConsulta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CodigoPuesto" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DescripcionMercado" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DescripcionTipo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TipoSolicitud" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="IdPago" type="xs:string" />
+              <xs:element minOccurs="0" name="CodBanred" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_Reverso">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Ciudad" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Tipo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="LlaveMunicipal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TipoTransaccion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SecuencialBandRed" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="HoraTrxHost" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FechaTrxHost" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FechaCompensacion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Documento" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="InstitucionAdquirente" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CodigoOperador" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SecuencialAdquirente" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CodRetorno" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NumTerminal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NombreApellidos" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DatosTrxOriginal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CodInstitucionAutorizadora" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Direccion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FechaHoraBandRed" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="IndicadorReverso" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TipoMoneda" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Producto" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DetalleValoresAPagar1" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DetalleValoresAPagar2" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CodigoCanal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="GrupoImpuesto" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NumAutorizacion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="ValorTotal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Sector" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Manzana" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Lote" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Division" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PHV" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PHH" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Numero" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="AnoVigencia" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Semestre" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CodigoImpuesto" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CedulaComerciante" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="IdDeuda" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="ValorPagar" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TipoConsulta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FechaRegistro" type="xs:string" />
+              <xs:element minOccurs="0" name="FechaEmision" type="xs:string" />
+              <xs:element minOccurs="0" name="CodBanred" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_DetValores1CUE">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="VALOR_EMISION" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="VALOR_EXONERACION" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="VALOR_DESCUENTO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="VALOR_RECARGOS" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="ANIO_DEUDA" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NUMERO_RUBROS" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_DetValores2CUE">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="VALOR_INTERESES" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="VALOR_TOTAL" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NUMERO_TITULOS" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FILLER" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_ValoresPagosGYE">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="ANIO_DEUDA" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="VALOR_A_PAGAR" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_DetValores1UIO">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="CODIGO_IMPUESTO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DESCRIPCION_IMPUESTO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="ANIO_DEUDA" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="MONTO_DEUDA" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_DetValores2UIO">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:Caption="CODIGO_IMPUESTO" minOccurs="0" default="" name="NUMERO_TITULO" type="xs:string" />
+              <xs:element msdata:Caption="DESCRIPCION_IMPUESTO" minOccurs="0" default="" name="PRIORIDAD" type="xs:string" />
+              <xs:element msdata:Caption="ANIO_DEUDA" minOccurs="0" default="" name="INDICE" type="xs:string" />
+              <xs:element msdata:Caption="MONTO_DEUDA" minOccurs="0" default="" name="NUMERO_OBRA" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NUMERO_DIVIDENDO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CODIGO_ESPECIAL" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_DetRubrosUIO">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:Caption="CODIGO_IMPUESTO" minOccurs="0" default="" name="DESCRIPCION" type="xs:string" />
+              <xs:element msdata:Caption="DESCRIPCION_IMPUESTO" minOccurs="0" default="" name="VALOR" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_DetValoresGYE">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="IdDeuda" type="xs:string" />
+              <xs:element minOccurs="0" name="NoAbono" type="xs:string" />
+              <xs:element minOccurs="0" name="FechaDesde" type="xs:string" />
+              <xs:element minOccurs="0" name="FechaHasta" type="xs:string" />
+              <xs:element minOccurs="0" name="Valor" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

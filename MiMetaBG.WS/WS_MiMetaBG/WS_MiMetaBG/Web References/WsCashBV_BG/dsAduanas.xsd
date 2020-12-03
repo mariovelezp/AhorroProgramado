@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsAduanas.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsAduanas.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsAduanas.xsd" id="dsAduanas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsAduanas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtSenaeIN">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="TipoTrx" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Codigo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SecuencialBanco" type="xs:string" />
+              <xs:element minOccurs="0" name="FechaHoraTrx" type="xs:dateTime" />
+              <xs:element minOccurs="0" default="" name="ValorEfectivo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="ValorNotaCredito" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Opid" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Canal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Terminal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CodigoTerminal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CodigoInstitucion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="MontoTrx" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Referencia" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SecuencialBancoPago" type="xs:string" />
+              <xs:element minOccurs="0" name="FechaHoraTrxPago" type="xs:dateTime" />
+              <xs:element minOccurs="0" default="" name="CodSenae" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="IdContrato" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtSenaeOUT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CodRetorno" type="xs:string" />
+              <xs:element minOccurs="0" name="MsjRetorno" type="xs:string" />
+              <xs:element minOccurs="0" name="SecuencialSwitch" type="xs:string" />
+              <xs:element minOccurs="0" name="Nombre" type="xs:string" />
+              <xs:element minOccurs="0" name="RucCedula" type="xs:string" />
+              <xs:element minOccurs="0" name="ValorAcumuladoNC" type="xs:string" />
+              <xs:element minOccurs="0" name="ValorDeuda" type="xs:string" />
+              <xs:element minOccurs="0" name="FechaCompensacion" type="xs:string" />
+              <xs:element minOccurs="0" name="CodAutorizacion" type="xs:string" />
+              <xs:element minOccurs="0" name="Referencia" type="xs:string" />
+              <xs:element minOccurs="0" name="CodSenae" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtRubros">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Codigo" type="xs:string" />
+              <xs:element minOccurs="0" name="Valor" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

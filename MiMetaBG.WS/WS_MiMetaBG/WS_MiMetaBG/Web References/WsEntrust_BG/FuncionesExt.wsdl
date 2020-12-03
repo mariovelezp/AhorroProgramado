@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="OTPgeneration">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aplicacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="servicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="identificador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cretorno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="err" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="canal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="opid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="terminal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTPgenerationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OTPgenerationResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cretorno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="err" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTPvalidate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aplicacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="servicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="identificador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cretorno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="err" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="canal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="opid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="terminal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTPvalidateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cretorno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="err" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertaTablaInvitados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="identificacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cretorno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="err" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="canal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="opid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="terminal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertaTablaInvitadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertaTablaInvitadosResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cretorno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="err" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="OTPgenerationSoapIn">
+    <wsdl:part name="parameters" element="tns:OTPgeneration" />
+  </wsdl:message>
+  <wsdl:message name="OTPgenerationSoapOut">
+    <wsdl:part name="parameters" element="tns:OTPgenerationResponse" />
+  </wsdl:message>
+  <wsdl:message name="OTPvalidateSoapIn">
+    <wsdl:part name="parameters" element="tns:OTPvalidate" />
+  </wsdl:message>
+  <wsdl:message name="OTPvalidateSoapOut">
+    <wsdl:part name="parameters" element="tns:OTPvalidateResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertaTablaInvitadosSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertaTablaInvitados" />
+  </wsdl:message>
+  <wsdl:message name="InsertaTablaInvitadosSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertaTablaInvitadosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="FuncionesExtSoap">
+    <wsdl:operation name="OTPgeneration">
+      <wsdl:input message="tns:OTPgenerationSoapIn" />
+      <wsdl:output message="tns:OTPgenerationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTPvalidate">
+      <wsdl:input message="tns:OTPvalidateSoapIn" />
+      <wsdl:output message="tns:OTPvalidateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertaTablaInvitados">
+      <wsdl:input message="tns:InsertaTablaInvitadosSoapIn" />
+      <wsdl:output message="tns:InsertaTablaInvitadosSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FuncionesExtSoap" type="tns:FuncionesExtSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="OTPgeneration">
+      <soap:operation soapAction="http://tempuri.org/OTPgeneration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTPvalidate">
+      <soap:operation soapAction="http://tempuri.org/OTPvalidate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertaTablaInvitados">
+      <soap:operation soapAction="http://tempuri.org/InsertaTablaInvitados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="FuncionesExtSoap12" type="tns:FuncionesExtSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="OTPgeneration">
+      <soap12:operation soapAction="http://tempuri.org/OTPgeneration" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTPvalidate">
+      <soap12:operation soapAction="http://tempuri.org/OTPvalidate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertaTablaInvitados">
+      <soap12:operation soapAction="http://tempuri.org/InsertaTablaInvitados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FuncionesExt">
+    <wsdl:port name="FuncionesExtSoap" binding="tns:FuncionesExtSoap">
+      <soap:address location="http://172.26.60.56:8088/EntrustInterfaceWS/FuncionesExt.asmx" />
+    </wsdl:port>
+    <wsdl:port name="FuncionesExtSoap12" binding="tns:FuncionesExtSoap12">
+      <soap12:address location="http://172.26.60.56:8088/EntrustInterfaceWS/FuncionesExt.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

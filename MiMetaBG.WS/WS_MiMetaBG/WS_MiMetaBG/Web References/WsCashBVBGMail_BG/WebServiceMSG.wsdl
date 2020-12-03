@@ -1,0 +1,998 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s1="http://MensajesWs.MsgRpConsultaFacturas" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s2="http://MensajesWs.MsgCabResponse" xmlns:s3="http://MensajesWs.MsgConsultaFacturas" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://MensajesWs.MsgRpConsultaFacturas" />
+      <s:element name="EnviarMail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_de" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_para" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_copia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_asunto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_mensaje" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_nombreAdjunto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_adjunto" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarMailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarMailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarMailServidor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_de" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_para" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_copia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_asunto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_mensaje" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_nombreAdjunto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_adjunto" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="_srvMail" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarMailServidorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarMailServidorResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarMail2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_de" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_para" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_copia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_asunto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_mensaje" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_nombreAdjunto" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iLinea" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarMail2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarMail2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarMailSeguro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="de" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombreDe" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="para" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombrePara" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="copia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="asunto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mensajeHtml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombreImagen" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarMailSeguroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarMailSeguroResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarMailSeguroServidor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="de" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombreDe" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="para" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombrePara" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="copia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="asunto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mensajeHtml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombreImagen" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="srvMail" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarMailSeguroServidorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarMailSeguroServidorResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarMailCT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_de" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_para" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_copia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_asunto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_mensaje" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_nombreAdjunto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_adjunto" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="_contentType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarMailCTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarMailCTResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarSMScc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_para" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_mensaje" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_opid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_origen" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_comando" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_codigo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarSMSccResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarSMSccResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarSMSwP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_para" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_mensaje" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_opid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_origen" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_params" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarSMSwPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarSMSwPResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarSMS2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_para" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_mensaje" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_opid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_origen" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarSMS2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarSMS2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_para" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_mensaje" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_opid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarSMSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarMailPlantilla">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_de" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_para" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_copia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_asunto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_mensaje" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_nombreAdjunto" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iLinea" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarMailPlantillaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarMailPlantillaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarMailPlantillaMuchos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_de" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_para" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_copia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_asunto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_mensaje" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_nomArchivoAd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rutaArchivoAd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iLinea" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarMailPlantillaMuchosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarMailPlantillaMuchosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarMailPlantillaMuchosAdjuntos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_de" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_para" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_copia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_asunto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_mensaje" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iLinea" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="archivosAdjuntos" type="tns:ArrayOfArchivoAdjunto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfArchivoAdjunto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ArchivoAdjunto" nillable="true" type="tns:ArchivoAdjunto" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArchivoAdjunto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Contenido" type="s:base64Binary" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="EnviarMailPlantillaMuchosAdjuntosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarMailPlantillaMuchosAdjuntosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarMailConAdjuntos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="de" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="para" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="copia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="asunto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mensaje" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="archivosAdjuntos" type="tns:ArrayOfArchivoAdjunto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarMailConAdjuntosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarMailConAdjuntosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarMailConAdjuntosServidor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="de" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="para" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="copia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="asunto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mensaje" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="archivosAdjuntos" type="tns:ArrayOfArchivoAdjunto" />
+            <s:element minOccurs="0" maxOccurs="1" name="srvMail" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarMailConAdjuntosServidorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarMailConAdjuntosServidorResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaFactura">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ClienteTJ" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="estacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaFacturaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaFacturaResult" type="s1:MsgRpConsultaFacturas" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarMailPlantillaBancontrol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_de" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_para" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_copia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_asunto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_mensaje" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_nombreAdjunto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_archivoAdjunto" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarMailPlantillaBancontrolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarMailPlantillaBancontrolResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarMailPlantillaAdjunto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_de" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_para" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_copia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_asunto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombreplantilla" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="XmlpathVar" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="archivosAdjuntos" type="tns:ArrayOfArchivoAdjunto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarMailPlantillaAdjuntoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarMailPlantillaAdjuntoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarNotificacionesPush">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="notificaPushIn" type="tns:NotificacionPush" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="NotificacionPush">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Cabecera" type="tns:CabeceraPush" />
+          <s:element minOccurs="0" maxOccurs="1" name="Detalle" type="tns:ArrayOfDetallePush" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CabeceraPush">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Todos" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Titulo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mensaje" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDetallePush">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DetallePush" nillable="true" type="tns:DetallePush" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DetallePush">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Titulo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mensaje" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NombreCorto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdPush" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="EnviarNotificacionesPushResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarNotificacionesPushResult" type="tns:NotificacionPushOut" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="NotificacionPushOut">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CodigoRetorno" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MensajeRetorno" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://MensajesWs.MsgRpConsultaFacturas">
+      <s:import namespace="http://MensajesWs.MsgCabResponse" />
+      <s:import namespace="http://MensajesWs.MsgConsultaFacturas" />
+      <s:complexType name="MsgRpConsultaFacturas">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Cabecera" type="s2:MsgCabResponse" />
+          <s:element minOccurs="0" maxOccurs="unbounded" form="unqualified" name="ConsultaFacturas" type="s3:MsgConsultaFacturas" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://MensajesWs.MsgCabResponse">
+      <s:complexType name="MsgCabResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="NumFilas" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="CodRespuesta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mensaje" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Prints" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://MensajesWs.MsgConsultaFacturas">
+      <s:complexType name="MsgConsultaFacturas">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="FVencido" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Factura" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Detallista" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="FEmision" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="VPagar" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="NombreDistribuidor" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="EnviarMailSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarMail" />
+  </wsdl:message>
+  <wsdl:message name="EnviarMailSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarMailServidorSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarMailServidor" />
+  </wsdl:message>
+  <wsdl:message name="EnviarMailServidorSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarMailServidorResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarMail2SoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarMail2" />
+  </wsdl:message>
+  <wsdl:message name="EnviarMail2SoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarMail2Response" />
+  </wsdl:message>
+  <wsdl:message name="EnviarMailSeguroSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarMailSeguro" />
+  </wsdl:message>
+  <wsdl:message name="EnviarMailSeguroSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarMailSeguroResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarMailSeguroServidorSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarMailSeguroServidor" />
+  </wsdl:message>
+  <wsdl:message name="EnviarMailSeguroServidorSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarMailSeguroServidorResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarMailCTSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarMailCT" />
+  </wsdl:message>
+  <wsdl:message name="EnviarMailCTSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarMailCTResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarSMSccSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarSMScc" />
+  </wsdl:message>
+  <wsdl:message name="EnviarSMSccSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarSMSccResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarSMSwPSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarSMSwP" />
+  </wsdl:message>
+  <wsdl:message name="EnviarSMSwPSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarSMSwPResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarSMS2SoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarSMS2" />
+  </wsdl:message>
+  <wsdl:message name="EnviarSMS2SoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarSMS2Response" />
+  </wsdl:message>
+  <wsdl:message name="EnviarSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarSMS" />
+  </wsdl:message>
+  <wsdl:message name="EnviarSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarMailPlantillaSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarMailPlantilla" />
+  </wsdl:message>
+  <wsdl:message name="EnviarMailPlantillaSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarMailPlantillaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarMailPlantillaMuchosSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarMailPlantillaMuchos" />
+  </wsdl:message>
+  <wsdl:message name="EnviarMailPlantillaMuchosSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarMailPlantillaMuchosResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarMailPlantillaMuchosAdjuntosSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarMailPlantillaMuchosAdjuntos" />
+  </wsdl:message>
+  <wsdl:message name="EnviarMailPlantillaMuchosAdjuntosSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarMailPlantillaMuchosAdjuntosResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarMailConAdjuntosSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarMailConAdjuntos" />
+  </wsdl:message>
+  <wsdl:message name="EnviarMailConAdjuntosSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarMailConAdjuntosResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarMailConAdjuntosServidorSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarMailConAdjuntosServidor" />
+  </wsdl:message>
+  <wsdl:message name="EnviarMailConAdjuntosServidorSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarMailConAdjuntosServidorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaFacturaSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaFactura" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaFacturaSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaFacturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarMailPlantillaBancontrolSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarMailPlantillaBancontrol" />
+  </wsdl:message>
+  <wsdl:message name="EnviarMailPlantillaBancontrolSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarMailPlantillaBancontrolResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarMailPlantillaAdjuntoSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarMailPlantillaAdjunto" />
+  </wsdl:message>
+  <wsdl:message name="EnviarMailPlantillaAdjuntoSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarMailPlantillaAdjuntoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarNotificacionesPushSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarNotificacionesPush" />
+  </wsdl:message>
+  <wsdl:message name="EnviarNotificacionesPushSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarNotificacionesPushResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceMSGSoap">
+    <wsdl:operation name="EnviarMail">
+      <wsdl:input message="tns:EnviarMailSoapIn" />
+      <wsdl:output message="tns:EnviarMailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMail">
+      <wsdl:input name="EnviarMailServidor" message="tns:EnviarMailServidorSoapIn" />
+      <wsdl:output name="EnviarMailServidor" message="tns:EnviarMailServidorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMail2">
+      <wsdl:input message="tns:EnviarMail2SoapIn" />
+      <wsdl:output message="tns:EnviarMail2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMailSeguro">
+      <wsdl:input message="tns:EnviarMailSeguroSoapIn" />
+      <wsdl:output message="tns:EnviarMailSeguroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMailSeguro">
+      <wsdl:input name="EnviarMailSeguroServidor" message="tns:EnviarMailSeguroServidorSoapIn" />
+      <wsdl:output name="EnviarMailSeguroServidor" message="tns:EnviarMailSeguroServidorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMailCT">
+      <wsdl:input message="tns:EnviarMailCTSoapIn" />
+      <wsdl:output message="tns:EnviarMailCTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarSMScc">
+      <wsdl:input message="tns:EnviarSMSccSoapIn" />
+      <wsdl:output message="tns:EnviarSMSccSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarSMSwP">
+      <wsdl:input message="tns:EnviarSMSwPSoapIn" />
+      <wsdl:output message="tns:EnviarSMSwPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarSMS2">
+      <wsdl:input message="tns:EnviarSMS2SoapIn" />
+      <wsdl:output message="tns:EnviarSMS2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarSMS">
+      <wsdl:input message="tns:EnviarSMSSoapIn" />
+      <wsdl:output message="tns:EnviarSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMailPlantilla">
+      <wsdl:input message="tns:EnviarMailPlantillaSoapIn" />
+      <wsdl:output message="tns:EnviarMailPlantillaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMailPlantillaMuchos">
+      <wsdl:input message="tns:EnviarMailPlantillaMuchosSoapIn" />
+      <wsdl:output message="tns:EnviarMailPlantillaMuchosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMailPlantillaMuchosAdjuntos">
+      <wsdl:input message="tns:EnviarMailPlantillaMuchosAdjuntosSoapIn" />
+      <wsdl:output message="tns:EnviarMailPlantillaMuchosAdjuntosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMailConAdjuntos">
+      <wsdl:input message="tns:EnviarMailConAdjuntosSoapIn" />
+      <wsdl:output message="tns:EnviarMailConAdjuntosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMailConAdjuntos">
+      <wsdl:input name="EnviarMailConAdjuntosServidor" message="tns:EnviarMailConAdjuntosServidorSoapIn" />
+      <wsdl:output name="EnviarMailConAdjuntosServidor" message="tns:EnviarMailConAdjuntosServidorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaFactura">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta Facturas Vencidas por b2b</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaFacturaSoapIn" />
+      <wsdl:output message="tns:ConsultaFacturaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMailPlantillaBancontrol">
+      <wsdl:input message="tns:EnviarMailPlantillaBancontrolSoapIn" />
+      <wsdl:output message="tns:EnviarMailPlantillaBancontrolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMailPlantillaAdjunto">
+      <wsdl:input message="tns:EnviarMailPlantillaAdjuntoSoapIn" />
+      <wsdl:output message="tns:EnviarMailPlantillaAdjuntoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarNotificacionesPush">
+      <wsdl:input message="tns:EnviarNotificacionesPushSoapIn" />
+      <wsdl:output message="tns:EnviarNotificacionesPushSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceMSGSoap" type="tns:WebServiceMSGSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EnviarMail">
+      <soap:operation soapAction="http://tempuri.org/EnviarMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMail">
+      <soap:operation soapAction="http://tempuri.org/EnviarMailServidor" style="document" />
+      <wsdl:input name="EnviarMailServidor">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="EnviarMailServidor">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMail2">
+      <soap:operation soapAction="http://tempuri.org/EnviarMail2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMailSeguro">
+      <soap:operation soapAction="http://tempuri.org/EnviarMailSeguro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMailSeguro">
+      <soap:operation soapAction="http://tempuri.org/EnviarMailSeguroServidor" style="document" />
+      <wsdl:input name="EnviarMailSeguroServidor">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="EnviarMailSeguroServidor">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMailCT">
+      <soap:operation soapAction="http://tempuri.org/EnviarMailCT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarSMScc">
+      <soap:operation soapAction="http://tempuri.org/EnviarSMScc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarSMSwP">
+      <soap:operation soapAction="http://tempuri.org/EnviarSMSwP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarSMS2">
+      <soap:operation soapAction="http://tempuri.org/EnviarSMS2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarSMS">
+      <soap:operation soapAction="http://tempuri.org/EnviarSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMailPlantilla">
+      <soap:operation soapAction="http://tempuri.org/EnviarMailPlantilla" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMailPlantillaMuchos">
+      <soap:operation soapAction="http://tempuri.org/EnviarMailPlantillaMuchos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMailPlantillaMuchosAdjuntos">
+      <soap:operation soapAction="http://tempuri.org/EnviarMailPlantillaMuchosAdjuntos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMailConAdjuntos">
+      <soap:operation soapAction="http://tempuri.org/EnviarMailConAdjuntos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMailConAdjuntos">
+      <soap:operation soapAction="http://tempuri.org/EnviarMailConAdjuntosServidor" style="document" />
+      <wsdl:input name="EnviarMailConAdjuntosServidor">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="EnviarMailConAdjuntosServidor">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaFactura">
+      <soap:operation soapAction="http://tempuri.org/ConsultaFactura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMailPlantillaBancontrol">
+      <soap:operation soapAction="http://tempuri.org/EnviarMailPlantillaBancontrol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMailPlantillaAdjunto">
+      <soap:operation soapAction="http://tempuri.org/EnviarMailPlantillaAdjunto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarNotificacionesPush">
+      <soap:operation soapAction="http://tempuri.org/EnviarNotificacionesPush" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceMSGSoap12" type="tns:WebServiceMSGSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EnviarMail">
+      <soap12:operation soapAction="http://tempuri.org/EnviarMail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMail">
+      <soap12:operation soapAction="http://tempuri.org/EnviarMailServidor" style="document" />
+      <wsdl:input name="EnviarMailServidor">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="EnviarMailServidor">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMail2">
+      <soap12:operation soapAction="http://tempuri.org/EnviarMail2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMailSeguro">
+      <soap12:operation soapAction="http://tempuri.org/EnviarMailSeguro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMailSeguro">
+      <soap12:operation soapAction="http://tempuri.org/EnviarMailSeguroServidor" style="document" />
+      <wsdl:input name="EnviarMailSeguroServidor">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="EnviarMailSeguroServidor">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMailCT">
+      <soap12:operation soapAction="http://tempuri.org/EnviarMailCT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarSMScc">
+      <soap12:operation soapAction="http://tempuri.org/EnviarSMScc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarSMSwP">
+      <soap12:operation soapAction="http://tempuri.org/EnviarSMSwP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarSMS2">
+      <soap12:operation soapAction="http://tempuri.org/EnviarSMS2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarSMS">
+      <soap12:operation soapAction="http://tempuri.org/EnviarSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMailPlantilla">
+      <soap12:operation soapAction="http://tempuri.org/EnviarMailPlantilla" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMailPlantillaMuchos">
+      <soap12:operation soapAction="http://tempuri.org/EnviarMailPlantillaMuchos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMailPlantillaMuchosAdjuntos">
+      <soap12:operation soapAction="http://tempuri.org/EnviarMailPlantillaMuchosAdjuntos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMailConAdjuntos">
+      <soap12:operation soapAction="http://tempuri.org/EnviarMailConAdjuntos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMailConAdjuntos">
+      <soap12:operation soapAction="http://tempuri.org/EnviarMailConAdjuntosServidor" style="document" />
+      <wsdl:input name="EnviarMailConAdjuntosServidor">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="EnviarMailConAdjuntosServidor">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaFactura">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaFactura" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMailPlantillaBancontrol">
+      <soap12:operation soapAction="http://tempuri.org/EnviarMailPlantillaBancontrol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMailPlantillaAdjunto">
+      <soap12:operation soapAction="http://tempuri.org/EnviarMailPlantillaAdjunto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarNotificacionesPush">
+      <soap12:operation soapAction="http://tempuri.org/EnviarNotificacionesPush" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebServiceMSG">
+    <wsdl:port name="WebServiceMSGSoap" binding="tns:WebServiceMSGSoap">
+      <soap:address location="http://172.26.60.56/BG.CashBVBG.WS/WebServiceMSG.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceMSGSoap12" binding="tns:WebServiceMSGSoap12">
+      <soap12:address location="http://172.26.60.56/BG.CashBVBG.WS/WebServiceMSG.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

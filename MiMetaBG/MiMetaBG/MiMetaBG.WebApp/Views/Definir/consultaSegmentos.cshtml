@@ -1,0 +1,48 @@
+﻿@model List<MiMetaBG.WebApp.Models.Segmento>
+
+@{
+    ViewBag.Title = "consultaSegmentos";
+}
+
+<script>
+    document.getElementById("btnAtras").style.display = "block";
+</script>
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="heading1">¿Qué quieres lograr?</h1>
+                <p class="subheading">Para empezar, selecciona la meta que prefieras o crea una nueva.</p>
+            </div>
+        </div>
+        <div class="row">
+             @if (Model != null) { 
+             foreach (var Seg in Model)
+             {
+                <div class="col-xl-3 col-lg-4 col-sm-6 mb-4 px-sm-3 px-4">
+                <div class="card shadow-sm">
+                    <input type="hidden" value="@Seg.idSegmento" />
+                    <a href="~/Definir/consultaDetSegmento?idSeg=@Seg.idSegmento">
+                        <div class="card-img-top">
+                            <img src="data:image;base64,@System.Convert.ToBase64String(Seg.imagen)" alt="">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <img src="data:image;base64,@System.Convert.ToBase64String(Seg.emojin)" width="30" height="30" />
+                             @Seg.descripcion
+                            </h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+                     }
+             }
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-6 col-lg-4 mt-0 mt-md-3 mt-lg-4 px-sm-3 px-4">
+                <a class="btn btn-primary d-block" href="~/Definir/consultaDetSegmento">+ Crea tu propia meta</a>
+            </div>
+        </div>
+    </div>
+</main>

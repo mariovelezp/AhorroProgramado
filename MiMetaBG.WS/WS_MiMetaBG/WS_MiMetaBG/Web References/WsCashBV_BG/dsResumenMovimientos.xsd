@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsResumenMovimientos.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsResumenMovimientos.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsResumenMovimientos.xsd" id="dsResumenMovimientos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsResumenMovimientos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtResumenMovimientos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="cta" type="xs:string" />
+              <xs:element minOccurs="0" name="saldo_anterior" type="xs:string" />
+              <xs:element minOccurs="0" name="saldo_actual" type="xs:string" />
+              <xs:element minOccurs="0" name="nota_debito" type="xs:string" />
+              <xs:element minOccurs="0" name="nota_credito" type="xs:string" />
+              <xs:element minOccurs="0" name="deposito" type="xs:string" />
+              <xs:element minOccurs="0" name="retiro" type="xs:string" />
+              <xs:element minOccurs="0" name="codigoretorno" type="xs:string" />
+              <xs:element minOccurs="0" name="nombre" type="xs:string" />
+              <xs:element minOccurs="0" name="fecha" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

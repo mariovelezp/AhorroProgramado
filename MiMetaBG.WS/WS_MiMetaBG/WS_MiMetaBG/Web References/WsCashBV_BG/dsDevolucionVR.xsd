@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsDevolucionVR.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsDevolucionVR.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsDevolucionVR.xsd" id="dsDevolucionVR" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsDevolucionVR">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dsDevolucion_In">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ID_INSTANCIA" type="xs:string" />
+              <xs:element minOccurs="0" name="ID_TIPO_TRANSACCION" type="xs:string" />
+              <xs:element minOccurs="0" name="ID_INTEGRADOR" type="xs:string" />
+              <xs:element minOccurs="0" name="COD_ALTERNO_DISTRIBUIDOR" type="xs:string" />
+              <xs:element minOccurs="0" name="USUARIO" type="xs:string" />
+              <xs:element minOccurs="0" name="CLAVE" type="xs:string" />
+              <xs:element minOccurs="0" name="DATA_SOURCE" type="xs:string" />
+              <xs:element minOccurs="0" name="CANAL" type="xs:string" />
+              <xs:element minOccurs="0" name="INSTITUCION" type="xs:string" />
+              <xs:element minOccurs="0" name="MEDIO" type="xs:string" />
+              <xs:element minOccurs="0" name="DET_MEDIO" type="xs:string" />
+              <xs:element minOccurs="0" name="FECHA" type="xs:string" />
+              <xs:element minOccurs="0" name="TRAMITE" type="xs:string" />
+              <xs:element minOccurs="0" name="CLAVE_ACCESO" type="xs:string" />
+              <xs:element minOccurs="0" name="NUM_AUTO_PORTA" type="xs:string" />
+              <xs:element minOccurs="0" name="NUM_AUTO_BANCO" type="xs:string" />
+              <xs:element minOccurs="0" name="VALOR_RECLAMO" type="xs:string" />
+              <xs:element minOccurs="0" name="SECUENCIA" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dsDevolucion_Out">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="WS_ERROR" type="xs:string" />
+              <xs:element minOccurs="0" name="WS_MENSAJE_ERROR" type="xs:string" />
+              <xs:element minOccurs="0" name="MENSAJE" type="xs:string" />
+              <xs:element minOccurs="0" name="APLICA" type="xs:string" />
+              <xs:element minOccurs="0" name="CAC" type="xs:string" />
+              <xs:element minOccurs="0" name="NOM_CLI" type="xs:string" />
+              <xs:element minOccurs="0" name="ID_CLI" type="xs:string" />
+              <xs:element minOccurs="0" name="N_EGRESO" type="xs:string" />
+              <xs:element minOccurs="0" name="CLAS_R" type="xs:string" />
+              <xs:element minOccurs="0" name="TIP_R" type="xs:string" />
+              <xs:element minOccurs="0" name="DET_R" type="xs:string" />
+              <xs:element minOccurs="0" name="VAL_R" type="xs:string" />
+              <xs:element minOccurs="0" name="DES_R" type="xs:string" />
+              <xs:element minOccurs="0" name="NA_CLARO" type="xs:string" />
+              <xs:element minOccurs="0" name="COD_RESPUESTA" type="xs:string" />
+              <xs:element minOccurs="0" name="ID_TRANSACCION" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

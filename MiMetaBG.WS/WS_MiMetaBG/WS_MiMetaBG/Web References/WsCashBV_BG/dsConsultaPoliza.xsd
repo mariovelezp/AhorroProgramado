@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsConsultaPoliza.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsConsultaPoliza.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsConsultaPoliza.xsd" id="dsConsultaPoliza" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsConsultaPoliza">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtConsultaPoliza">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="nombre" type="xs:string" />
+              <xs:element minOccurs="0" name="plazo_promedio" type="xs:string" />
+              <xs:element minOccurs="0" name="total_inversion" type="xs:string" />
+              <xs:element minOccurs="0" name="interes_promedio" type="xs:string" />
+              <xs:element minOccurs="0" name="codigoretorno" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtDetallePoliza">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="documento" type="xs:string" />
+              <xs:element minOccurs="0" name="fechaemision" type="xs:string" />
+              <xs:element minOccurs="0" name="fechavencimiento" type="xs:string" />
+              <xs:element minOccurs="0" name="plazo" type="xs:string" />
+              <xs:element minOccurs="0" name="capital" type="xs:string" />
+              <xs:element minOccurs="0" name="interes" type="xs:string" />
+              <xs:element minOccurs="0" name="nombre" type="xs:string" />
+              <xs:element minOccurs="0" name="fechapago" type="xs:string" />
+              <xs:element minOccurs="0" name="agencia" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="dtConsultaPolizaKey1">
+      <xs:selector xpath=".//mstns:dtConsultaPoliza" />
+      <xs:field xpath="mstns:nombre" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="dtConsultaPoliza_dtDetallePoliza" msdata:parent="dtConsultaPoliza" msdata:child="dtDetallePoliza" msdata:parentkey="nombre" msdata:childkey="nombre" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

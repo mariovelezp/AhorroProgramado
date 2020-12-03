@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsConsultaLANout.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsConsultaLANout.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsConsultaLANout.xsd" id="dsConsultaLANout" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsConsultaLANout">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtPax">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="PAX" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtResTransaccion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="id_pago" type="xs:string" />
+              <xs:element minOccurs="0" name="pnr" type="xs:string" />
+              <xs:element minOccurs="0" name="routing" type="xs:string" />
+              <xs:element minOccurs="0" name="trip_date" type="xs:string" />
+              <xs:element minOccurs="0" name="return_date" type="xs:string" />
+              <xs:element minOccurs="0" name="ind_tipo_viaje" type="xs:string" />
+              <xs:element minOccurs="0" name="monto" type="xs:double" />
+              <xs:element minOccurs="0" name="monto_moneda" type="xs:string" />
+              <xs:element minOccurs="0" name="monto_usd" type="xs:double" />
+              <xs:element minOccurs="0" name="fecha_limite_pago" type="xs:string" />
+              <xs:element minOccurs="0" name="hora_limite_pago" type="xs:string" />
+              <xs:element minOccurs="0" name="Mensaje_Respuesta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Codigo_Respuesta" type="xs:string" />
+              <xs:element minOccurs="0" name="Status" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

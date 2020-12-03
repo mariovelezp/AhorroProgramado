@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsPrestamos.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsPrestamos.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsPrestamos.xsd" id="dsPrestamos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsPrestamos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dsPrestamosConsolidadaCab">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="PUNTERO" type="xs:string" />
+              <xs:element minOccurs="0" name="PAGINEO" type="xs:string" />
+              <xs:element minOccurs="0" name="CONTADOR" type="xs:string" />
+              <xs:element minOccurs="0" name="CODRETORNO" type="xs:string" />
+              <xs:element minOccurs="0" name="FILLER" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dsPrestamosConsolidadaDet">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="BANCO" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPOOBLIGA" type="xs:string" />
+              <xs:element minOccurs="0" name="NUMOBLIGA" type="xs:string" />
+              <xs:element minOccurs="0" name="NUMDIVIDEN" type="xs:string" />
+              <xs:element minOccurs="0" name="CAPITAL" type="xs:string" />
+              <xs:element minOccurs="0" name="INTERES" type="xs:string" />
+              <xs:element minOccurs="0" name="DIVIDENMI" type="xs:string" />
+              <xs:element minOccurs="0" name="SALDOCAPI" type="xs:string" />
+              <xs:element minOccurs="0" name="FECHACONC" type="xs:string" />
+              <xs:element minOccurs="0" name="FECHAVENC" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dsPrestamosDividendoxVencerCab">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CUENTA" type="xs:string" />
+              <xs:element minOccurs="0" name="NOMCLIENTE" type="xs:string" />
+              <xs:element minOccurs="0" name="PUNTERO" type="xs:string" />
+              <xs:element minOccurs="0" name="PAGINEO" type="xs:string" />
+              <xs:element minOccurs="0" name="CONTADOR" type="xs:string" />
+              <xs:element minOccurs="0" name="CODRETORNO" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dsPrestamosDividendoxVencerDet">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="NUMCHEQ" type="xs:string" />
+              <xs:element minOccurs="0" name="FECHAPAGO" type="xs:string" />
+              <xs:element minOccurs="0" name="ESTADO" type="xs:string" />
+              <xs:element minOccurs="0" name="MONTO" type="xs:string" />
+              <xs:element minOccurs="0" name="FECHACONCE" type="xs:string" />
+              <xs:element minOccurs="0" name="FECHAVENCI" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dsPrestamosDetalleDet">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="PERIODO" type="xs:string" />
+              <xs:element minOccurs="0" name="CAPITAL" type="xs:string" />
+              <xs:element minOccurs="0" name="INTERES" type="xs:string" />
+              <xs:element minOccurs="0" name="DIVIDENDO" type="xs:string" />
+              <xs:element minOccurs="0" name="SALDOCAPITAL" type="xs:string" />
+              <xs:element minOccurs="0" name="FECHACON" type="xs:string" />
+              <xs:element minOccurs="0" name="FECHAVEN" type="xs:string" />
+              <xs:element minOccurs="0" name="INTERESXMORA" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dsPrestamosDetalleCab">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="NOOFICIAL" type="xs:string" />
+              <xs:element minOccurs="0" name="OPERACION" type="xs:string" />
+              <xs:element minOccurs="0" name="NCLIENTE" type="xs:string" />
+              <xs:element minOccurs="0" name="NUMOPERA" type="xs:string" />
+              <xs:element minOccurs="0" name="MONTOVENCE" type="xs:string" />
+              <xs:element minOccurs="0" name="MONTOVENCI" type="xs:string" />
+              <xs:element minOccurs="0" name="TASA" type="xs:string" />
+              <xs:element minOccurs="0" name="FECHACONCE" type="xs:string" />
+              <xs:element minOccurs="0" name="FECHAVENCI" type="xs:string" />
+              <xs:element minOccurs="0" name="CODRETORNO" type="xs:string" />
+              <xs:element minOccurs="0" name="PAGINEO" type="xs:string" />
+              <xs:element minOccurs="0" name="PUNTERO" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

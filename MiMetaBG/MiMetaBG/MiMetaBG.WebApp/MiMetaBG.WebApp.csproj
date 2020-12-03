@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B263058E-857F-46D1-A99E-68E49891458E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MiMetaBG.WebApp</RootNamespace>
+    <AssemblyName>MiMetaBG.WebApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="jose-jwt, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\jose-jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\Mario\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Optimization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\ComboImagen.css" />
+    <Content Include="Content\css\main.css" />
+    <Content Include="Content\css\mainl.css" />
+    <Content Include="Content\dd.css" />
+    <Content Include="Content\Ejemplo.css" />
+    <Content Include="Content\procesando.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="favicon.png" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\Gotham-Bold.svg" />
+    <Content Include="fonts\Gotham-Book.svg" />
+    <Content Include="fonts\Gotham-Medium.svg" />
+    <Content Include="fonts\icomoon.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\banco-guayaquil-logo.svg" />
+    <Content Include="img\banco-guayaquil-logo.png" />
+    <Content Include="img\banco-guayaquil-logo.svg" />
+    <Content Include="img\bg_logo.png" />
+    <Content Include="img\bg_Principal.png" />
+    <Content Include="img\cerrarSesion.jpg" />
+    <Content Include="img\credito.png" />
+    <Content Include="img\error-sistema.svg" />
+    <Content Include="img\landing\carousel-pasos-1.jpg" />
+    <Content Include="img\landing\carousel-pasos-2.jpg" />
+    <Content Include="img\landing\carousel-pasos-3.jpg" />
+    <Content Include="img\landing\carousel-pasos-4.jpg" />
+    <Content Include="img\landing\ahorro-1.png" />
+    <Content Include="img\landing\ahorro-2.png" />
+    <Content Include="img\landing\ahorro-3.png" />
+    <Content Include="img\landing\banco-guayaquil-logo.svg" />
+    <Content Include="img\landing\bg-metas.jpg" />
+    <Content Include="img\landing\carousel-pasos-deco.png" />
+    <Content Include="img\landing\cellphone-1.png" />
+    <Content Include="img\landing\circles.svg" />
+    <Content Include="img\landing\faq-img.jpg" />
+    <Content Include="img\landing\faq-img2.jpg" />
+    <Content Include="img\landing\section-bottom-path.svg" />
+    <Content Include="img\landing\section-top-path.svg" />
+    <Content Include="img\landing\section-top2-path.svg" />
+    <Content Include="img\landing\section1-path.svg" />
+    <Content Include="img\landing\section3-path.svg" />
+    <Content Include="img\landing\Sin tÂ°tulo-1.svg" />
+    <Content Include="img\landing\video-example-bg.jpg" />
+    <Content Include="img\landing\video2.jpg" />
+    <Content Include="img\landing\video2.mp4" />
+    <Content Include="img\landing\video2.png" />
+    <Content Include="img\logo-banco-guayaquil.png" />
+    <Content Include="img\multicredito.png" />
+    <Content Include="img\procesando.gif" />
+    <Content Include="img\tarjeta-de-credito.png" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="fonts\Gotham-Bold.eot" />
+    <Content Include="fonts\Gotham-Bold.ttf" />
+    <Content Include="fonts\Gotham-Bold.woff" />
+    <Content Include="fonts\Gotham-Book.eot" />
+    <Content Include="fonts\Gotham-Book.ttf" />
+    <Content Include="fonts\Gotham-Book.woff" />
+    <Content Include="fonts\icomoon.eot" />
+    <Content Include="fonts\icomoon.ttf" />
+    <Content Include="fonts\icomoon.woff" />
+    <Content Include="Content\css\main1.css" />
+    <Content Include="fonts\Gotham-Bold.otf" />
+    <Content Include="fonts\Gotham-Book.otf" />
+    <Content Include="fonts\Gotham-Book.woff2" />
+    <Content Include="fonts\Gotham-Medium.eot" />
+    <Content Include="fonts\Gotham-Medium.otf" />
+    <Content Include="fonts\Gotham-Medium.ttf" />
+    <Content Include="fonts\Gotham-Medium.woff" />
+    <Content Include="Documentos\terminos_y_condiciones.pdf" />
+    <None Include="Properties\PublishProfiles\Jpluas.pubxml" />
+    <None Include="Properties\PublishProfiles\mario.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\ComboImagen.js" />
+    <Content Include="Scripts\controlRangos.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery.dd.js" />
+    <Content Include="Scripts\jquery.dd.min.js" />
+    <Content Include="Scripts\jslanding\main.js" />
+    <Content Include="Scripts\jslanding\vendor\bootstrap.min.js" />
+    <Content Include="Scripts\jslanding\vendor\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jslanding\vendor\popper.min.js" />
+    <Content Include="Scripts\js\main.js" />
+    <Content Include="Scripts\js\vendor\bootstrap.min.js" />
+    <Content Include="Scripts\js\vendor\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\js\vendor\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\js\vendor\popper.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\Private.js" />
+    <Content Include="sitemap.xml" />
+    <Content Include="Web References\MiMetaWS\ParametroResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Views\Validar\GetIdentification.cshtml" />
+    <Content Include="Views\Validar\GetOTP.cshtml" />
+    <Content Include="Web References\MiMetaWS\MetaResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Views\Error\PageError.cshtml" />
+    <Content Include="Web References\MiMetaWS\CuentasResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\MiMetaWS\ConsultaMetasResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Views\Metas\ConsultaSuenio.cshtml" />
+    <Content Include="Views\Metas\CreacionSuenio.cshtml" />
+    <Content Include="Views\Error\PageSesion.cshtml" />
+    <Content Include="Views\Error\ConsultaSuenio.cshtml" />
+    <Content Include="Web References\MiMetaWS\MetaAdicionalResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\MiMetaWS\prvImagenGralResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\MiMetaWS\prvImagenResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\MiMetaWS\prvLoginResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\MiMetaWS\prvProductoGralResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\MiMetaWS\prvSegmentoGralResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\MiMetaWS\prvSegmentoResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Views\Private\ImgPrincipal.cshtml" />
+    <Content Include="Views\Private\Index.cshtml" />
+    <Content Include="Views\Private\SaveImagen.cshtml" />
+    <Content Include="Views\Private\SaveSegment.cshtml" />
+    <Content Include="Views\Private\SegConsImagenes.cshtml" />
+    <Content Include="Views\Private\SegConsProductos.cshtml" />
+    <Content Include="Views\Private\SegPrincipal.cshtml" />
+    <Content Include="Views\Shared\_VentaCruzadas.cshtml" />
+    <Content Include="Views\Shared\_ListaMetasCreadas.cshtml" />
+    <None Include="Web References\MiMetaWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web References\MiMetaWS\SegmentoResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\MiMetaWS\ValidacionClienteOTPResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\MiMetaWS\ValidacionClienteResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\MiMetaWS\TokenResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\MiMetaWS\VentaCruzadaResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\MiMetaWS\WS_MiMetaBG.disco" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DefinirController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MetasController.cs" />
+    <Compile Include="Controllers\PrivateController.cs" />
+    <Compile Include="Controllers\RedirectController.cs" />
+    <Compile Include="Controllers\ValidarController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\General.cs" />
+    <Compile Include="Models\ImagenGral.cs" />
+    <Compile Include="Models\Logs.cs" />
+    <Compile Include="Models\MetasCreadas.cs" />
+    <Compile Include="Models\metodos.cs" />
+    <Compile Include="Models\ParametroRequest.cs" />
+    <Compile Include="Models\ParametroResponse.cs" />
+    <Compile Include="Models\ProductoGral.cs" />
+    <Compile Include="Models\Segmento.cs" />
+    <Compile Include="Models\SegmentoGral.cs" />
+    <Compile Include="Models\SegmentoRequest.cs" />
+    <Compile Include="Models\SegmentoResponse.cs" />
+    <Compile Include="Models\Token.cs" />
+    <Compile Include="Properties\PublishProfiles\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MiMetaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Definir\consultaSegmentos.cshtml" />
+    <Content Include="Views\Definir\consultaDetSegmento.cshtml" />
+    <None Include="Web References\MiMetaWS\WS_MiMetaBG.wsdl" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="bin\" />
+    <Folder Include="obj\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://172.26.60.165:8082/MiMetaBG.WS/WS_MiMetaBG.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MiMetaWS\</RelPath>
+      <UpdateFromURL>http://172.26.60.165:8082/MiMetaBG.WS/WS_MiMetaBG.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MiMetaBG_WebApp_MiMetaWS_WS_MiMetaBG</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50889</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50889/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsBigBang.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsBigBang.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsBigBang.xsd" id="dsBigBang" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsBigBang">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtConsultaMedioPagosIN">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="codAplicacion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="tipoDato" type="xs:string" />
+              <xs:element minOccurs="0" default="0" name="tamanioDato" type="xs:int" />
+              <xs:element minOccurs="0" default="" name="nombreDato" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="valorDato" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtConsultaMedioPagosOUT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="numero" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="marca" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="disponible" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtBigBangOUT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="0" name="codRetorno" type="xs:int" />
+              <xs:element minOccurs="0" default="" name="msjRetorno" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

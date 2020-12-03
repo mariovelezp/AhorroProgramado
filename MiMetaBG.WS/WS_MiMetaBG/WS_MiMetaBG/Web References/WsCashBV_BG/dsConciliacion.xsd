@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsConciliacion.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsConciliacion.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsConciliacion.xsd" id="dsConciliacion" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsConciliacion">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dt_ConciliacionPago">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Fecha" type="xs:string" />
+              <xs:element minOccurs="0" name="Hora" type="xs:string" />
+              <xs:element minOccurs="0" name="NumeroTransaccion" type="xs:string" />
+              <xs:element minOccurs="0" name="Banco" type="xs:string" />
+              <xs:element minOccurs="0" name="iAgencia" type="xs:string" />
+              <xs:element minOccurs="0" name="iCajero" type="xs:string" />
+              <xs:element minOccurs="0" name="iDireccionClienteBanco" type="xs:string" />
+              <xs:element minOccurs="0" name="CuentaBancaria" type="xs:string" />
+              <xs:element minOccurs="0" name="Telefono" type="xs:string" />
+              <xs:element minOccurs="0" name="CodigoInstalacionCliente" type="xs:string" />
+              <xs:element minOccurs="0" name="Monto" type="xs:string" />
+              <xs:element minOccurs="0" name="CodigoOperacion" type="xs:string" />
+              <xs:element minOccurs="0" name="DescripcionOperacion" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_ConciliacionIn">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="BANCO" type="xs:string" />
+              <xs:element minOccurs="0" name="AGENCIA" type="xs:string" />
+              <xs:element minOccurs="0" name="CAJERO" type="xs:string" />
+              <xs:element minOccurs="0" name="NUMEROTRANSACCION" type="xs:string" />
+              <xs:element minOccurs="0" name="NUMEROFACTURA" type="xs:string" />
+              <xs:element minOccurs="0" name="MONTO" type="xs:string" />
+              <xs:element minOccurs="0" name="TELEFONO" type="xs:string" />
+              <xs:element minOccurs="0" name="CODIGOINSTALACIONCLIENTE" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

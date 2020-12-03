@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewBag.Title = "SaveSegment";
+}
+
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="heading1">Segmento</h1>
+                <p class="subheading">Mantenimiento de segmentos</p>
+                <h5 class="card-title">@ViewBag.MensajeOk</h5>
+                <h5 class="card-title"><a href="~/Private/SegPrincipal">Volver a Consulta de Segmentos.</a></h5>
+            </div>
+            
+        </div>
+        
+                @using (Html.BeginForm("SaveSegment", "Private", FormMethod.Post, new { @class = "p-3 py-md-4 px-md-5" }))
+                {
+                    <div>
+                        <div class="row justify-content-center">
+                            <div class="col-sm-10 col-md-8 col-lg-6 mb-4 px-sm-3 px-4">
+                                <div class="card shadow-sm">
+                                    <div class="p-3 py-md-4 px-md-5">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <label for="IdSegmento">Código Segmento</label>
+                                                    <input class="form-control" type="text" id="IdSegmento" name="IdSegmento" value="@ViewBag.IdSegmento" readonly="readonly" />
+
+                                                    <label for="nombre">Nombre</label>
+                                                    <input class="form-control" type="text" value="@ViewBag.nombre" id="nombre" name="nombre" maxlength="50" required />
+
+                                                    <label for="descripcion">Descripción</label>
+                                                    <input class="form-control" type="text" value="@ViewBag.descripcion" id="descripcion" name="descripcion" maxlength="250" required />
+
+                                                    <table><tr><td><label for="codimagen">Código Imagen </label></td><td><h5 class="card-title"><a href="~/Private/SegConsImagenes"> Seleccionar</a></h5></td></tr></table>
+                                                    <input class="form-control" type="number" value="@ViewBag.codimagen" id="codimagen" name="codimagen" min="1" max="999" maxlength="3" required />
+
+                                                    <label for="umbral">% Umbral</label>
+                                                    <input class="form-control" type="number" value="@ViewBag.umbral" id="umbral" name="umbral" min="1" max="100" step="any" pattern="^\d*(\.\d{0,2})?$" required>
+
+                                                    <label for="estado">Estado</label>
+                                                    <input class="form-control" type="text" value="@ViewBag.estado" id="estado" name="estado" maxlength="1" list="defaultEstados" required />
+                                                    <datalist id="defaultEstados">
+                                                        <option value="A">
+                                                        <option value="I">
+                                                    </datalist>
+
+                                                    <table><tr><td><label for="producto">Código Producto Cruzar </label></td><td><h5 class="card-title"><a href="~/Private/SegConsProductos"> Seleccionar</a></h5></td></tr></table>
+                                                    <input class="form-control" type="number" value="@ViewBag.producto" id="producto" name="producto" min="1" max="999" maxlength="3" required>
+
+                                                    <label for="prioridad">Prioridad</label>
+                                                    <input class="form-control" type="number" value="@ViewBag.prioridad" id="prioridad" name="prioridad" min="1" max="99" maxlength="2" required>
+
+                                                    <label for="mensaje_seg">Mensaje</label>
+                                                    <input class="form-control" type="text" value="@ViewBag.mensaje_seg" id="mensaje_seg" name="mensaje_seg" maxlength="250" required />
+
+                                                    <label for="mensaje_seg">Cod. Host</label>
+                                                    <input class="form-control" type="number" value="@ViewBag.cod_host" id="cod_host" name="cod_host" min="0" max="99" maxlength="2" required />
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-sm-6 col-lg-4 mt-0 mt-md-3 mt-lg-4 px-sm-3 px-4">
+                                <input type="submit" class="btn btn-primary d-block col-lg-12" value="Grabar" onsubmit="CamposBlancoSeg();" />
+                            </div>
+                        </div>
+                    </div>
+                }
+        </div>
+</main>
+<script>
+    if (sessionStorage.getItem('codimagen') != null) {
+        document.getElementById("codimagen").value = sessionStorage.getItem('codimagen');
+        sessionStorage.removeItem("codimagen");
+    }
+    if (sessionStorage.getItem('codproducto') != null) {
+        document.getElementById("producto").value = sessionStorage.getItem('codproducto');
+        sessionStorage.removeItem("codproducto");
+    }
+    
+</script>

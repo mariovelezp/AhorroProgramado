@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsCRMCampanias.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsCRMCampanias.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsCRMCampanias.xsd" id="dsCRMCampanias" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsCRMCampanias">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtCRMcampaniasGetInfoIn">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Identificacion" type="xs:string" />
+              <xs:element minOccurs="0" name="CodigoCampania" type="xs:string" />
+              <xs:element minOccurs="0" name="Canal" type="xs:string" />
+              <xs:element minOccurs="0" name="Opid" type="xs:string" />
+              <xs:element minOccurs="0" name="Terminal" type="xs:string" />
+              <xs:element minOccurs="0" name="DireccionIp" type="xs:string" />
+              <xs:element minOccurs="0" name="MacAddress" type="xs:string" />
+              <xs:element minOccurs="0" name="Usuario" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtCRMcampaniasUpdateFonoContato">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Identificacion" type="xs:string" />
+              <xs:element minOccurs="0" name="CodigoCamapania" type="xs:string" />
+              <xs:element minOccurs="0" name="TelefonoConvencional" type="xs:string" />
+              <xs:element minOccurs="0" name="TelefonoCelular" type="xs:string" />
+              <xs:element minOccurs="0" name="Canal" type="xs:string" />
+              <xs:element minOccurs="0" name="Opid" type="xs:string" />
+              <xs:element minOccurs="0" name="Terminal" type="xs:string" />
+              <xs:element minOccurs="0" name="DireccionIp" type="xs:string" />
+              <xs:element minOccurs="0" name="MacAddress" type="xs:string" />
+              <xs:element minOccurs="0" name="Usuario" type="xs:string" />
+              <xs:element minOccurs="0" name="CodigoRetorno" type="xs:string" />
+              <xs:element minOccurs="0" name="MensajeRetorno" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtCRMcampaniasResolveResponse">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Identificacion" type="xs:string" />
+              <xs:element msdata:Caption="CodigoCamapania" minOccurs="0" name="CRMCanal" type="xs:string" />
+              <xs:element minOccurs="0" name="Respuesta" type="xs:string" />
+              <xs:element minOccurs="0" name="CodigoCampania" type="xs:string" />
+              <xs:element minOccurs="0" name="Canal" type="xs:string" />
+              <xs:element minOccurs="0" name="Opid" type="xs:string" />
+              <xs:element minOccurs="0" name="Terminal" type="xs:string" />
+              <xs:element minOccurs="0" name="DireccionIp" type="xs:string" />
+              <xs:element minOccurs="0" name="MacAddress" type="xs:string" />
+              <xs:element minOccurs="0" name="Usuario" type="xs:string" />
+              <xs:element minOccurs="0" name="CodigoRetorno" type="xs:string" />
+              <xs:element minOccurs="0" name="MensajeRetorno" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtCRMcampaniasGetInfoOut">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Encabezado" type="xs:string" />
+              <xs:element minOccurs="0" name="TelefonoConvencional" type="xs:string" />
+              <xs:element minOccurs="0" name="TelefonoCelular" type="xs:string" />
+              <xs:element minOccurs="0" name="NombreGestor" type="xs:string" />
+              <xs:element minOccurs="0" name="TelefonoContactoGestor" type="xs:string" />
+              <xs:element minOccurs="0" name="TipoCampania" type="xs:string" />
+              <xs:element minOccurs="0" name="CodigoRetorno" type="xs:string" />
+              <xs:element minOccurs="0" name="MensajeRetorno" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtCRMcampaniasCreateCelular">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Identificacion" type="xs:string" />
+              <xs:element msdata:Caption="CodigoCampania" minOccurs="0" name="Celular" type="xs:string" />
+              <xs:element minOccurs="0" name="CRMCanal" type="xs:string" />
+              <xs:element minOccurs="0" name="Canal" type="xs:string" />
+              <xs:element minOccurs="0" name="Opid" type="xs:string" />
+              <xs:element minOccurs="0" name="Terminal" type="xs:string" />
+              <xs:element minOccurs="0" name="DireccionIp" type="xs:string" />
+              <xs:element minOccurs="0" name="MacAddress" type="xs:string" />
+              <xs:element minOccurs="0" name="Usuario" type="xs:string" />
+              <xs:element minOccurs="0" name="CodigoRetorno" type="xs:string" />
+              <xs:element minOccurs="0" name="MensajeRetorno" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtCRMcampaniasReqRespClienteCampania">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="identificacion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="canal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="respuesta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="codigoCampania" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="celular" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="telefono1" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="telefono2" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="direccion1" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="direccion2" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="correo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="idAtm" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="medioPago" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="cuentaTarjeta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="numeroTransaccion" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtCRMcampaniasOutClienteCampania">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="codigoRetorno" type="xs:string" />
+              <xs:element minOccurs="0" name="mensajeRetorno" type="xs:string" />
+              <xs:element minOccurs="0" name="anuncio" type="xs:string" />
+              <xs:element minOccurs="0" name="telefonoCasa" type="xs:string" />
+              <xs:element minOccurs="0" name="celular" type="xs:string" />
+              <xs:element minOccurs="0" name="gestor" type="xs:string" />
+              <xs:element minOccurs="0" name="celularGestor" type="xs:string" />
+              <xs:element minOccurs="0" name="tipoCampania" type="xs:string" />
+              <xs:element msdata:Caption="codcompania" minOccurs="0" name="montoMulticredito" type="xs:string" />
+              <xs:element minOccurs="0" name="categoria" type="xs:string" />
+              <xs:element minOccurs="0" name="codigoCampania" type="xs:string" />
+              <xs:element minOccurs="0" name="codigoProductoBigBang" type="xs:string" />
+              <xs:element minOccurs="0" name="nombreProducto" type="xs:string" />
+              <xs:element minOccurs="0" name="nombreImagen" type="xs:string" />
+              <xs:element minOccurs="0" name="medioPago" type="xs:string" />
+              <xs:element minOccurs="0" name="codigoEmpresaProducto" type="xs:string" />
+              <xs:element minOccurs="0" name="nombreEmpresaProducto" type="xs:string" />
+              <xs:element minOccurs="0" name="periocidad" type="xs:string" />
+              <xs:element minOccurs="0" name="documentosExigible" type="xs:string" />
+              <xs:element minOccurs="0" name="formaPresentacion" type="xs:string" />
+              <xs:element minOccurs="0" name="tipoSeguro" type="xs:string" />
+              <xs:element minOccurs="0" name="cobertura" type="xs:string" />
+              <xs:element minOccurs="0" name="imagenBase64" type="xs:string" />
+              <xs:element minOccurs="0" default="false" name="tieneImagenBase64" type="xs:boolean" />
+              <xs:element minOccurs="0" default="false" name="llamadaMedioPago" type="xs:boolean" />
+              <xs:element minOccurs="0" name="montoMinimo" type="xs:string" />
+              <xs:element minOccurs="0" name="montoMaximo" type="xs:string" />
+              <xs:element minOccurs="0" name="numeroCuotas" type="xs:string" />
+              <xs:element minOccurs="0" default="false" name="exigeGarante" type="xs:boolean" />
+              <xs:element minOccurs="0" default="false" name="exigeActaDatosConyugue" type="xs:boolean" />
+              <xs:element minOccurs="0" name="nombreComercialProducto" type="xs:string" />
+              <xs:element minOccurs="0" name="textoAdicional1" type="xs:string" />
+              <xs:element minOccurs="0" name="textoAdicional2" type="xs:string" />
+              <xs:element minOccurs="0" name="diaPago" type="xs:string" />
+              <xs:element minOccurs="0" name="politicas" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

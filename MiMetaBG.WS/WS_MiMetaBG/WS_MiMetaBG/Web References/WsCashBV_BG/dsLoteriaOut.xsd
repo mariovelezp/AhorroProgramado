@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsLoteriaOut.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsLoteriaOut.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsLoteriaOut.xsd" id="dsLoteriaOut" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsLoteriaOut">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtLoteria">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Canal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Terminal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Codigo_Respuesta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Mensaje_Respuesta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="codError" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="msgError" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="usuario" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="transaccion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="token" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FilaSorteo" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="ReturnValue" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="valorUnit" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Mascota" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtSorteo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Id" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="JId" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Sort" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Num" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Num2" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Num3" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Cant" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Resv" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtVenta">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="VId" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FVta" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Anu1" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Anu2" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Anu3" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtBoletoVendido">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="JId" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Sort" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="JNomb" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SortNomb" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FSort" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FCadu" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="PVP" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Premio" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CFra" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Clase" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Clave" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Num" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Cant" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Val" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtDetalleVenta">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Num" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Nomb" type="xs:string" />
+              <xs:element minOccurs="0" name="ValPrem" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtPremio">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Msg" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="JId" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="JNomb" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Sort" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Num" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Clave" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SortNomb" type="xs:string" />
+              <xs:element minOccurs="0" name="FPag" type="xs:string" />
+              <xs:element minOccurs="0" name="TotPag" type="xs:string" />
+              <xs:element minOccurs="0" name="TotPagConDesc" type="xs:string" />
+              <xs:element minOccurs="0" name="ClaVta" type="xs:string" />
+              <xs:element minOccurs="0" name="SNomb" type="xs:string" />
+              <xs:element minOccurs="0" name="VId" type="xs:string" />
+              <xs:element minOccurs="0" name="Tot" type="xs:string" />
+              <xs:element minOccurs="0" name="TotConDesc" type="xs:string" />
+              <xs:element minOccurs="0" name="PagoId" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtDetallePremio">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="Fra" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Prem" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Val" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="ConDesc" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TPrem" type="xs:string" />
+              <xs:element minOccurs="0" name="Num" type="xs:string" />
+              <xs:element minOccurs="0" name="BolId" type="xs:string" />
+              <xs:element minOccurs="0" name="PremId" type="xs:string" />
+              <xs:element minOccurs="0" name="FCadu" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

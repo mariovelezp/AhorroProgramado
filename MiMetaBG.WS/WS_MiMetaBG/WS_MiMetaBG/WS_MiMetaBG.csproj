@@ -1,0 +1,882 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9559296C-21D7-4AEB-A57E-EFF3A3AAFA96}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WS_MiMetaBG</RootNamespace>
+    <AssemblyName>WS_MiMetaBG</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="jose-jwt, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\jose-jwt.2.4.0\lib\net40\jose-jwt.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\..\..\..\..\..\..\Users\VMT-JPLUAS\Desktop\bin\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\..\..\..\Users\VMT-JPLUAS\Desktop\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="packages.config" />
+    <Content Include="Documentos\convenio_ahorro_meta_bg.pdf" />
+    <None Include="Web References\WsAvisoSeguro_BG\NotificacionesService.disco" />
+    <Content Include="Web References\WsCashBVBGMail_BG\MsgRpConsultaFacturas.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBVBGMail_BG\NotificacionPushOut.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBVBGMail_BG\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\WsCashBVBGMail_BG\WebServiceMSG.disco" />
+    <Content Include="Web References\WsCashBV_BG\BloqueoDesbloqueoResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\CabeceraHost.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBVBGMail_BG\WebServiceMSG.wsdl" />
+    <None Include="Web References\WsCashBV_BG\CabeceraHost.xsd" />
+    <Content Include="Web References\WsCashBV_BG\CabeceraHost2.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\ChequesCamara.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\CuentasRelacionadasResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\DocumentType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\doHandShakeCNBResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsACCI.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsAduanas.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\DsAguaQuitoIn_AQ.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\DsAguaQuitoOut_AQ.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsAhorroMeta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsAndinatel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsAperturaPoliza.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsBancaCelular.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsBancaCelular.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsBancomer.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsBancomer.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsBanred.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsBigBang.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsCabecera.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsCabecera.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsCambiaEstadoCheque.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsCambiaEstadoCheque.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsCampaniaIn.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsCampaniaIn.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsCampaniaOut.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsCartaReferencia.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsCashCRM.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsCashCRMCampanias.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsCashCRMCampanias.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsCashCRMCampaniasOut.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsCATEG.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsClaroDTH.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsClaroIlimitadoIn.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsClaroIlimitadoOut.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsClienteEspecial.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsCNJ.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsComandatoIn.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsComandatoOut.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsComandatoOut.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsCompraSegura.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsConciliacion.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsConciliacionCheque.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsConPrestamos.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\DsConsolidadoSaldo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\DsConsolidadoSaldo.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsConsultaAgencia.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsConsultaCheque2.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsConsultaCheques.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsConsultaConciliacionCheque.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsConsultaLANout.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsConsultaMovimiento.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsConsultaPacifictel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsConsultaPacifictel.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsConsultaPoliza.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsConsultaSaldos.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsConsultaTarifa.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsConteconIn.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsConteconOut.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsConteconOut.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsCORPAIREIn.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsCORPAIREOut.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsCostoChequera.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsCRMCampanias.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsCtasTerceros.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsCtasTerceros.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsCTG.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsCTG.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsCUENCAIRE.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsCuentasRelacionadas.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsDatosCliente.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsDatosCliente_OFAC_SENTINEL.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsDebitoCredito.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsDebitoCreditoSysCard.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\DsDePratiIn.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\DsDePratiOut.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsDetallePrestamo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsDevolucionVR.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsDirectTVIn.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsDirectTVOut.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsDirectTVOut.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsEEASA.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsEECS.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsEECS.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsEEQ.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsEMELSAD.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\DsEMTETIn.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\DsEMTETOut.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsEstadoCuentaA.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsEstadoCuentaA2.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsEstadoCuentaC.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsEstadoCuentaC.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsEstadoCuentaDet.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\DsEtapaIn.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\DsEtapaOut.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsFacturacion.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsIESS.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsIESS.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsImpuestos.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsInConsultaOFAC.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsInConsultaOFAC.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsInfoPoliza.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsInfoPoliza.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsIngresoConciliacionCheques.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsLANin.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsLANin.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsLogin.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsLoteriaIn.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsLoteriaIn.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsLoteriaOut.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsMatriculacion.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsMatriculacion.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsMicroservicioCLTE.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsMotivos.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsMOVI.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsMOVI.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsMovistarPostPago.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsMunicipioDestino.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsMunicipioDestino.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsMunicipios.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsMunicipios.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsNombreCuenta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsOFACConsultas.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsOFACConsultas.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsOficiales.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsOnBase.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsOnBase.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsOperCartera.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsOutConsultaOFAC.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsPagEfeRelacionadas.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsPagEfeRelacionadas.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsPagoAjustesPacifictel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsPagoAjustesPacifictel.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsPagoLANout.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsPagoLANout.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsPinesMoviles.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsPorta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsPortaPostPago.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsPrestamos.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsProductosOnline.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsRecargaCnt.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsReferenciasBancarias.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsRegistroCivil.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsRegistroCivil.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsRegistroCVIn.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsRegistroCVOut.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsRemesas.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsRenovacionPoliza.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsResumenMovimientos.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsReversoLANout.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsReversoLANout.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsRise.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsSaldoCuentaAPag.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsSaldoCuentaAPag.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsSaldosCuentaA2.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsSaldosCuentaCte.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsServicios.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsServicios.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsSimPortaIn.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsSimPortaIn.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsSimPortaOut.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsSolicitudChequera.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsStandardIn.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsStandardIn.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsStandardOut.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsSyscard.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsTarjetasRelacionadas.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsTasasInteres.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\DsTransitoMunicipal_In.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\DsTransitoMunicipal_In.xsd" />
+    <Content Include="Web References\WsCashBV_BG\dsTVCable.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsTVCable2.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsUTPLIn.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsUTPLOut.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsVariosCNT.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsVariosCNT.xsd" />
+    <Content Include="Web References\WsCashBV_BG\DsVirtualDirecTVKit_In.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\dsYANBAL.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\dsYANBAL.xsd" />
+    <Content Include="Web References\WsCashBV_BG\DS_TransferenciaSwift.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\EnrolarResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\GeneraOTPResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\GeneraTokenNeoMaticResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\GeneraTokenResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\getCatalogoClaroIlimitadoResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\InformacionTokenNeoMaticResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\ListaPagosCobrosPendientesResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\MsgResp.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\MsgRpAfilCampania.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\MsgRpConsSaldo_Cuenta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\MsgRpPlastico.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\PreguntasGenera.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\RechazoCobroResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\RespuestaFotoPlantilla.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\RespuestaFotoValida.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\RespuestaPregunta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\Result.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\setActualizarCodigoAgenciaUsuarioResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\SolicitudCobroResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\TransferenciaResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WsCashBV_BG\ValidaTokenResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\WebServiceBG.disco" />
+    <Content Include="Web References\WsEntrust_BG\FuncionesExt.disco" />
+    <None Include="Web References\WsAvisoSeguro_BG\NotificacionesService.wsdl" />
+    <Content Include="Web References\WsAvisoSeguro_BG\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\WsCashBV_BG\CabeceraHost2.xsd" />
+    <None Include="Web References\WsCashBV_BG\ChequesCamara.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsACCI.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsAduanas.xsd" />
+    <None Include="Web References\WsCashBV_BG\DsAguaQuitoIn_AQ.xsd" />
+    <None Include="Web References\WsCashBV_BG\DsAguaQuitoOut_AQ.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsAhorroMeta.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsAndinatel.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsAperturaPoliza.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsBanred.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsBigBang.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsCampaniaOut.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsCartaReferencia.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsCashCRM.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsCashCRMCampaniasOut.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsCATEG.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsClaroDTH.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsClaroIlimitadoIn.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsClaroIlimitadoOut.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsClienteEspecial.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsCNJ.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsComandatoIn.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsCompraSegura.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsConciliacion.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsConciliacionCheque.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsConPrestamos.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsConsultaAgencia.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsConsultaCheque2.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsConsultaCheques.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsConsultaConciliacionCheque.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsConsultaLANout.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsConsultaMovimiento.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsConsultaPoliza.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsConsultaSaldos.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsConsultaTarifa.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsConteconIn.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsCORPAIREIn.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsCORPAIREOut.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsCostoChequera.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsCRMCampanias.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsCUENCAIRE.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsCuentasRelacionadas.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsDatosCliente.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsDatosCliente_OFAC_SENTINEL.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsDebitoCredito.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsDebitoCreditoSysCard.xsd" />
+    <None Include="Web References\WsCashBV_BG\DsDePratiIn.xsd" />
+    <None Include="Web References\WsCashBV_BG\DsDePratiOut.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsDetallePrestamo.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsDevolucionVR.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsDirectTVIn.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsEEASA.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsEEQ.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsEMELSAD.xsd" />
+    <None Include="Web References\WsCashBV_BG\DsEMTETIn.xsd" />
+    <None Include="Web References\WsCashBV_BG\DsEMTETOut.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsEstadoCuentaA.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsEstadoCuentaA2.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsEstadoCuentaDet.xsd" />
+    <None Include="Web References\WsCashBV_BG\DsEtapaIn.xsd" />
+    <None Include="Web References\WsCashBV_BG\DsEtapaOut.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsFacturacion.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsImpuestos.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsIngresoConciliacionCheques.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsLogin.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsLoteriaOut.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsMicroservicioCLTE.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsMotivos.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsMovistarPostPago.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsNombreCuenta.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsOficiales.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsOperCartera.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsOutConsultaOFAC.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsPinesMoviles.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsPorta.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsPortaPostPago.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsPrestamos.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsProductosOnline.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsRecargaCnt.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsReferenciasBancarias.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsRegistroCVIn.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsRegistroCVOut.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsRemesas.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsRenovacionPoliza.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsResumenMovimientos.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsRise.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsSaldosCuentaA2.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsSaldosCuentaCte.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsSimPortaOut.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsSolicitudChequera.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsStandardOut.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsSyscard.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsTarjetasRelacionadas.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsTasasInteres.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsTVCable.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsTVCable2.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsUTPLIn.xsd" />
+    <None Include="Web References\WsCashBV_BG\dsUTPLOut.xsd" />
+    <None Include="Web References\WsCashBV_BG\DsVirtualDirecTVKit_In.xsd" />
+    <None Include="Web References\WsCashBV_BG\DS_TransferenciaSwift.xsd" />
+    <None Include="Web References\WsCashBV_BG\WebServiceBG.wsdl" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WS_MiMetaBG.asmx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MetodosOrquestador.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WsAvisoSeguro_BG\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WsCashBVBGMail_BG\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WsCashBV_BG\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WsEntrust_BG\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WS_MiMetaBG.asmx.cs">
+      <DependentUpon>WS_MiMetaBG.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\vmt-jpluas.pubxml" />
+    <Content Include="Web References\WsEntrust_BG\FuncionesExt.wsdl" />
+    <Content Include="Web References\WsEntrust_BG\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MiMetaBG_AccesoDatos\MiMetaBG_AccesoDatos.csproj">
+      <Project>{084bbaea-ac75-490e-8adb-13d0867492a9}</Project>
+      <Name>MiMetaBG_AccesoDatos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://172.26.60.165:88/BG.AvisoSeguro.Notificaciones.WS/NotificacionesService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WsAvisoSeguro_BG\</RelPath>
+      <UpdateFromURL>http://172.26.60.165:88/BG.AvisoSeguro.Notificaciones.WS/NotificacionesService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WS_MiMetaBG_WsAvisoSeguro_BG_NotificacionesService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://172.26.60.56/BG.CashBVBG.WS/WebServiceBG.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WsCashBV_BG\</RelPath>
+      <UpdateFromURL>http://172.26.60.56/BG.CashBVBG.WS/WebServiceBG.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WS_MiMetaBG_WsCashBV_BG_WebServiceBG</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://172.26.60.56/BG.CashBVBG.WS/WebServiceMSG.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WsCashBVBGMail_BG\</RelPath>
+      <UpdateFromURL>http://172.26.60.56/BG.CashBVBG.WS/WebServiceMSG.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WS_MiMetaBG_WsCashBVBGMail_BG_WebServiceMSG</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://172.26.60.56:8088/EntrustInterfaceWS/FuncionesExt.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WsEntrust_BG\</RelPath>
+      <UpdateFromURL>http://172.26.60.56:8088/EntrustInterfaceWS/FuncionesExt.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WS_MiMetaBG_WsEntrust_BG_FuncionesExt</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61003</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:64296/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,226 @@
+﻿
+@{
+    ViewBag.Title = "GetOTP";
+}
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <ul class="steps-list">
+                    <li><a href="#"></a></li>
+                    <li><a class="active" href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="heading1">Verifica tu identidad</h1>
+                <p class="subheading">@ViewBag.correo</p>
+            </div>
+        </div>
+
+        @using (Html.BeginForm("ValidaOTP", "Validar", FormMethod.Post, new { @class = "p-3 py-md-4 px-md-5" }))
+        {
+            <div>
+                <div class="row justify-content-center">
+                    <div class="col-sm-10 col-md-8 col-lg-6 mb-4 px-sm-3 px-4">
+                        <div class="card shadow-sm">
+                            <div class="p-3 py-md-4 px-md-5">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label for="codigo">Ingresa el código</label>
+                                            <input class="form-control" type="text" value="" id="codigo" name="codigo" maxlength="6" onkeypress="return validarNum(event)" onblur="return validarNum(event)" onpaste="return false" onkeydown="mostrar('0');" />
+                                            <input type="hidden" id="pIdentificion" name="pIdentificion" value="@ViewBag.identificacion" />
+                                            <input type="hidden" id="pTipoIdentificion" name="pTipoIdentificion" value="@ViewBag.tipoidentificacion" />
+                                            <input type="hidden" id="CodError" name="CodError" value="@ViewBag.CodError" />
+                                            <input type="hidden" id="cliente" name="cliente" value="@ViewBag.cliente" />
+                                            <input type="hidden" id="token" name="token" value="@ViewBag.token" />
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="alert alert-danger" id="msgAlerta" style='display:none; text-align:center'>
+                                            <span class="icon-danger"></span>
+                                            <div align="center">
+                                                <p id="textAlert" name="textAlert" style="text-align:center">Por favor ingrese el código.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-sm-10 col-md-8 col-lg-6 mb-4 px-sm-3 px-4" style="text-align:center">
+                        
+                        <p><i>Con el ingreso de tu firma electrónica y dando clic en el botón Confirmar, <b>autorizas</b> a Banco Guayaquil a <b>programar</b> una meta de <b>ahorros</b> de acuerdo con los <a href="~/Documentos/terminos_y_condiciones.pdf" target="_blank">términos y condiciones.</a></i></p>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-sm-6 col-lg-4 mt-0 mt-md-3 mt-lg-4 px-sm-3 px-4">
+                        <input type="submit" class="btn btn-primary d-block col-lg-12" value="Confirmar" onclick="CampoBlancoOtp();" />
+                        <input type="hidden" id="retorno" name="retorno" value="@ViewBag.sourcePage" />
+                        <input type="hidden" id="idSegmentoIN" name="idSegmentoIN" value="" />
+                    </div>
+                    <div class="col-12 mt-4 text-center">
+                        <p class="mb-2">¿No ha recibido ningún código?</p>
+                    </div>
+                </div>
+            </div>
+        }
+        @using (Html.BeginForm("ReenviarOTP", "Validar", FormMethod.Post, new { id = "formReenvio" }))
+        {
+        <div class="row justify-content-center">
+            <div class="col-sm-6 col-lg-4 d-flex justify-content-around text-center">
+                <a class="link" href="#" onclick="LevantaModal()">Actualizar correo</a>
+                <a class="link" href="#" onclick="SubmitReenvio();">Reenviar código</a>
+                <input type="hidden" id="pIdent" name="pIdent" value="@ViewBag.identificacion" />
+                <input type="hidden" id="pTipoIdent" name="pTipoIdent" value="@ViewBag.tipoidentificacion" />
+               
+
+            </div>
+        </div>
+        }
+    </div>
+</main>
+
+<div class="modal fade" id="noOtpModal" tabindex="-1" role="dialog" aria-labelledby="noOtpModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <div class="modal-icon icon-danger"></div>
+                        <h5 class="modal-title">¡Lo sentimos!</h5>
+                        <p class="modal-text" id="mensajerror">@ViewBag.msgErrorService</p>
+                    </div>
+                    <div class="col-12 mt-2 text-center">
+                        <button class="btn btn-link btn-link-danger" id="VerificarError-@ViewBag.CodError" type="button" onclick="SetFocusOtp('1');">Salir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="otpReenvioOK" tabindex="-1" role="dialog" aria-labelledby="otpReenvioOKlLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <div class="modal-icon icon-success"></div>
+                        <h5 class="modal-title">¡Felicitaciones!</h5>
+                        <p class="modal-text">@ViewBag.correo</p>
+                    </div>
+                    <div class="col-12 mt-2 text-center">
+                        <button class="btn btn-link btn-link-danger" type="button" onclick="SetFocusOtp('2');">Salir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="ModalCorreo" tabindex="-1" role="dialog" aria-labelledby="ModalCorreolLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <div class="modal-icon icon-success"></div>
+                        <h5 class="modal-title">Informativo</h5>
+                        <p class="modal-text">Por tu seguridad para actualizar tu correo electrónico debes acercarte a una de nuestras oficinas y actualizar tu información.</p>
+                    </div>
+                    <div class="col-12 mt-2 text-center">
+                        <button class="btn btn-link btn-link-danger" type="button" onclick="SetFocusOtp('3');">Salir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+    window.onload = function () {
+        if (document.getElementById("CodError").value != "0000" && document.getElementById("CodError").value != "0006") {
+            $("#noOtpModal").modal('show');       
+        }
+
+        if (document.getElementById("retorno").value == "REENVIO_OTP") {
+        if (document.getElementById("CodError").value == "0000") {
+            $("#otpReenvioOK").modal('show');
+        }
+        }
+        if (document.getElementById("CodError").value == "0006") {
+            mostrar(1);
+            document.getElementById('textAlert').innerText = 'El código que ingresaste no es el corecto. Intenta nuevamente.';
+        }
+    }
+
+    function SubmitReenvio() {
+        $('#formReenvio').submit();
+    }
+
+    function LevantaModal() {
+        $("#ModalCorreo").modal('show');
+    }
+
+    function SetFocusOtp(origen) {
+        if (origen == "1") {
+        $("#noOtpModal").modal('hide');
+        $("#codigo").val("");
+            document.getElementById("CodError").value = "";
+        }
+
+        if (origen == "2") {
+            $("#otpReenvioOK").modal('hide');
+            $("#codigo").val("");
+            document.getElementById("CodError").value = "";
+        }
+
+        if (origen == "3") {
+            $("#ModalCorreo").modal('hide');
+            $("#codigo").val("");
+            document.getElementById("CodError").value = "";
+        }
+        document.getElementById("codigo").focus();
+    }
+
+    function CampoBlancoOtp() {
+        var value = document.getElementById("codigo").value;
+        value = value.trim();
+        
+        if (value.length == 0) {
+            mostrar("1");
+            event.preventDefault();
+        }
+        else {
+           
+
+            var idSegmento = localStorage.getItem("IdSegmento");
+            document.getElementById("idSegmentoIN").value = idSegmento;
+
+
+            var Nomcliente = document.getElementById("cliente").value;
+           
+            if (typeof (Storage) != "undefined") {
+
+                localStorage.setItem("cliente", Nomcliente);
+            }
+        }
+    }
+    function mostrar(flag) {
+        if (flag == "1") {
+            document.getElementById('textAlert').innerText = 'Por favor ingrese el código.';
+            document.getElementById('msgAlerta').style.display = 'block';
+        }
+        if (flag == "0") {
+            document.getElementById('msgAlerta').style.display = 'none';
+        }
+    }
+</script>

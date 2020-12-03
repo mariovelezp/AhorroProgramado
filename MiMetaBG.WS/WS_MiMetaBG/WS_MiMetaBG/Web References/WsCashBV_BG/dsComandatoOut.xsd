@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsComandatoOut.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsComandatoOut.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsComandatoOut.xsd" id="dsComandatoOut" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsComandatoOut">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dt_Transaccion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Codigo_Error" type="xs:string" />
+              <xs:element minOccurs="0" name="Mensaje_Error" type="xs:string" />
+              <xs:element minOccurs="0" name="Monto" type="xs:decimal" />
+              <xs:element minOccurs="0" name="Sec_Comandato" type="xs:string" />
+              <xs:element minOccurs="0" name="Fecha_Vencimiento" type="xs:string" />
+              <xs:element minOccurs="0" name="Periodo_Pago" type="xs:string" />
+              <xs:element minOccurs="0" name="Nombre_Cliente" type="xs:string" />
+              <xs:element minOccurs="0" name="Saldo" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

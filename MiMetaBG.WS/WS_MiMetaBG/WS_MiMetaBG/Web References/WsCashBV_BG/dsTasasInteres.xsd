@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsTasasInteres.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" xmlns:mstns="http://tempuri.org/dsTasasInteres.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsTasasInteres.xsd" id="dsTasasInteres" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsTasasInteres">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtTasaInteres">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:AutoIncrement="true" msdata:Caption="Column1" minOccurs="0" name="id_dtTasaInteres" type="xs:int" />
+              <xs:element minOccurs="0" name="codigoretorno" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtDetTasaInteres">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:AutoIncrement="true" minOccurs="0" name="id_dtDetTasas" type="xs:int" />
+              <xs:element minOccurs="0" name="id_dttasas" type="xs:int" />
+              <xs:element msdata:Caption="Column1" minOccurs="0" name="Tipo" type="xs:string" />
+              <xs:element minOccurs="0" name="Descripcion" type="xs:string" />
+              <xs:element minOccurs="0" name="Valor" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtTasasPolizas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:AutoIncrement="true" minOccurs="0" name="id_TasasPolizas" type="xs:int" />
+              <xs:element minOccurs="0" name="codigoretorno" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtDetTasasPolizas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:AutoIncrement="true" minOccurs="0" name="id_detTasasPolizas" type="xs:int" />
+              <xs:element minOccurs="0" name="id_tasasPolizas" type="xs:int" />
+              <xs:element minOccurs="0" name="RangoValores" type="xs:string" />
+              <xs:element msprop:Generator_UserColumnName="Plazo &lt;=59" msprop:Generator_ColumnVarNameInTable="_columnPlazo___59" minOccurs="0" name="Plazo_x0020__x003C__x003D_59" type="xs:string" />
+              <xs:element msprop:Generator_UserColumnName="Plazo &lt;=94" msprop:Generator_ColumnVarNameInTable="_columnPlazo___94" minOccurs="0" name="Plazo_x0020__x003C__x003D_94" type="xs:string" />
+              <xs:element msprop:Generator_UserColumnName="Plazo &lt;=179" msprop:Generator_ColumnVarNameInTable="_columnPlazo___179" minOccurs="0" name="Plazo_x0020__x003C__x003D_179" type="xs:string" />
+              <xs:element msprop:Generator_UserColumnName="Plazo &lt;=359" msprop:Generator_ColumnVarNameInTable="_columnPlazo___359" minOccurs="0" name="Plazo_x0020__x003C__x003D_359" type="xs:string" />
+              <xs:element msprop:Generator_UserColumnName="Plazo &gt;360" msprop:Generator_ColumnVarNameInTable="_columnPlazo__360" minOccurs="0" name="Plazo_x0020__x003E_360" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="dtTasaInteresKey1">
+      <xs:selector xpath=".//mstns:dtTasaInteres" />
+      <xs:field xpath="mstns:id_dtTasaInteres" />
+    </xs:unique>
+    <xs:unique name="dtTasasPolizasKey1">
+      <xs:selector xpath=".//mstns:dtTasasPolizas" />
+      <xs:field xpath="mstns:id_TasasPolizas" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="dtTasaInteres_dtDetTasaInteres" msdata:parent="dtTasaInteres" msdata:child="dtDetTasaInteres" msdata:parentkey="id_dtTasaInteres" msdata:childkey="id_dttasas" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" />
+      <msdata:Relationship name="dtTasasPolizas_dtDetTasasPolizas" msdata:parent="dtTasasPolizas" msdata:child="dtDetTasasPolizas" msdata:parentkey="id_TasasPolizas" msdata:childkey="id_tasasPolizas" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

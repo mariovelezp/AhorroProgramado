@@ -1,0 +1,92 @@
+﻿@model MiMetaBG.WebApp.Models.MetasCreadas
+
+@{
+    Layout = null;
+}
+
+
+<div class="row justify-content-center">
+    @if (Model.ventasCruzada != null)
+    {
+        if (Model.contador == 1)
+        {
+            foreach (var metas in Model.ventasCruzada)
+            {
+                if (metas.codigoCruzar == 1)
+                {
+                    <div class="col-lg-10">
+                        <div class="card promo-notification alert fade show mb-0 mb-md-4 mb-lg-5">
+                            <button class="close alert-close d-none d-md-block" type="button" data-dismiss="alert" aria-label="Close" onclick="ActualizarVentas(3)"><span aria-hidden="true">×</span></button>
+                            <div class="d-flex align-items-center flex-md-row-reverse w-100 py-2">
+                                <div class="col-9 col-sm-10 col-md-10">
+                                    <div class="row align-items-center">
+                                        <div class="col-12 col-md-8 pr-0">
+                                            <p>Tienes pre-aprobado un multicrédito por @metas.Valor  </p>
+                                        </div>
+                                        <div class="col-12 col-md-4 pr-0 pr-md-3 text-md-right">
+                                            <a class="btn btn-outline-primary sm" onclick="ActualizarVentas(2)">Solicítalo</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3 col-sm-2 col-md-2 text-center">
+                                    <img class="img-fluid" src="~/img/multicredito.png" alt="Multicrédito"></div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                else if(metas.codigoCruzar == 2)
+                {                          
+                    <div class="col-lg-10">
+                        <div class="card promo-notification alert fade show mb-0 mb-md-4 mb-lg-5">
+                            <button class="close alert-close d-none d-md-block" type="button" data-dismiss="alert" aria-label="Close" onclick="ActualizarVentas(3)"><span aria-hidden="true">×</span></button>
+                            <div class="d-flex align-items-center flex-md-row-reverse w-100 py-2">
+                                <div class="col-9 col-sm-10 col-md-10">
+                                    <div class="row align-items-center">
+                                        <div class="col-12 col-md-8 pr-0">
+                                            <p>Tienes aprobada una tarjeta de crédito.</p>
+                                        </div>
+                                        <div class="col-12 col-md-4 pr-0 pr-md-3 text-md-right">
+                                            <a class="btn btn-outline-primary sm" onclick="ActualizarVentas(1)">Solicítala</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3 col-sm-2 col-md-2 text-center">
+                                    <img class="img-fluid" src="~/img/tarjeta-de-credito.png" alt="Tarjeta de Crédito"></div>
+                            </div>
+                        </div>
+                    </div>
+                } else
+                {
+                    <input type="hidden" id="idMC1" name="idMC" value=""/>  
+                }
+            }
+        }
+        else if (Model.contador == 2)
+        {         
+        <div class="col-lg-10">
+            <div class="card promo-notification alert fade show mb-0 mb-md-4 mb-lg-5">
+                <button class="close alert-close d-none d-md-block" type="button" data-dismiss="alert" aria-label="Close" onclick="ActualizarVentas(3)"><span aria-hidden="true">×</span></button>
+                <div class="d-flex align-items-center flex-md-row-reverse w-100 py-2">
+                    <div class="col-9 col-sm-10 col-md-10">
+                        <div class="row align-items-center">
+                            <div class="col-12 col-md-6 col-lg-6 col-xl-7 pr-0">
+                                <p>Tienes 2 productos pre-aprobados.</p>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6 col-xl-5 pr-0 pr-md-3 text-md-right">
+                                <a class="btn btn-outline-primary sm" onclick="ActualizarVentas(1)">Tarjeta de crédito</a>
+                                <a class="btn btn-outline-primary sm ml-1" onclick="ActualizarVentas(2)">Multicrédito</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 col-sm-2 col-md-2 text-center">
+                        <img class="img-fluid" src="~/img/credito.png" alt="Crédito">
+                    </div>
+                </div>
+            </div>
+        </div>
+        }
+        else{
+            <input type="hidden" id="idMC2" name="idMC" value=""/>  
+        }
+    }
+</div>

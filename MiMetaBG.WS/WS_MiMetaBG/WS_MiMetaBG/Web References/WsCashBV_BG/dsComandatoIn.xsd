@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsComandatoIn.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsComandatoIn.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsComandatoIn.xsd" id="dsComandatoIn" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsComandatoIn">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dt_Transaccion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="idEmpresa" type="xs:string" />
+              <xs:element minOccurs="0" name="idCanal" type="xs:string" />
+              <xs:element minOccurs="0" name="idRegion" type="xs:string" />
+              <xs:element minOccurs="0" name="idCiudad" type="xs:string" />
+              <xs:element minOccurs="0" name="idAgencia" type="xs:string" />
+              <xs:element minOccurs="0" name="idEquipo" type="xs:string" />
+              <xs:element minOccurs="0" name="secEmpresa" type="xs:string" />
+              <xs:element minOccurs="0" name="fechaHoraTransaccion" type="xs:string" />
+              <xs:element minOccurs="0" name="fechaContable" type="xs:string" />
+              <xs:element minOccurs="0" name="identificacion" type="xs:string" />
+              <xs:element minOccurs="0" name="monto" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

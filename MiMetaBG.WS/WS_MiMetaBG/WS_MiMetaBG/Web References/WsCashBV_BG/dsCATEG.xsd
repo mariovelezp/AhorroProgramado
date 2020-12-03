@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsCATEG.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsCATEG.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsCATEG.xsd" id="dsCATEG" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsCATEG">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dt_Transaccion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="TIPO_MENSAJE" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CODIGO_CUENTA" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TIPO_TRANSACCION" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TOTAL_PENDIENTE_PAGO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="INTERES_ACUMULADO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="INFRACCION" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FECHA_HORA_MIT" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TRANSFERENCIA" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SECUENCIAL_MIT" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="HORA_TRX_HOST" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FECHA_TRX_HOST" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FECHA_COMPENSACION" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CANAL" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="INDICADOR_REVERSO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="INSTITUCION_ADQUIRENTE" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CODIGO_OPERADOR" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="SECUENCIAL_ADQUIRENTE" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CODIGO_AUTORIZACION" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="COD_RETORNO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NUM_TERMINAL" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NOMBRE_APELLIDOS" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TIPO_REPARTO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DIRECCION_SERVICIO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TIPO_MONEDA" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CED_RUC_PASAPORTE" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CODIGO_SEGURIDAD" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DATOS_TRX_ORIGINAL" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FECHA_LECTURA_INICIAL" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FECHA_LECTURA_FINAL" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FECHA_EMISION" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FACTURAS_PENDIENTES" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="FECHA_VENCIMIENTO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CONSUMO_KWH" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="NUMERO_FACTURA" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TOTAL_MES" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="DEUDA_ANTERIOR" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="VALOR_PAGADO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="COD_TRAN_ADMIN" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="COD_ENT_AUTO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="COD_SERVICIO" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="VALOR_RETENCION" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="BASE_IMPONIBLE" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

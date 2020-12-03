@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsClaroIlimitadoOut.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsClaroIlimitadoOut.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsClaroIlimitadoOut.xsd" id="dsClaroIlimitadoOut" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsClaroIlimitadoOut">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dt_PromocionesClaroIlimitadoOut">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CodigoProducto" type="xs:long" />
+              <xs:element minOccurs="0" name="NombreProducto" type="xs:string" />
+              <xs:element minOccurs="0" name="ValorProducto" type="xs:decimal" />
+              <xs:element minOccurs="0" name="Operadora" type="xs:string" />
+              <xs:element minOccurs="0" name="NombreCortoProducto" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_PagoRecargaPaqueteDatosOut">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CodigoRespuesta" type="xs:string" />
+              <xs:element minOccurs="0" name="MensajeRespuesta" type="xs:string" />
+              <xs:element minOccurs="0" name="CodigoProductoClaro" type="xs:string" />
+              <xs:element minOccurs="0" name="Contrato" type="xs:string" />
+              <xs:element minOccurs="0" name="FechaTransaccion" type="xs:string" />
+              <xs:element minOccurs="0" name="IdSecuencial" type="xs:string" />
+              <xs:element minOccurs="0" name="TipoTransaccion" type="xs:string" />
+              <xs:element minOccurs="0" name="FormaPago" type="xs:string" />
+              <xs:element minOccurs="0" name="NroPagos" type="xs:int" />
+              <xs:element minOccurs="0" name="NumeroCelular" type="xs:string" />
+              <xs:element minOccurs="0" name="ValorPagado" type="xs:double" />
+              <xs:element minOccurs="0" name="NombreCliente" type="xs:string" />
+              <xs:element minOccurs="0" name="IdTransaccionEmpresa" type="xs:long" />
+              <xs:element minOccurs="0" name="CodigoSolicitarFactElectPortal" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_PromocionesClaroIlimitadoCabeceraOut">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CodigoRetorno" type="xs:string" />
+              <xs:element minOccurs="0" name="MensajeRetorno" type="xs:string" />
+              <xs:element minOccurs="0" name="Pagineo" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

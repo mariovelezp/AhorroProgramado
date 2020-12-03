@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsEstadoCuentaC.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsEstadoCuentaC.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsEstadoCuentaC.xsd" id="dsEstadoCuentaC" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsEstadoCuentaC">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtEstadoCuentaC">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="cuenta" type="xs:string" />
+              <xs:element minOccurs="0" name="nombre" type="xs:string" />
+              <xs:element minOccurs="0" name="saldo" type="xs:string" />
+              <xs:element minOccurs="0" name="saldo_disponible" type="xs:string" />
+              <xs:element minOccurs="0" name="saldo_confirmar" type="xs:string" />
+              <xs:element minOccurs="0" name="codigoretorno" type="xs:string" />
+              <xs:element minOccurs="0" name="codigopaginacion" type="xs:string" />
+              <xs:element minOccurs="0" name="archivo" type="xs:string" />
+              <xs:element minOccurs="0" name="secuencia" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtMovimientosC">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="cuenta" type="xs:string" />
+              <xs:element minOccurs="0" name="fecha" type="xs:string" />
+              <xs:element minOccurs="0" name="numero" type="xs:string" />
+              <xs:element minOccurs="0" name="referencia" type="xs:string" />
+              <xs:element minOccurs="0" name="agencia" type="xs:string" />
+              <xs:element minOccurs="0" name="debito" type="xs:string" />
+              <xs:element minOccurs="0" name="credito" type="xs:string" />
+              <xs:element minOccurs="0" name="saldo" type="xs:string" />
+              <xs:element minOccurs="0" name="signo" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="dtEstadoCuentaCKey1">
+      <xs:selector xpath=".//mstns:dtEstadoCuentaC" />
+      <xs:field xpath="mstns:cuenta" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="dtEstadoCuentaC_dtMovimientosC" msdata:parent="dtEstadoCuentaC" msdata:child="dtMovimientosC" msdata:parentkey="cuenta" msdata:childkey="cuenta" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

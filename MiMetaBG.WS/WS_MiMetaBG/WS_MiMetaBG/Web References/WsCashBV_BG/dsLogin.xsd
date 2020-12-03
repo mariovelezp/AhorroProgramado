@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsLogin.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsLogin.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsLogin.xsd" id="dsLogin" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsLogin">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtLoginTabletaIN">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="CodigoTransaccion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="TipoIdentificacion" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Identificacion" type="xs:string" />
+              <xs:element minOccurs="0" name="FechaNacimiento" type="xs:dateTime" />
+              <xs:element minOccurs="0" default="" name="DireccionIP" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Opid" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Terminal" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Canal" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtLoginTabletaOUT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="CodigoRetorno" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="MensajeRetorno" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="CodigoCLTE" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Nombre" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Email" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="Celular" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

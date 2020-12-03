@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsCampaniaOut.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsCampaniaOut.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsCampaniaOut.xsd" id="dsCampaniaOut" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsCampaniaOut">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dt_Transaccion_Campania">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Codigo" type="xs:string" />
+              <xs:element minOccurs="0" name="DescCampania" type="xs:string" />
+              <xs:element minOccurs="0" name="Tarjeta" type="xs:string" />
+              <xs:element minOccurs="0" name="Bin" type="xs:string" />
+              <xs:element minOccurs="0" name="FechaUltCarga" type="xs:string" />
+              <xs:element minOccurs="0" name="Email" type="xs:string" />
+              <xs:element minOccurs="0" name="Estado" type="xs:string" />
+              <xs:element minOccurs="0" name="Frecuencia" type="xs:string" />
+              <xs:element minOccurs="0" name="Tarifa" type="xs:string" />
+              <xs:element minOccurs="0" name="Canal" type="xs:string" />
+              <xs:element minOccurs="0" name="UsuarioAfil" type="xs:string" />
+              <xs:element minOccurs="0" name="FechaAfil" type="xs:string" />
+              <xs:element minOccurs="0" name="EstacionAfil" type="xs:string" />
+              <xs:element minOccurs="0" name="NumFilas" type="xs:string" />
+              <xs:element minOccurs="0" name="CodRespuesta" type="xs:string" />
+              <xs:element minOccurs="0" name="Mensaje" type="xs:string" />
+              <xs:element minOccurs="0" name="Status" type="xs:string" />
+              <xs:element minOccurs="0" name="NumAfiliacion" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

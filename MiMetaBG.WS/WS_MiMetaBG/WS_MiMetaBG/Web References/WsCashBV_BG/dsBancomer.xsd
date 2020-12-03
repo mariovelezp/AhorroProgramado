@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsBancomer.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsBancomer.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsBancomer.xsd" id="dsBancomer" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsBancomer">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dt_In">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="_psBTSConfirmNm" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="_psReqDt" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="_psReqTm" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="_psPaymentAgentCd" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="_psPaymentAgentRegionCd" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="_psPaymentAgentBranchCd" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="_psTellerId" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="_psTerminalId" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="_idissuer" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="_idtype" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="_idnumber" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="_idexpdt" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="_recname" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="_reclastname" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="_reclastname2" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="_bankrefnum" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="_revbankrefnum" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_Consulta">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="psOpCode" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psProcessDt" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psProcessTm" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psRecName" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psRecLastName" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psRecLastName2" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psDestinationAmount" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psPaymentCurrencyCd" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psFieldError" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psStatusCd" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psStatusDt" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psPaymentAgentName" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psPaymentAgentRegionName" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psPaymentAgentBranchName" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psIdIssuerDesc" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psIdTypeDesc" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psIdNumber" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psIdExpDt" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_Pago">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="psOpCode" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psProcessDt" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psProcessTm" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psSaleFxRate" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psOriginCurrencyCd" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psOriginAmount" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psPaymentCurrencyCd" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psDestinationAmount" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psSndName" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psSndLastName" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psSndLastName2" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psSndAddress" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psSndCity" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psSndState" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psSndCountry" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psSndZipCode" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psRecName" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psRecLastName" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psRecLastName2" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psRecAddress" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psRecCity" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psRecState" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psRecCountry" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psRecZipCode" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psFieldError" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psStatusCd" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psStatusDt" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psPaymentAgentName" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psPaymentAgentRegionName" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psPaymentAgentBranchName" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_Reverso">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" default="" name="psOpCode" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psProcessDt" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psProcessTm" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psRecName" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psRecLastName" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psRecLastName2" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psDestinationAmount" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psPaymentCurrencyCd" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psFieldError" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psStatusCd" type="xs:string" />
+              <xs:element minOccurs="0" default="" name="psStatusDt" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

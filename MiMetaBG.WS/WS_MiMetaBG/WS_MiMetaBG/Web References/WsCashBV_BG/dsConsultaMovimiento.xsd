@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsConsultaMovimiento.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsConsultaMovimiento.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsConsultaMovimiento.xsd" id="dsConsultaMovimiento" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsConsultaMovimiento">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtConsultaMovimiento">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Periodo" type="xs:string" />
+              <xs:element minOccurs="0" name="Nombre" type="xs:string" />
+              <xs:element minOccurs="0" name="Cupo" type="xs:string" />
+              <xs:element minOccurs="0" name="Disponible" type="xs:string" />
+              <xs:element minOccurs="0" name="Minimo_Pagar" type="xs:string" />
+              <xs:element minOccurs="0" name="Fecha_Tope_Pago" type="xs:string" />
+              <xs:element minOccurs="0" name="Codigo_Retorno" type="xs:string" />
+              <xs:element minOccurs="0" name="Codigo_Paginacion" type="xs:string" />
+              <xs:element minOccurs="0" name="Rotativo" type="xs:string" />
+              <xs:element minOccurs="0" name="Tdiferido" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtDetConsultaMovimiento">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Fecha" type="xs:string" />
+              <xs:element minOccurs="0" name="Referencia" type="xs:string" />
+              <xs:element minOccurs="0" name="Descripcion" type="xs:string" />
+              <xs:element minOccurs="0" name="Simbolo" type="xs:string" />
+              <xs:element minOccurs="0" name="Valor" type="xs:string" />
+              <xs:element minOccurs="0" name="Periodo" type="xs:string" />
+              <xs:element minOccurs="0" name="Hora" type="xs:string" />
+              <xs:element minOccurs="0" name="Agencia" type="xs:string" />
+              <xs:element minOccurs="0" name="Fechacon" type="xs:string" />
+              <xs:element minOccurs="0" name="Diferido" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="dtConsultaMovimientoKey1">
+      <xs:selector xpath=".//mstns:dtConsultaMovimiento" />
+      <xs:field xpath="mstns:Periodo" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="dtConsultaMovimiento_dtDetConsultaMovimiento" msdata:parent="dtConsultaMovimiento" msdata:child="dtDetConsultaMovimiento" msdata:parentkey="Periodo" msdata:childkey="Periodo" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsConsultaCheque2.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsConsultaCheque2.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsConsultaCheque2.xsd" id="dsConsultaCheque2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsConsultaCheque2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CabCheques">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CodRetorno" type="xs:string" />
+              <xs:element minOccurs="0" name="CantCheques" type="xs:string" />
+              <xs:element minOccurs="0" name="ValorCheques" type="xs:string" />
+              <xs:element minOccurs="0" name="FchequesCamara" type="xs:string" />
+              <xs:element minOccurs="0" name="Puntero" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DetCheques">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="NumCuenta" type="xs:string" />
+              <xs:element minOccurs="0" name="NumCheque" type="xs:string" />
+              <xs:element minOccurs="0" name="Valor" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

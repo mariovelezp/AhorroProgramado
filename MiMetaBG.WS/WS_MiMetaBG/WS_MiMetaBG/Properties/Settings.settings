@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WS_MiMetaBG.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="WS_MiMetaBG_WsEntrust_BG_FuncionesExt" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.26.60.56:8088/EntrustInterfaceWS/FuncionesExt.asmx</Value>
+    </Setting>
+    <Setting Name="WS_MiMetaBG_WsPersona_BG_Personas" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.26.60.71:88/BG.Neo.Ws.Persona/Personas.asmx</Value>
+    </Setting>
+    <Setting Name="WS_MiMetaBG_WsAvisoSeguro_BG_NotificacionesService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.26.60.165:88/BG.AvisoSeguro.Notificaciones.WS/NotificacionesService.asmx</Value>
+    </Setting>
+    <Setting Name="WS_MiMetaBG_WsCashBV_BG_WebServiceBG" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.26.60.56/BG.CashBVBG.WS/WebServiceBG.asmx</Value>
+    </Setting>
+    <Setting Name="WS_MiMetaBG_WsCashBVBGMail_BG_WebServiceMSG" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.26.60.56/BG.CashBVBG.WS/WebServiceMSG.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

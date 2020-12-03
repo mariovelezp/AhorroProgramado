@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/ChequesCamara.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/ChequesCamara.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/ChequesCamara.xsd" id="ChequesCamara" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="ChequesCamara">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ChequeCamara">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Transaccion" type="xs:string" />
+              <xs:element minOccurs="0" name="Marca_primera_vez" type="xs:string" />
+              <xs:element minOccurs="0" name="Identificacion" type="xs:string" />
+              <xs:element minOccurs="0" name="Cuenta" type="xs:string" />
+              <xs:element minOccurs="0" name="Puntero" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

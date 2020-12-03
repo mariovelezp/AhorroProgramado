@@ -1,0 +1,167 @@
+﻿@{
+    ViewBag.Title = "Creacion";
+}
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <ul class="steps-list">
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a class="active" href="#"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="heading1">Finaliza la creación de tu meta</h1>
+                <p class="subheading">Selecciona la cuenta y el día del débito</p>
+            </div>
+        </div>
+        
+       
+            <div class="row justify-content-center">
+                <div class="col-sm-10 col-md-8 col-lg-6 mb-4 px-sm-3 px-4">
+                    <div class="card shadow-sm container">
+                        <div class="dream-detail-header">
+                            <div class="dream-detail-img"><img src="data:image;base64,@System.Convert.ToBase64String(ViewBag.imagenes)" alt="" width="25" height="25"></div>
+                            <div class="dream-detail-text">
+                                <h5><span id="idNomMetas"></span></h5>
+                            
+                            </div>
+                        </div>
+                        <div class="dream-detail-divider"></div>
+                        <div class="dream-detail-body">
+                            <div class="dream-detail-goal">
+                                <p>Meta:<span id="idmontoMeta"></span></p>
+                            </div>
+                            <div class="dream-detail-save">
+                                <p>Cuota:<span id="idcuotaMeta"></span></p>
+                            </div>
+                            <div class="dream-detail-time">
+                                <p>Plazo:<span id="idfechaMeta"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row justify-content-center">
+                <div class="col-sm-10 col-md-8 col-lg-6 mb-4 px-sm-3 px-4">
+                    <div class="card shadow-sm container">
+                            <div class="form-group row">
+                                <div class="form-group col-12">
+                                    <div class="form-group">
+                                        <input type="hidden" id="token" name="token" value="@ViewBag.token" />
+                                        <input type = "hidden" id="NomMetaId" name="NomMetaId" value="@ViewBag.NomMetaId" />
+                                        <label for="cuentaInicio">Debitar de:</label>
+                                        <div class="col-12">
+                                            @Html.DropDownList("cuentasAC", ViewData["cuentasAC"] as SelectList, new { id = "cuentasAC", name = "cuentasAC", @Class = "form-control" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-12">
+                                    <div class="form-group">
+                                        <label for="cuentaDestino">Acreditar a:</label>
+                                        <div class="col-12">
+                                            @Html.DropDownList("cuentasA", ViewData["cuentasA"] as SelectList, new { id = "cuentasA", name = "cuentasA", @Class = "form-control" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-12">
+                                    <p class="dream-goal text-sm-left">¿Qué día deseas que se debite de tu cuenta?</p>
+                                </div>
+                                <div class="d-flex form-group col-12">
+                                        <div class="col-number">
+                                            <div class="form-group">
+                                                @Html.DropDownList("listasM", ViewData["listasM"] as SelectList, new { id = "listasM", name = "listasM", @Class = "form-control" })
+                                            </div>
+                                        </div>
+                                        <div class="col-number-parent pl-0">
+                                            <p class="b">día de cada mes</p>
+                                        </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row justify-content-center">
+                <div class="col-sm-6 col-lg-4 mt-0 mt-md-3 mt-lg-4 px-sm-3 px-4">
+                    <input id="CrearMeta" type="submit" class="btn btn-primary d-block col-lg-12" value="Listo, crear mi meta" onclick="CreaSuenio()"/>
+                </div>
+            </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-sm-8 col-lg-6 mt-4 text-center">
+                <p class="s">Al hacer clic en el siguiente botón estoy autorizando a Banco Guayaquil a debitar el monto ingresado de forma mensual.</p>
+                <p class="s">Puedes cancelar tu meta en cualquier momento.</p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <div class="modal-icon icon-success"></div>
+                            <h5 class="modal-title">¡Felicitaciones!</h5>
+                            <p class="modal-text">@ViewData["NombreId"], tu meta ha sido creada con éxito.</p>
+                        </div>
+                        <div class="col-12 mt-2 text-center"><a id="MetaCreada" class="btn btn-link btn-link-success" href="~/Metas/ConsultaSuenio">Continuar</a></div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<script>
+
+    
+    window.onload = function ()
+    {
+
+        var nombreMeta = localStorage.getItem("NombreMeta");
+        var montoMeta = localStorage.getItem("MontoTotal");
+        var cuotaMeta = localStorage.getItem("MontoDebito");
+        var fechaMetaMeta = localStorage.getItem("FechaFinalDebito");
+        var idSegmento = localStorage.getItem("IdSegmento");
+        
+
+        document.getElementById("idNomMetas").textContent = nombreMeta;
+        document.getElementById("idcuotaMeta").textContent = "$" + cuotaMeta;
+        document.getElementById("idmontoMeta").textContent = "$" + montoMeta;
+
+        var monthNames = [
+        "Enero", "Febrero", "Marzo",
+        "Abril", "Mayo", "Junio", "Julio",
+        "Agosto", "Septiembre", "Octubre",
+        "Noviembre", "Diciembre"
+        ];
+
+        var fecha = new Date();
+        var dias = fechaMetaMeta * 30;
+
+        fecha.setDate(fecha.getDate() + dias);
+        var f_dia = fecha.getDate();
+        var f_mes = fecha.getMonth();
+        var f_anio = fecha.getFullYear();
+        f_mes = monthNames[f_mes];
+        var fechaFinalMeta = f_dia + "/" + f_mes + "/" + f_anio;
+
+        document.getElementById("idfechaMeta").textContent = fechaFinalMeta;
+    }
+
+    function SetCerrar() {
+        $("#successModal").modal('hide');  
+    }
+</script>
