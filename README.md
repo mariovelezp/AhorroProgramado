@@ -1,3 +1,3 @@
 # AhorroProgramado
-Sistema de ahorro programado desarrollado
-subido 2 dic 2020
+Sistema de ahorro programado.  Cliente determina monto de ahorro mensual y periodo del mismo.
+
